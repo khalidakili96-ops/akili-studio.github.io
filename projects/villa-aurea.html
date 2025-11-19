@@ -2,117 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Villa Aurea — Akili Studio</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dolce Divano — Akili Studio</title>
 
   <style>
-    body { font-family: 'Inter', sans-serif; color:#222; background:#fff; }
-    h1, h2 { font-family:'Playfair Display', serif; }
-    .hero-banner {
-      height: 70vh;
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #ffffff;
+    }
+
+    /* FULL-WIDTH HERO */
+    .hero-image {
       width: 100%;
+      height: 85vh;
       object-fit: cover;
       object-position: center;
+      display: block;
     }
-    .project-section { padding: 60px 0; }
-    .project-img {
-      width: 100%;
-      margin-bottom: 30px;
-      border-radius: 4px;
-      object-fit: cover;
-    }
-    .accent { color:#b68a3a; }
-  </style>
 
+    /* PROJECT TITLE */
+    .project-title {
+      text-align: center;
+      padding: 36px 16px 8px;
+      font-size: 32px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    /* Masonry grid */
+    .masonry {
+      column-count: 2;
+      column-gap: 24px;
+      max-width: 1300px;
+      padding: 32px 16px;
+      margin: 0 auto;
+    }
+    @media (min-width: 1200px) {
+      .masonry { column-count: 3; }
+    }
+
+    .masonry-item {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 24px;
+      break-inside: avoid;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .masonry-item.visible {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    .masonry-item img {
+      width: 100%;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 0;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- NAVIGATION -->
-<nav class="navbar navbar-expand-lg navbar-dark charcoal-ribbon px-4 py-3" style="background:#2D2C2A;">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="../index.html">
-      <img src="../assets/logo.svg" alt="Akili Studio Logo" style="height:70px;">
-    </a>
+  <!-- HERO -->
+  <img src="../assets/projects/villa-aurea/01.webp" class="hero-image" alt="Project Hero">
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- PROJECT TITLE -->
+  <div class="project-title">Dolce Divano</div>
 
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="../projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="../services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
-      </ul>
-    </div>
+  <!-- MASONRY GALLERY -->
+  <div class="masonry">
+    <div class="masonry-item"><img src="../assets/projects/villa-aurea/01.webp" alt=""></div>
+    <div class="masonry-item"><img src="../assets/projects/villa-aurea/02.webp" alt=""></div>
+    <div class="masonry-item"><img src="../assets/projects/villa-aurea/03.webp" alt=""></div>
+    <div class="masonry-item"><img src="../assets/projects/villa-aurea/04.webp" alt=""></div>
+    <div class="masonry-item"><img src="../assets/projects/villa-aurea/05.webp" alt=""></div>
+    <!-- Add more as needed -->
   </div>
-</nav>
 
+  <footer>
+    © Akili Studio — All rights reserved.
+  </footer>
 
-<!-- HERO IMAGE -->
-<header>
-  <img src="../assets/projects/villa-aurea//01.webp" class="hero-banner" alt="PROJECT NAME by Akili Studio">
-</header>
+  <!-- SCROLL ANIMATION SCRIPT -->
+  <script>
+    const items = document.querySelectorAll('.masonry-item');
 
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
 
-<!-- INTRO SECTION -->
-<section class="project-section">
-  <div class="container">
-    <h1 class="display-4 mb-3">Villa Aurea</h1>
-    <p class="lead">
-      A refined interior project crafted by Akili Studio, blending elegance, precision, and a narrative-driven approach to spatial design.
-    </p>
+    items.forEach(item => observer.observe(item));
+  </script>
 
-    <div class="row mt-4">
-      <div class="col-md-4">
-        <h5 class="accent">Location</h5>
-        <p>Cairo, Egypt</p>
-      </div>
-      <div class="col-md-4">
-        <h5 class="accent">Scale</h5>
-        <p>180 sqm apartment</p>
-      </div>
-      <div class="col-md-4">
-        <h5 class="accent">Scope</h5>
-        <p>Interior Design & 3D Visualisation</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- GALLERY SECTION -->
-<section class="project-section bg-light">
-  <div class="container">
-    <h2 class="mb-4">Gallery</h2>
-
-    <!-- Example images -->
-    <img src="../assets/projects/villa-aurea/01.webp" class="project-img">
-    <img src="../assets/projects/villa-aurea/02.webp" class="project-img">
-    <img src="../assets/projects/villa-aurea/03.webp" class="project-img">
-    <img src="../assets/projects/villa-aurea/04.webp" class="project-img">
-  </div>
-</section>
-
-
-<!-- FOOTER -->
-<footer class="py-4" style="background:#111; color:#ddd;">
-  <div class="container d-flex justify-content-between">
-    <div>© Akili Studio — Based in Egypt</div>
-    <div>
-      <a href="https://wa.me/201149564506" target="_blank" class="me-3" style="color:#ddd;">WhatsApp</a>
-      <a href="mailto:akilis.studio@gmail.com" style="color:#ddd;">Email</a>
-    </div>
-  </div>
-</footer>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
