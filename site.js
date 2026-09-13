@@ -7,3 +7,13 @@ if (menu && nav) {
     menu.textContent = open ? 'Close' : 'Menu';
   });
 }
+
+// Akili Studio typography override: Caviar Dreams is the primary typeface.
+const caviarFont = document.createElement('link');
+caviarFont.rel = 'stylesheet';
+caviarFont.href = 'https://fonts.bunny.net/css?family=Caviar+Dreams:400,700&display=swap';
+document.head.appendChild(caviarFont);
+
+const typography = document.createElement('style');
+typography.textContent = `:root { --serif: 'Caviar Dreams', sans-serif; --sans: 'Caviar Dreams', sans-serif; }`;
+document.head.appendChild(typography);
