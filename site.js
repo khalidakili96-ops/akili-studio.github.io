@@ -2,7 +2,7 @@
 if(!document.querySelector('link[data-akili-typography]')){
  const typography=document.createElement('link');
  typography.rel='stylesheet';
- typography.href='typography.css?v=3';
+ typography.href='typography.css?v=4';
  typography.dataset.akiliTypography='true';
  document.head.appendChild(typography);
 }
@@ -21,6 +21,7 @@ if('IntersectionObserver' in window){
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const touchDevice='ontouchstart' in window || navigator.maxTouchPoints>0;
 
+/* Homepage project gallery — continuous desktop/mobile crossfade. */
 document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  const media=card.querySelector('.project-media');
  if(!media)return;
@@ -32,17 +33,65 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  images.forEach((src,index)=>{
    const img=document.createElement('img');
    img.className=`project-slide${index===0?' is-active':''}`;
-   img.src=src; img.alt=card.dataset.alt||''; img.loading='eager'; media.appendChild(img);
+   img.src=src;
+   img.alt=card.dataset.alt||'';
+   img.loading='eager';
+   img.decoding='async';
+   media.appendChild(img);
  });
- const progress=document.createElement('div'); progress.className='project-progress'; progress.innerHTML='<span></span>'; media.appendChild(progress);
- const counter=document.createElement('span'); counter.className='project-index'; counter.textContent=`01 / ${String(images.length).padStart(2,'0')}`; media.appendChild(counter);
+ const progress=document.createElement('div');
+ progress.className='project-progress';
+ progress.innerHTML='<span></span>';
+ media.appendChild(progress);
+ const counter=document.createElement('span');
+ counter.className='project-index';
+ counter.textContent=`01 / ${String(images.length).padStart(2,'0')}`;
+ media.appendChild(counter);
+ card.classList.add('has-gallery');
  let current=0,timer=null;
- const restartProgress=()=>{const bar=progress.querySelector('span');if(!bar)return;bar.style.animation='none';void bar.offsetWidth;bar.style.animation='projectProgress 3.8s linear infinite';};
- const advance=()=>{const slides=media.querySelectorAll('.project-slide');if(!slides.length)return;slides[current].classList.remove('is-active');current=(current+1)%slides.length;slides[current].classList.add('is-active');counter.textContent=`${String(current+1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;restartProgress();};
- const start=()=>{if(!reducedMotion&&!timer){restartProgress();timer=setInterval(advance,3800);}};
- const stop=()=>{if(timer){clearInterval(timer);timer=null;}};
- card.addEventListener('focusin',stop); card.addEventListener('focusout',start); document.addEventListener('visibilitychange',()=>document.hidden?stop():start()); start();
- if(!touchDevice&&!reducedMotion){card.addEventListener('pointermove',event=>{const rect=card.getBoundingClientRect();const x=(event.clientX-rect.left)/rect.width-.5;const y=(event.clientY-rect.top)/rect.height-.5;card.style.setProperty('--tilt-x',`${(y*-2.2).toFixed(2)}deg`);card.style.setProperty('--tilt-y',`${(x*2.2).toFixed(2)}deg`);card.classList.add('is-pointer-active');});card.addEventListener('pointerleave',()=>{card.classList.remove('is-pointer-active');card.style.setProperty('--tilt-x','0deg');card.style.setProperty('--tilt-y','0deg');});}
+ const restartProgress=()=>{
+   const bar=progress.querySelector('span');
+   if(!bar)return;
+   bar.style.animation='none';
+   void bar.offsetWidth;
+   bar.style.animation='projectProgress 3.8s linear infinite';
+ };
+ const advance=()=>{
+   const slides=media.querySelectorAll('.project-slide');
+   if(!slides.length)return;
+   slides[current].classList.remove('is-active');
+   current=(current+1)%slides.length;
+   slides[current].classList.add('is-active');
+   counter.textContent=`${String(current+1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;
+   restartProgress();
+ };
+ const start=()=>{
+   if(reducedMotion||timer||document.hidden)return;
+   restartProgress();
+   timer=window.setInterval(advance,3800);
+ };
+ const stop=()=>{
+   if(timer){window.clearInterval(timer);timer=null;}
+ };
+ card.addEventListener('focusin',stop);
+ card.addEventListener('focusout',start);
+ document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
+ start();
+ if(!touchDevice&&!reducedMotion){
+   card.addEventListener('pointermove',event=>{
+     const rect=card.getBoundingClientRect();
+     const x=(event.clientX-rect.left)/rect.width-.5;
+     const y=(event.clientY-rect.top)/rect.height-.5;
+     card.style.setProperty('--tilt-x',`${(y*-2.2).toFixed(2)}deg`);
+     card.style.setProperty('--tilt-y',`${(x*2.2).toFixed(2)}deg`);
+     card.classList.add('is-pointer-active');
+   });
+   card.addEventListener('pointerleave',()=>{
+     card.classList.remove('is-pointer-active');
+     card.style.setProperty('--tilt-x','0deg');
+     card.style.setProperty('--tilt-y','0deg');
+   });
+ }
 });
 
 const heroContent=document.querySelector('.hero-home .hero-content');
