@@ -29,7 +29,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    img.className=`project-slide${index===0?' is-active':''}`;
    img.src=src;
    img.alt=card.dataset.alt||'';
-   img.loading=index===0?'eager':'lazy';
+   img.loading='eager';
    media.appendChild(img);
  });
  const progress=document.createElement('div');
@@ -60,8 +60,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  };
  const start=()=>{if(!reducedMotion&&!timer){restartProgress();timer=setInterval(advance,3800);}};
  const stop=()=>{if(timer){clearInterval(timer);timer=null;}};
- card.addEventListener('mouseenter',stop);
- card.addEventListener('mouseleave',start);
+ // Keep the editorial carousel running while the visitor hovers; only pause when keyboard focus enters the card.
  card.addEventListener('focusin',stop);
  card.addEventListener('focusout',start);
  document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
