@@ -1,1 +1,82 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Tell Akili Studio about your project and find the right design service for your needs."><meta name="theme-color" content="#292724"><title>Project Application | Akili Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap"><link rel="stylesheet" href="https://fonts.bunny.net/css?family=Caviar+Dreams:400,700&display=swap"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="animations.css"></head><body><header class="site-header"><div class="container nav"><a class="brand-logo" href="index.html" aria-label="Akili Studio home"><img src="assets/akili-logo.svg" alt="Akili Studio — Interior Design Services"></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button><nav id="primary-nav" class="nav-links"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></div></header><main><section class="page-section application-section"><div class="container"><div class="application-intro"><p class="eyebrow gold">Project Application</p><h1>Begin with your space.</h1><p class="lead">Tell us a little about your project, its location and what you need to achieve. Your answers help us understand the scope and recommend the most appropriate way for Akili Studio to work with you.</p></div><iframe class="application-frame" title="Akili Studio new-client project application" src="https://form.jotform.com/262563623866062" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe></div></section></main><footer><div class="container footer-inner"><a class="brand-logo" href="index.html" aria-label="Akili Studio home"><img src="assets/akili-logo.svg" alt="Akili Studio"></a><p>© 2026 Akili Studio · Cairo, Egypt</p><div class="footer-contacts"><a href="mailto:akilis.studios@gmail.com">Email</a><a href="tel:+201149564506">+20 114 956 4506</a><a href="#">Instagram</a><a href="#">Facebook</a></div></div></footer><script src="site.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Tell Akili Studio about your project and find the right design service for your needs.">
+<meta name="theme-color" content="#292724">
+<title>Project Application | Akili Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=Caviar+Dreams:400,700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="animations.css">
+</head>
+<body>
+<header class="site-header">
+<div class="container nav">
+<a class="brand-logo" href="index.html" aria-label="Akili Studio home"><img src="assets/akili-logo.svg" alt="Akili Studio — Interior Design Services"></a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+<nav id="primary-nav" class="nav-links"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+</div>
+</header>
+<main>
+<section class="page-section application-section">
+<div class="container">
+<div class="application-intro">
+<p class="eyebrow gold">Project Application</p>
+<h1>Begin with your space.</h1>
+<p class="lead">Tell us about your project, where it is located and the service you are looking for. Your answers help us understand the brief and determine the most appropriate way for Akili Studio to work with you.</p>
+</div>
+<div class="application-form-wrap">
+<form class="application-form" action="https://formsubmit.co/akilis.studios@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New Akili Studio Project Application">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://akilis.studio/application.html?submitted=true">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" class="form-honeypot" aria-hidden="true">
+<div class="form-section">
+<p class="form-kicker">01 · Contact</p><h2>Tell us who you are.</h2>
+<div class="form-grid">
+<label>Full Name <span>*</span><input type="text" name="Full Name" autocomplete="name" required></label>
+<label>Phone / WhatsApp <span>*</span><input type="tel" name="Phone / WhatsApp" autocomplete="tel" required></label>
+<label class="full-width">Email Address <span>*</span><input type="email" name="Email Address" autocomplete="email" required></label>
+</div></div>
+<div class="form-section">
+<p class="form-kicker">02 · Project</p><h2>Give us the essentials.</h2>
+<div class="form-grid">
+<label>Project Location <span>*</span><input type="text" name="Project Location" placeholder="City, country" required></label>
+<label>Project Type <span>*</span><select name="Project Type" required><option value="" selected disabled>Select one</option><option>Residential</option><option>Commercial</option></select></label>
+</div></div>
+<div class="form-section">
+<p class="form-kicker">03 · Service</p><h2>How can Akili Studio help?</h2>
+<p class="form-note">Select the service that best describes what you are looking for.</p>
+<div class="service-select-list">
+<label class="service-option"><input type="radio" name="Service Required" value="Design Strategy Session" required><span><strong>Design Strategy Session</strong><small>A focused consultation to structure the project before design or execution.</small></span></label>
+<label class="service-option"><input type="radio" name="Service Required" value="Interior Design"><span><strong>Interior Design</strong><small>Concept, spatial planning, materials, mood and design development.</small></span></label>
+<label class="service-option"><input type="radio" name="Service Required" value="Interior Architecture"><span><strong>Interior Architecture</strong><small>Detailed drawings, specifications and execution-ready documentation.</small></span></label>
+<label class="service-option"><input type="radio" name="Service Required" value="Execution & Supervision"><span><strong>Execution &amp; Supervision</strong><small>Site coordination, quality control and considered delivery.</small></span></label>
+<label class="service-option"><input type="radio" name="Service Required" value="Turnkey / Timeless Journey"><span><strong>Turnkey / Timeless Journey</strong><small>A complete journey from design through coordinated execution.</small></span></label>
+<label class="service-option"><input type="radio" name="Service Required" value="Branding"><span><strong>Branding</strong><small>A distinctive visual identity and system shaped around your business.</small></span></label>
+</div></div>
+<div class="form-section">
+<p class="form-kicker">04 · Investment</p><h2>Help us understand the brief.</h2>
+<div class="form-grid">
+<label class="full-width">Approximate Budget Range <span>*</span><select name="Budget Range" required><option value="" selected disabled>Select a range</option><option>Under $10,000</option><option>$10,000 – $25,000</option><option>$25,000 – $50,000</option><option>$50,000 – $100,000</option><option>$100,000+</option><option>I would prefer to discuss this</option></select></label>
+<label class="full-width">Project Description <span>*</span><textarea name="Project Description" rows="7" placeholder="Tell us about the space, your ambitions, the challenge you are facing and anything you already know about the project." required></textarea></label>
+</div></div>
+<div class="form-section form-final">
+<p class="form-kicker">05 · Contact Preference</p>
+<div class="form-grid"><label>Preferred Contact Method <span>*</span><select name="Preferred Contact Method" required><option value="" selected disabled>Select one</option><option>WhatsApp</option><option>Phone Call</option><option>Email</option></select></label></div>
+<label class="consent"><input type="checkbox" name="Consent" value="I agree to be contacted by Akili Studio regarding this project." required><span>I agree to be contacted by Akili Studio regarding this project.</span></label>
+<button class="button button-dark form-submit" type="submit">Submit Project Application <span>→</span></button>
+<p class="form-disclaimer">We review each application carefully and will respond with the appropriate next step.</p>
+</div>
+</form></div></div>
+</section>
+</main>
+<footer><div class="container footer-inner"><a class="brand-logo" href="index.html" aria-label="Akili Studio home"><img src="assets/akili-logo.svg" alt="Akili Studio"></a><p>© 2026 Akili Studio · Cairo, Egypt</p><div class="footer-contacts"><a href="mailto:akilis.studios@gmail.com">Email</a><a href="tel:+201149564506">+20 114 956 4506</a><a href="#" aria-label="Akili Studio on Instagram">Instagram</a><a href="#" aria-label="Akili Studio on Facebook">Facebook</a></div></div></footer>
+<script src="site.js"></script>
+</body>
+</html>
