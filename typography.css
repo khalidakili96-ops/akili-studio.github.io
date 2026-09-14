@@ -1,5 +1,6 @@
 /* Akili Studio — global typography contract */
-@import url('https://fonts.bunny.net/css?family=Caviar+Dreams:400,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/caviar-dreams');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
 :root{
   --font-primary:'Caviar Dreams',Arial,sans-serif;
@@ -7,7 +8,7 @@
   --font:var(--font-primary);
 }
 
-/* Primary typeface: Caviar Dreams. Secondary typeface: Montserrat. */
+/* Primary: Caviar Dreams. Secondary: Montserrat. */
 html,body{font-family:var(--font-secondary)!important}
 
 h1,h2,h3,h4,h5,h6,
@@ -17,8 +18,9 @@ blockquote,cite,
 .project-closing h2,
 .application-sidebar h1,
 .application-block legend{
-  font-family:var(--font-primary)!important;
+  font-family:'Caviar Dreams',Arial,sans-serif!important;
   font-synthesis:none!important;
+  font-weight:500;
 }
 
 p,small,label,input,select,textarea,button,
@@ -29,11 +31,10 @@ a,.eyebrow,.lead,.project-meta,
 .contact-options a,.application-lead,.application-side-note p,
 .form-grid label,.consent,.submit-row p,.application-submit,
 footer{
-  font-family:var(--font-secondary)!important;
+  font-family:'Montserrat',Arial,sans-serif!important;
 }
 
 @media(max-width:760px){
-  html,body{font-family:var(--font-secondary)!important}
   h1,h2,h3,h4,h5,h6,
   blockquote,cite,
   .case-card h2,
@@ -41,8 +42,9 @@ footer{
   .project-closing h2,
   .application-sidebar h1,
   .application-block legend{
-    font-family:var(--font-primary)!important;
+    font-family:'Caviar Dreams',Arial,sans-serif!important;
     font-synthesis:none!important;
+    font-weight:500;
   }
   p,small,label,input,select,textarea,button,a,
   .eyebrow,.lead,.project-meta,.nav-links,.menu-toggle,
@@ -51,6 +53,6 @@ footer{
   .contact-options a,.application-lead,.application-side-note p,
   .form-grid label,.consent,.submit-row p,.application-submit,
   footer{
-    font-family:var(--font-secondary)!important;
+    font-family:'Montserrat',Arial,sans-serif!important;
   }
 }
