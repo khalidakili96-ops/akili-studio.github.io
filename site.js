@@ -12,6 +12,9 @@ if('IntersectionObserver' in window){
  revealTargets.forEach(el=>observer.observe(el));
 }else{revealTargets.forEach(el=>el.classList.add('is-visible'));}
 
+const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const touchDevice='ontouchstart' in window || navigator.maxTouchPoints>0;
+
 // Main-page project storytelling: quietly cycle through multiple project images.
 document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  const media=card.querySelector('.project-media');
@@ -39,6 +42,13 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  media.appendChild(counter);
  let current=0;
  let timer=null;
+ const restartProgress=()=>{
+   const bar=progress.querySelector('span');
+   if(!bar)return;
+   bar.style.animation='none';
+   void bar.offsetWidth;
+   bar.style.animation='projectProgress 3.8s linear infinite';
+ };
  const advance=()=>{
    const slides=media.querySelectorAll('.project-slide');
    if(!slides.length)return;
@@ -46,12 +56,9 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    current=(current+1)%slides.length;
    slides[current].classList.add('is-active');
    counter.textContent=`${String(current+1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;
-   const bar=progress.querySelector('span');
-   bar.style.animation='none';
-   void bar.offsetWidth;
-   bar.style.animation='projectProgress 3.8s linear infinite';
+   restartProgress();
  };
- const start=()=>{if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&!timer)timer=setInterval(advance,3800);};
+ const start=()=>{if(!reducedMotion&&!timer){restartProgress();timer=setInterval(advance,3800);}};
  const stop=()=>{if(timer){clearInterval(timer);timer=null;}};
  card.addEventListener('mouseenter',stop);
  card.addEventListener('mouseleave',start);
@@ -59,15 +66,40 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  card.addEventListener('focusout',start);
  document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
  start();
+
+ // Subtle desktop tilt: enough to add depth, never enough to feel playful.
+ if(!touchDevice&&!reducedMotion){
+   card.addEventListener('pointermove',event=>{
+     const rect=card.getBoundingClientRect();
+     const x=(event.clientX-rect.left)/rect.width-.5;
+     const y=(event.clientY-rect.top)/rect.height-.5;
+     card.style.setProperty('--tilt-x',`${(y*-2.2).toFixed(2)}deg`);
+     card.style.setProperty('--tilt-y',`${(x*2.2).toFixed(2)}deg`);
+     card.classList.add('is-pointer-active');
+   });
+   card.addEventListener('pointerleave',()=>{
+     card.classList.remove('is-pointer-active');
+     card.style.setProperty('--tilt-x','0deg');
+     card.style.setProperty('--tilt-y','0deg');
+   });
+ }
 });
 
 // Very subtle hero depth effect on desktop; disabled for touch and reduced-motion users.
 const heroContent=document.querySelector('.hero-home .hero-content');
-if(heroContent&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&!('ontouchstart' in window)){
+if(heroContent&&!reducedMotion&&!touchDevice){
  window.addEventListener('scroll',()=>{
    const y=Math.min(window.scrollY*.08,36);
    heroContent.style.transform=`translate3d(0,${y}px,0)`;
  },{passive:true});
+}
+
+// Header quietly gains separation after the hero as the visitor scrolls.
+const header=document.querySelector('.site-header');
+if(header&&!reducedMotion){
+ const updateHeader=()=>header.classList.toggle('is-scrolled',window.scrollY>24);
+ updateHeader();
+ window.addEventListener('scroll',updateHeader,{passive:true});
 }
 
 // Keep mobile navigation closed after selecting a page.
