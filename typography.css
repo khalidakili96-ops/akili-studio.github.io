@@ -1,8 +1,56 @@
 /* Akili Studio — global typography contract */
 @import url('https://fonts.bunny.net/css?family=Caviar+Dreams:400,700&display=swap');
 
-:root{--font-primary:'Caviar Dreams',Arial,sans-serif;--font-secondary:'Montserrat',Arial,sans-serif;--font:var(--font-primary)}
-html,body{font-family:var(--font-secondary)}
-h1,h2,h3,blockquote,cite,.case-card h2,.service-copy h2,.project-closing h2,.application-sidebar h1,.application-block legend{font-family:var(--font-primary)!important;font-synthesis:none}
-p,small,label,input,select,textarea,button,a,.eyebrow,.lead,.project-meta,.nav-links,.menu-toggle,.button,.text-link,.service-grid small,.service-grid p,.project-card p,.case-card small,.service-copy small,.contact-options a,.application-lead,.application-side-note p,.form-grid label,.consent,.submit-row p,.application-submit,footer{font-family:var(--font-secondary)}
-@media(max-width:760px){body{font-family:var(--font-secondary)}h1,h2,h3,blockquote,cite,.case-card h2,.service-copy h2,.project-closing h2,.application-sidebar h1,.application-block legend{font-family:var(--font-primary)!important;font-synthesis:none}p,small,label,input,select,textarea,button,a,.eyebrow,.lead,.project-meta,.nav-links,.menu-toggle,.button,.text-link,.service-grid small,.service-grid p,.project-card p,.case-card small,.service-copy small,.contact-options a,.application-lead,.application-side-note p,.form-grid label,.consent,.submit-row p,.application-submit,footer{font-family:var(--font-secondary)}}
+:root{
+  --font-primary:'Caviar Dreams',Arial,sans-serif;
+  --font-secondary:'Montserrat',Arial,sans-serif;
+  --font:var(--font-primary);
+}
+
+/* Primary typeface: Caviar Dreams. Secondary typeface: Montserrat. */
+html,body{font-family:var(--font-secondary)!important}
+
+h1,h2,h3,h4,h5,h6,
+blockquote,cite,
+.case-card h2,
+.service-copy h2,
+.project-closing h2,
+.application-sidebar h1,
+.application-block legend{
+  font-family:var(--font-primary)!important;
+  font-synthesis:none!important;
+}
+
+p,small,label,input,select,textarea,button,
+a,.eyebrow,.lead,.project-meta,
+.nav-links,.menu-toggle,.button,.text-link,
+.service-grid small,.service-grid p,
+.project-card p,.case-card small,.service-copy small,
+.contact-options a,.application-lead,.application-side-note p,
+.form-grid label,.consent,.submit-row p,.application-submit,
+footer{
+  font-family:var(--font-secondary)!important;
+}
+
+@media(max-width:760px){
+  html,body{font-family:var(--font-secondary)!important}
+  h1,h2,h3,h4,h5,h6,
+  blockquote,cite,
+  .case-card h2,
+  .service-copy h2,
+  .project-closing h2,
+  .application-sidebar h1,
+  .application-block legend{
+    font-family:var(--font-primary)!important;
+    font-synthesis:none!important;
+  }
+  p,small,label,input,select,textarea,button,a,
+  .eyebrow,.lead,.project-meta,.nav-links,.menu-toggle,
+  .button,.text-link,.service-grid small,.service-grid p,
+  .project-card p,.case-card small,.service-copy small,
+  .contact-options a,.application-lead,.application-side-note p,
+  .form-grid label,.consent,.submit-row p,.application-submit,
+  footer{
+    font-family:var(--font-secondary)!important;
+  }
+}
