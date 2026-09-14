@@ -1,12 +1,5 @@
-// Load the global Akili typography contract on every page, including mobile.
-if(!document.querySelector('link[data-akili-typography]')){
- const typography=document.createElement('link');
- typography.rel='stylesheet';
- typography.href='typography.css?v=4';
- typography.dataset.akiliTypography='true';
- document.head.appendChild(typography);
-}
-
+// Akili Studio global behaviour
+// Typography is loaded by the page stylesheet contract; no runtime font injection is required.
 const menu=document.querySelector('.menu-toggle');
 const nav=document.querySelector('.nav-links');
 if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close':'Menu';});}
@@ -21,15 +14,14 @@ if('IntersectionObserver' in window){
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const touchDevice='ontouchstart' in window || navigator.maxTouchPoints>0;
 
-/* Homepage project gallery — continuous desktop/mobile crossfade. */
+/* Homepage project gallery — always cycles; reduced-motion only removes the tilt/parallax effects. */
 document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  const media=card.querySelector('.project-media');
  if(!media)return;
  let images=[];
  try{images=JSON.parse(card.dataset.gallery);}catch(e){return;}
  if(!Array.isArray(images)||images.length<2)return;
- const original=media.querySelector('img');
- if(original)original.remove();
+ media.replaceChildren();
  images.forEach((src,index)=>{
    const img=document.createElement('img');
    img.className=`project-slide${index===0?' is-active':''}`;
@@ -48,7 +40,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  counter.textContent=`01 / ${String(images.length).padStart(2,'0')}`;
  media.appendChild(counter);
  card.classList.add('has-gallery');
- let current=0,timer=null;
+ let current=0;
  const restartProgress=()=>{
    const bar=progress.querySelector('span');
    if(!bar)return;
@@ -58,25 +50,15 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  };
  const advance=()=>{
    const slides=media.querySelectorAll('.project-slide');
-   if(!slides.length)return;
+   if(slides.length<2)return;
    slides[current].classList.remove('is-active');
    current=(current+1)%slides.length;
    slides[current].classList.add('is-active');
    counter.textContent=`${String(current+1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;
    restartProgress();
  };
- const start=()=>{
-   if(reducedMotion||timer||document.hidden)return;
-   restartProgress();
-   timer=window.setInterval(advance,3800);
- };
- const stop=()=>{
-   if(timer){window.clearInterval(timer);timer=null;}
- };
- card.addEventListener('focusin',stop);
- card.addEventListener('focusout',start);
- document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
- start();
+ restartProgress();
+ window.setInterval(advance,3800);
  if(!touchDevice&&!reducedMotion){
    card.addEventListener('pointermove',event=>{
      const rect=card.getBoundingClientRect();
