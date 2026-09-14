@@ -1,0 +1,16 @@
+/* Akili Studio — homepage project gallery, CSS-driven fallback */
+.project-card .project-media .project-slide{
+  opacity:0!important;
+  transform:scale(1.045)!important;
+  animation:akiliProjectCrossfade 11.4s infinite!important;
+}
+.project-card .project-media .project-slide:nth-child(1){animation-delay:0s!important}
+.project-card .project-media .project-slide:nth-child(2){animation-delay:3.8s!important}
+.project-card .project-media .project-slide:nth-child(3){animation-delay:7.6s!important}
+@keyframes akiliProjectCrossfade{
+  0%,28%{opacity:1!important;transform:scale(1)!important}
+  33%,100%{opacity:0!important;transform:scale(1.045)!important}
+}
+@media(max-width:760px){
+  .project-card .project-media .project-slide{animation-duration:11.4s!important}
+}
