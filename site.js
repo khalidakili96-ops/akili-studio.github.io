@@ -1,8 +1,15 @@
+// Load the global Akili typography contract on every page, including mobile.
+if(!document.querySelector('link[data-akili-typography]')){
+ const typography=document.createElement('link');
+ typography.rel='stylesheet';
+ typography.href='typography.css?v=2';
+ typography.dataset.akiliTypography='true';
+ document.head.appendChild(typography);
+}
+
 const menu=document.querySelector('.menu-toggle');
 const nav=document.querySelector('.nav-links');
 if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close':'Menu';});}
-
-// Akili Studio typography is loaded statically in each page <head>.
 
 // Refined scroll reveals with staggered timing.
 const revealTargets=document.querySelectorAll('main>section,.project-card,.case-card,.service-copy,.contact-grid>* ,.about-image,.project-gallery img');
