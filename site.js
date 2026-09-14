@@ -83,6 +83,34 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  }
 });
 
+/* Services hover — direct inline transform guarantees the interaction wins over any cached or competing CSS rule. */
+if(!touchDevice && !reducedMotion){
+ document.querySelectorAll('.service-grid article').forEach(service=>{
+   service.addEventListener('pointerenter',()=>{
+     document.querySelectorAll('.service-grid article').forEach(item=>{
+       item.style.opacity=item===service?'1':'.48';
+       if(item===service){
+         item.style.transform='translateY(-10px) scale(1.10)';
+         item.style.zIndex='20';
+         item.style.boxShadow='0 30px 70px rgba(0,0,0,.34)';
+       }else{
+         item.style.transform='scale(1)';
+         item.style.zIndex='1';
+         item.style.boxShadow='none';
+       }
+     });
+   });
+   service.addEventListener('pointerleave',()=>{
+     document.querySelectorAll('.service-grid article').forEach(item=>{
+       item.style.opacity='1';
+       item.style.transform='scale(1)';
+       item.style.zIndex='1';
+       item.style.boxShadow='none';
+     });
+   });
+ });
+}
+
 const heroContent=document.querySelector('.hero-home .hero-content');
 if(heroContent&&!reducedMotion&&!touchDevice){window.addEventListener('scroll',()=>{const y=Math.min(window.scrollY*.08,36);heroContent.style.transform=`translate3d(0,${y}px,0)`;},{passive:true});}
 const header=document.querySelector('.site-header');
