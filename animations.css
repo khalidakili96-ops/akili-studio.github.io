@@ -16,16 +16,16 @@
 @media(max-width:900px){.application-layout{grid-template-columns:1fr;gap:60px}.application-sidebar{position:relative;top:auto}.application-sidebar h1{font-size:50px}.application-side-note{margin-top:45px}.application-form{max-width:760px}}
 @media(max-width:760px){
  .project-card{transform:none!important;box-shadow:none!important}.project-card .project-progress{left:20px;right:20px}.project-card .project-index{top:18px;right:18px}.site-header.is-overlay.is-scrolled{backdrop-filter:none}.application-page{padding:80px 0 90px}.application-sidebar h1{font-size:42px}.application-layout{gap:45px}.application-block{padding:34px 0 40px}.application-block legend{margin-bottom:26px;font-size:22px}.form-grid{grid-template-columns:1fr;gap:22px}.form-grid .full-width{grid-column:auto}.submit-row{align-items:flex-start;flex-direction:column;gap:28px}.application-submit{align-self:flex-start}
- /* Mobile services — each card is an opaque stacking layer, so previous typography cannot show through. */
- .service-grid{display:block;overflow:visible;position:relative;padding-bottom:12vh}
- .service-grid article{position:sticky;top:92px;min-height:240px;margin:0 0 26px;background:rgba(41,39,36,1)!important;border-left:1px solid #55514a;border-right:1px solid #55514a;transform:none!important;box-shadow:none!important;opacity:1!important;isolation:isolate;overflow:hidden;z-index:1;transition:none}
+ /* Mobile services — each card is a fixed-height, opaque clipping layer. The next card therefore completely masks the previous card, including all typography. */
+ .service-grid{display:block;overflow:visible;position:relative;padding-bottom:12vh;isolation:isolate}
+ .service-grid article{position:sticky;top:76px;height:240px;min-height:240px;margin:0 0 26px;padding:27px 24px;box-sizing:border-box;overflow:hidden;isolation:isolate;background:var(--charcoal)!important;border:1px solid #55514a;transform:none!important;box-shadow:none!important;opacity:1!important;transition:none}
+ .service-grid article:before{display:none!important}
+ .service-grid article>*{position:relative;z-index:1}
  .service-grid article:nth-child(1){z-index:10}
  .service-grid article:nth-child(2){z-index:20}
  .service-grid article:nth-child(3){z-index:30}
  .service-grid article:nth-child(4){z-index:40}
- .service-grid article:before{display:none}
- .service-grid article>*{position:relative;z-index:1}
- .service-grid article:hover{transform:none!important;box-shadow:none!important}
- .service-grid:hover article:not(:hover){opacity:1}
+ .service-grid article:hover{transform:none!important;box-shadow:none!important;background:var(--charcoal)!important}
+ .service-grid:hover article:not(:hover){opacity:1!important}
 }
 @media(prefers-reduced-motion:reduce){.project-card,.project-card.is-pointer-active{transform:none!important;box-shadow:none!important}.project-card .project-slide{opacity:0;transform:none!important;transition:none}.project-card .project-slide.is-active{opacity:1}.project-card .project-progress{display:none}.hero-content{transform:none!important}.site-header.is-overlay{transition:none}.application-submit{transition:none}.service-grid article{transition:none}.service-grid article:hover{transform:translateY(-6px) scale(1.06)!important;box-shadow:0 20px 45px rgba(0,0,0,.22)!important}.service-grid:hover article:not(:hover){opacity:.6}}
