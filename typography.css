@@ -33,14 +33,7 @@ footer{
   font-family:'Montserrat',Arial,sans-serif!important;
 }
 
-/* The original official logo artwork is preserved in the 13 Sep 2026 repository asset.
-   This mobile-only override bypasses the superseded vectorised logo currently referenced
-   by the legacy header rule. */
 @media(max-width:760px){
-  .site-header .brand-logo img{
-    content:url('https://raw.githubusercontent.com/khalidakili96-ops/akili-studio.github.io/fba4192cee36e612b15752b6221345d00bd643e3/assets/akili-logo.svg?v=original')!important;
-  }
-
   h1,h2,h3,h4,h5,h6,
   blockquote,cite,
   .case-card h2,
