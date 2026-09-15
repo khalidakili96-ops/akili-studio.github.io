@@ -34,9 +34,6 @@ footer{
 }
 
 @media(max-width:760px){
-  .site-header .brand-logo img{
-    content:url('assets/akili-logo.svg?v=5')!important;
-  }
   h1,h2,h3,h4,h5,h6,
   blockquote,cite,
   .case-card h2,

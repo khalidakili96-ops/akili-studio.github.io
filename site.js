@@ -7,12 +7,6 @@ if(!document.querySelector('link[data-akili-typography]')){
  document.head.appendChild(typography);
 }
 
-// Force the current Akili logo asset on every viewport, including mobile.
-document.querySelectorAll('.brand-logo img').forEach(img=>{
- const src=img.getAttribute('src');
- if(src&&src.includes('assets/akili-logo.svg')) img.src='assets/akili-logo.svg?v=3';
-});
-
 const menu=document.querySelector('.menu-toggle');
 const nav=document.querySelector('.nav-links');
 if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close':'Menu';});}
