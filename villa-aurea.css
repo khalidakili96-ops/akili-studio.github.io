@@ -15,10 +15,10 @@
 .villa-intro h2,.villa-section h2{font-size:clamp(38px,4.5vw,68px);line-height:1.02;letter-spacing:-.025em;margin:20px 0 0}
 .villa-intro .lead,.villa-section .lead{font-size:15px;line-height:1.9;color:#5f5a52;margin:6px 0 0}
 .villa-label{font:500 10px/1.5 Montserrat,Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--va-gold)}
-.villa-gallery{background:#211f1b;padding:clamp(42px,6vw,88px) 0}
+.villa-gallery{background:#211f1b;padding:clamp(80px,10vw,150px) 0}
 .villa-image{display:block;width:100%;height:auto;object-fit:cover}
-.villa-gallery .wide{aspect-ratio:16/9;object-fit:cover}
-.villa-gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,3vw,52px);background:#211f1b;margin-top:clamp(22px,3vw,52px)}
+.villa-gallery .wide{aspect-ratio:16/9;object-fit:cover;margin-bottom:clamp(70px,9vw,130px)}
+.villa-gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(55px,7vw,110px);background:#211f1b;margin-top:0}
 .villa-gallery-grid img{width:100%;height:100%;min-height:520px;object-fit:cover;display:block}
 .villa-section{padding:150px 0;background:var(--va-paper)}
 .villa-section.dark{background:#211f1b;color:#fff}
@@ -39,8 +39,9 @@
  .villa-intro-grid{grid-template-columns:1fr;gap:48px}
  .villa-intro h2,.villa-section h2{font-size:clamp(36px,11vw,54px)}
  .villa-intro .lead,.villa-section .lead{font-size:13px;line-height:1.8}
- .villa-gallery{padding:28px 0}
- .villa-gallery-grid{grid-template-columns:1fr;gap:28px;margin-top:28px}
+ .villa-gallery{padding:55px 0}
+ .villa-gallery .wide{margin-bottom:55px}
+ .villa-gallery-grid{grid-template-columns:1fr;gap:55px;margin-top:0}
  .villa-gallery-grid img{min-height:0;aspect-ratio:4/3}
  .villa-gallery .wide{aspect-ratio:4/3}
 }
