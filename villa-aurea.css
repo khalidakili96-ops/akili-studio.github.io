@@ -20,6 +20,7 @@
 .villa-gallery .wide{aspect-ratio:16/9;object-fit:cover;margin-bottom:clamp(9px,1.1vw,16px)}
 .villa-gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(7px,.875vw,14px);background:#211f1b;margin-top:0}
 .villa-gallery-grid img{width:100%;height:100%;min-height:520px;object-fit:cover;display:block}
+.villa-gallery-grid + .wide{margin-top:clamp(18px,2.25vw,32px)}
 .villa-section{padding:150px 0;background:var(--va-paper)}
 .villa-section.dark{background:#211f1b;color:#fff}
 .villa-section.dark .lead{color:#bdb8ae}
@@ -44,5 +45,6 @@
  .villa-gallery-grid{grid-template-columns:1fr;gap:7px;margin-top:0}
  .villa-gallery-grid img{min-height:0;aspect-ratio:4/3}
  .villa-gallery .wide{aspect-ratio:4/3}
+ .villa-gallery-grid + .wide{margin-top:14px}
 }
 @media(prefers-reduced-motion:reduce){.villa-back:after,.villa-sound-toggle{transition:none}}
