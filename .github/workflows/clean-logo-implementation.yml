@@ -1,0 +1,52 @@
+name: Clean logo implementation
+
+on:
+  push:
+
+permissions:
+  contents: write
+
+jobs:
+  clean-logo:
+    if: github.event.head_commit.message != 'Apply clean logo implementation'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Remove legacy logo overrides
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          for path in Path('.').glob('*.html'):
+              text = path.read_text(encoding='utf-8')
+              text = re.sub(r'assets/akili-logo\.svg(?:\?v=\d+)?', 'assets/akili-logo.svg', text)
+              path.write_text(text, encoding='utf-8')
+
+          path = Path('site.js')
+          text = path.read_text(encoding='utf-8')
+          text = re.sub(r"// Force the current Akili logo asset on every viewport, including mobile\.\n.*?\n\}\);\n\n", '', text, flags=re.S)
+          path.write_text(text, encoding='utf-8')
+
+          path = Path('typography.css')
+          text = path.read_text(encoding='utf-8')
+          text = re.sub(r"\n\s*\.site-header \.brand-logo img\{\n\s*content:url\('assets/akili-logo\.svg(?:\?v=\d+)?'\)!important;\n\s*\}\n", '\n', text)
+          path.write_text(text, encoding='utf-8')
+
+          path = Path('styles.css')
+          text = path.read_text(encoding='utf-8')
+          text = re.sub(r"content:url\('assets/akili-logo\.svg(?:\?v=\d+)?'\)!important;", '', text)
+          path.write_text(text, encoding='utf-8')
+
+      - name: Commit clean implementation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add '*.html' site.js typography.css styles.css
+          git rm .github/workflows/clean-logo-implementation.yml
+          git commit -m "Apply clean logo implementation"
+          git push
