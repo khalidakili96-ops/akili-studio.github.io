@@ -7,10 +7,10 @@ if(!document.querySelector('link[data-akili-typography]')){
  document.head.appendChild(typography);
 }
 
-// Cache-bust the current Akili logo so mobile browsers do not retain an older logo asset.
+// Force the current Akili logo asset on every viewport, including mobile.
 document.querySelectorAll('.brand-logo img').forEach(img=>{
  const src=img.getAttribute('src');
- if(src&&src.includes('assets/akili-logo.svg')&&!src.includes('?')) img.src=`${src}?v=2`;
+ if(src&&src.includes('assets/akili-logo.svg')) img.src='assets/akili-logo.svg?v=3';
 });
 
 const menu=document.querySelector('.menu-toggle');
@@ -27,7 +27,6 @@ if('IntersectionObserver' in window){
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const touchDevice='ontouchstart' in window || navigator.maxTouchPoints>0;
 
-/* Homepage project gallery — always cycles; reduced-motion only removes the tilt/parallax effects. */
 document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  const media=card.querySelector('.project-media');
  if(!media)return;
@@ -89,7 +88,6 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  }
 });
 
-/* Services hover — direct inline transform guarantees the interaction wins over any cached or competing CSS rule. */
 if(!touchDevice && !reducedMotion){
  document.querySelectorAll('.service-grid article').forEach(service=>{
    service.addEventListener('pointerenter',()=>{
