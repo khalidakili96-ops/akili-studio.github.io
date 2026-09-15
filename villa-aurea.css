@@ -6,6 +6,10 @@
 .villa-hero h1{font-size:clamp(58px,9vw,132px);line-height:.9;letter-spacing:-.045em;margin:18px 0 28px;max-width:900px}
 .villa-hero .eyebrow{color:#e1c38b}
 .villa-meta{display:flex;flex-wrap:wrap;gap:10px 28px;font:500 11px/1.5 Montserrat,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82)}
+.villa-sound-toggle{position:absolute;right:28px;bottom:30px;z-index:3;display:inline-flex;align-items:center;gap:10px;padding:11px 15px;border:1px solid rgba(255,255,255,.42);border-radius:999px;background:rgba(20,19,17,.28);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff;font:500 9px/1 Montserrat,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:background .4s ease,border-color .4s ease,transform .4s ease}
+.villa-sound-toggle:hover{background:rgba(20,19,17,.52);border-color:rgba(255,255,255,.7);transform:translateY(-2px)}
+.villa-sound-icon{font-family:Georgia,serif;font-size:15px;line-height:1}
+.villa-sound-toggle.is-on{border-color:rgba(225,195,139,.75);background:rgba(20,19,17,.45)}
 .villa-intro{padding:150px 0 130px;background:var(--va-paper)}
 .villa-intro-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.72fr);gap:100px;align-items:start}
 .villa-intro h2,.villa-section h2{font-size:clamp(38px,4.5vw,68px);line-height:1.02;letter-spacing:-.025em;margin:20px 0 0}
@@ -30,6 +34,7 @@
  .villa-hero .container{width:min(100% - 40px,1180px);padding-bottom:9vh}
  .villa-hero h1{font-size:clamp(50px,17vw,82px);margin:14px 0 22px}
  .villa-meta{gap:8px 16px;font-size:9px}
+ .villa-sound-toggle{right:20px;bottom:22px;padding:10px 13px;font-size:8px}
  .villa-intro,.villa-section{padding:90px 0}
  .villa-intro-grid{grid-template-columns:1fr;gap:48px}
  .villa-intro h2,.villa-section h2{font-size:clamp(36px,11vw,54px)}
@@ -38,4 +43,4 @@
  .villa-gallery-grid img{min-height:0;aspect-ratio:4/3}
  .villa-gallery .wide{aspect-ratio:4/3}
 }
-@media(prefers-reduced-motion:reduce){.villa-back:after{transition:none}}
+@media(prefers-reduced-motion:reduce){.villa-back:after,.villa-sound-toggle{transition:none}}
