@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded',function(){
     navItems.forEach(function(el,i){
       el.classList.toggle('is-active',i===index);
     });
+    const activeSection=sections[index];
+    const lightSection=activeSection && activeSection.classList.contains('about6-pov') || activeSection && activeSection.classList.contains('about6-beliefs') || activeSection && activeSection.classList.contains('about6-founder') || activeSection && activeSection.classList.contains('about6-vision-mission');
+    const pageNav=document.querySelector('.about6-page-nav');
+    if(pageNav) pageNav.classList.toggle('is-light',!!lightSection);
   };
 
   groups.forEach(function(group){
