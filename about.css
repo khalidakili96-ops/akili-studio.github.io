@@ -20,8 +20,8 @@
 
 .about6-pov{background:var(--about-light);color:var(--about-ink);padding:150px 0 140px}
 .about6-pov-intro{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:8vw;align-items:end;margin-top:78px}
-.about6-pov-intro h2{font:400 clamp(72px,9.3vw,138px)/.77 var(--font);letter-spacing:-.065em;margin:0}
-.about6-pov-intro h2 i{font-style:normal;color:var(--about-gold)}
+.about6-pov-intro h1{font:400 clamp(72px,9.3vw,138px)/.77 var(--font);letter-spacing:-.065em;margin:0}
+.about6-pov-intro h2 i,.about6-pov-intro h1 i{font-style:normal;color:var(--about-gold)}
 .about6-pov-intro>p{max-width:370px;margin:0 0 8px;border-left:1px solid #cfc7bb;padding-left:30px;font:400 11px/1.9 var(--font-secondary);color:var(--about-muted)}
 .about6-pov-list{margin-top:115px;border-top:1px solid #cfc7bb}
 .about6-pov-list>div{display:grid;grid-template-columns:65px minmax(190px,1fr) minmax(280px,.72fr);gap:20px;align-items:center;min-height:105px;border-bottom:1px solid #cfc7bb}
@@ -118,7 +118,7 @@
   .about6-title i{padding-left:1.35em}
   .about6-pov,.about6-beliefs,.about6-method,.about6-vision-mission{padding:95px 0}
   .about6-pov-intro{margin-top:55px}
-  .about6-pov-intro h2{font-size:clamp(52px,14vw,76px)}
+  .about6-pov-intro h2,.about6-pov-intro h1{font-size:clamp(52px,14vw,76px)}
   .about6-pov-intro>p{padding-left:20px}
   .about6-pov-list{margin-top:65px}
   .about6-pov-list>div{grid-template-columns:38px 1fr;gap:10px;min-height:118px}
@@ -613,7 +613,7 @@
     margin-top:48px;
     gap:34px;
   }
-  .about6-pov-intro h2{
+  .about6-pov-intro h2,.about6-pov-intro h1{
     font-size:clamp(50px,13.5vw,70px);
   }
   .about6-pov-intro>p{
