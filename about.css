@@ -754,3 +754,16 @@
     margin:52px 0 36px;
   }
 }
+
+
+/* ABOUT V6 — targeted type adjustment: Founder + Vision / Mission only */
+.about6-founder-grid h2{
+  font-size:clamp(72px,8.2vw,116px);
+}
+.about6-vision-mission> .container>h2{
+  font-size:clamp(72px,8.6vw,120px);
+}
+@media(max-width:760px){
+  .about6-founder-grid h2{font-size:60px}
+  .about6-vision-mission> .container>h2{font-size:60px}
+}
