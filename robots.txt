@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akilis.studio/sitemap.xml
