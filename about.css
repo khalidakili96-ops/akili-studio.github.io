@@ -767,3 +767,16 @@
   .about6-founder-grid h2{font-size:60px}
   .about6-vision-mission> .container>h2{font-size:60px}
 }
+
+
+/* ABOUT V6 — second targeted type adjustment: Founder + Vision / Mission */
+.about6-founder-grid h2{
+  font-size:clamp(80px,9.2vw,132px);
+}
+.about6-vision-mission> .container>h2{
+  font-size:clamp(80px,9.6vw,138px);
+}
+@media(max-width:760px){
+  .about6-founder-grid h2{font-size:66px}
+  .about6-vision-mission> .container>h2{font-size:66px}
+}
