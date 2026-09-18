@@ -18,3 +18,79 @@
 @media(max-width:900px){.application-layout{grid-template-columns:1fr;gap:60px}.application-sidebar{position:relative;top:auto}.application-sidebar h1{font-size:50px}.application-side-note{margin-top:45px}.application-form{max-width:760px}}
 @media(max-width:760px){.project-card{transform:none!important;box-shadow:none!important}.project-card .project-progress{left:20px;right:20px}.project-card .project-index{top:18px;right:18px}.site-header.is-overlay.is-scrolled{backdrop-filter:none}.application-page{padding:80px 0 90px}.application-sidebar h1{font-size:42px}.application-layout{gap:45px}.application-block{padding:34px 0 40px}.application-block legend{margin-bottom:26px;font-size:22px}.form-grid{grid-template-columns:1fr;gap:22px}.form-grid .full-width{grid-column:auto}.submit-row{align-items:flex-start;flex-direction:column;gap:28px}.application-submit{align-self:flex-start}.service-grid{display:block;overflow:visible;position:relative;padding-bottom:12vh;isolation:isolate}.service-grid article{position:sticky;top:76px;height:240px;min-height:240px;margin:0 0 26px;padding:27px 24px;box-sizing:border-box;overflow:hidden;isolation:isolate;background:var(--charcoal)!important;border:1px solid #55514a;transform:none!important;box-shadow:none!important;opacity:1!important;transition:none}.service-grid article:before{display:none!important}.service-grid article>*{position:relative;z-index:1}.service-grid article:nth-child(1){z-index:10}.service-grid article:nth-child(2){z-index:20}.service-grid article:nth-child(3){z-index:30}.service-grid article:nth-child(4){z-index:40}.service-grid article:hover{transform:none!important;box-shadow:none!important;background:var(--charcoal)!important}.service-grid:hover article:not(:hover){opacity:1!important}.about-stack article,.about-stack article:hover,.about-stack article:focus,.about-stack article:active{top:76px;height:240px;min-height:240px;margin-bottom:26px;padding:27px 24px;box-shadow:none!important;transform:none!important;scale:1!important;translate:none!important;rotate:none!important}.about-stack article h3{margin:48px 0 14px}.page-section:nth-of-type(2)>.container.split,.page-section:nth-of-type(3)>.container>.split,.page-section:nth-of-type(4)>.container>.split{top:76px;min-height:240px;margin-bottom:26px;padding:27px 24px;box-shadow:none!important;transform:none!important;scale:1!important;translate:none!important;rotate:none!important}.page-section:nth-of-type(2)>.container.split:hover,.page-section:nth-of-type(3)>.container>.split:hover,.page-section:nth-of-type(4)>.container>.split:hover{transform:none!important;box-shadow:none!important}}
 @media(prefers-reduced-motion:reduce){.project-card,.project-card.is-pointer-active{transform:none!important;box-shadow:none!important}.project-card .project-slide{opacity:0;transform:none!important;transition:none}.project-card .project-slide.is-active{opacity:1}.project-card .project-progress{display:none}.hero-content{transform:none!important}.site-header.is-overlay{transition:none}.application-submit{transition:none}.service-grid article{transition:none}.service-grid article:hover{transform:translateY(-6px) scale(1.06)!important;box-shadow:0 20px 45px rgba(0,0,0,.22)!important}.service-grid:hover article:not(:hover){opacity:.6}}
+
+
+/* Akili Studio — About page redesign */
+.about-page{overflow:hidden}
+.about-hero{position:relative;min-height:720px;display:flex;align-items:end;color:#fff;overflow:hidden;background:var(--charcoal)}
+.about-hero-image{position:absolute;inset:0;background:linear-gradient(90deg,#000b 0%,#0005 48%,#0002 100%),url('assets/villa-aurea-01.jpg') center/cover;transform:scale(1.015);animation:aboutHeroIn 1.6s cubic-bezier(.22,1,.36,1) forwards}
+.about-hero-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,18,15,.68),transparent 48%)}
+.about-hero-content{position:relative;z-index:1;padding-bottom:92px}
+.about-hero-content h1{max-width:900px}
+.about-hero-content>p:last-child{font:400 15px/1.7 var(--font-secondary);color:#f4f1ec}
+.about-editorial{padding:135px 0;background:var(--paper)}
+.about-intro-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:90px;align-items:center}
+.about-image-frame{height:650px;overflow:hidden;position:relative}
+.about-image-frame:after{content:'';position:absolute;inset:18px;border:1px solid rgba(255,255,255,.35);pointer-events:none}
+.about-image-frame img,.vision-image img,.mission-image img,.about-method-image img{width:100%;height:100%;display:block;object-fit:cover;transition:transform 1.2s cubic-bezier(.22,1,.36,1)}
+.about-image-frame:hover img,.vision-image:hover img,.mission-image:hover img,.about-method-image:hover img{transform:scale(1.018)}
+.about-copy{max-width:560px}
+.about-copy h2{margin-bottom:34px}
+.about-copy .lead{margin-bottom:25px}
+.about-copy p:not(.eyebrow):not(.lead){max-width:500px;color:var(--muted);font:400 13px/1.85 var(--font-secondary)}
+.about-philosophy{padding:0 0 135px;background:var(--paper)}
+.about-philosophy-image{height:78vh;min-height:570px;max-height:850px;position:relative;overflow:hidden;background:#333}
+.about-philosophy-image>img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.4s cubic-bezier(.22,1,.36,1);filter:saturate(.92)}
+.about-philosophy-image:hover>img{transform:scale(1.018)}
+.about-image-caption{position:absolute;left:0;right:0;bottom:0;padding:25px 5%;display:flex;justify-content:space-between;gap:20px;color:#fff;font:400 9px/1 var(--font-secondary);letter-spacing:.16em;text-transform:uppercase;background:linear-gradient(transparent,rgba(0,0,0,.5))}
+.about-philosophy-copy{padding-top:78px}
+.philosophy-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:90px;align-items:start;margin-top:20px}
+.philosophy-layout h2{font-size:clamp(48px,6vw,76px)}
+.philosophy-layout .lead{max-width:590px}
+.philosophy-layout .lead p{margin:0 0 24px}
+.about-vision{padding:135px 0;background:#fff}
+.vision-grid,.mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.vision-image,.mission-image{height:620px;overflow:hidden}
+.vision-copy,.mission-copy{max-width:560px}
+.vision-copy h2,.mission-copy h2{margin:0 0 30px}
+.mission-grid{margin-top:150px}
+.mission-image{height:560px}
+.about-values-section{background:var(--charcoal);color:#fff}
+.about-values-section .about-section-head h2,.about-method-section .about-section-head h2{font-size:clamp(48px,6vw,74px)}
+.about-section-head{margin-bottom:58px}
+.about-section-head .lead{max-width:370px;color:#bdb7ad}
+.about-method-section{padding-bottom:135px}
+.about-method-image{height:520px;position:relative;overflow:hidden;margin-bottom:70px;background:#333}
+.about-method-image>div{position:absolute;left:0;right:0;bottom:0;padding:22px 28px;display:flex;justify-content:space-between;color:#fff;background:linear-gradient(transparent,#0009);font:400 9px/1 var(--font-secondary);letter-spacing:.16em;text-transform:uppercase}
+.about-method-image>div span:first-child{color:#d3a65c}
+.about-perspective{min-height:650px;position:relative;display:flex;align-items:center;color:#fff;overflow:hidden}
+.about-perspective-image{position:absolute;inset:0;background:linear-gradient(90deg,#000b 0%,#0006 55%,#0003 100%),url('assets/dolce-divano-01.jpg') center/cover;transform:scale(1.01)}
+.about-perspective-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,18,15,.55),transparent 65%)}
+.about-perspective .container{position:relative;z-index:1}
+.about-perspective h2{max-width:820px;margin-bottom:25px}
+.about-perspective p:not(.eyebrow){font:400 15px/1.7 var(--font-secondary);color:#f0ece5;margin:0 0 34px}
+.about-perspective .text-link{display:inline-block}
+@keyframes aboutHeroIn{from{opacity:0;transform:scale(1.06)}to{opacity:1;transform:scale(1.015)}}
+@media(max-width:760px){
+.about-hero{min-height:650px}
+.about-hero-content{padding-bottom:70px}
+.about-editorial,.about-vision{padding:82px 0}
+.about-intro-grid,.vision-grid,.mission-grid,.philosophy-layout{grid-template-columns:1fr;gap:42px}
+.about-image-frame{height:430px}
+.about-copy h2{margin-bottom:25px}
+.about-philosophy{padding-bottom:82px}
+.about-philosophy-image{height:500px;min-height:0}
+.about-image-caption{padding:18px 22px;font-size:8px}
+.about-philosophy-copy{padding-top:55px}
+.philosophy-layout h2{font-size:48px}
+.vision-image,.mission-image{height:430px}
+.mission-grid{margin-top:80px}
+.about-section-head{margin-bottom:36px}
+.about-section-head .lead{max-width:100%}
+.about-method-section{padding-bottom:82px}
+.about-method-image{height:350px;margin-bottom:48px}
+.about-method-image>div{padding:18px 20px;font-size:8px}
+.about-perspective{min-height:560px}
+.about-perspective h2{font-size:44px}
+.about-perspective p:not(.eyebrow){font-size:13px}
+}
