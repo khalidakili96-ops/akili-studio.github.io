@@ -326,3 +326,6 @@
  .about-editorial-list .about-v4-values>div{min-height:125px}
  .about-editorial-list .about-v4-values small{justify-self:start}
 }
+
+/* About page — remove oversized decorative background words */
+.about-v4-statement-word{display:none!important}
