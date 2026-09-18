@@ -1,1 +1,126 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Interior design, exterior architecture, execution, supervision and branding services by Akili Studio."><title>Services | Akili Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"><link rel="stylesheet" href="https://fonts.cdnfonts.com/css/caviar-dreams"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="typography.css?v=5"></head><body><header class="site-header is-overlay"><div class="container nav"><a class="brand-logo" href="index.html" aria-label="Akili Studio home"><img src="assets/akili-logo.svg" alt="Akili Studio — Interior Design Services"></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button><nav id="primary-nav" class="nav-links"><a href="index.html">Home</a><a href="projects.html">Projects</a><a class="active" href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></div></header><main><section class="page-hero"><div class="container"><p class="eyebrow">Our Services</p><h1>A considered process.<br>Beautifully resolved.</h1><p>From the first conversation to the final detail, our work combines imagination, rigorous planning and thoughtful delivery.</p></div></section><section class="page-section"><div class="container service-list"><article class="service-copy"><small>01</small><h2>Interior Design</h2><p>We establish a personal narrative for your space through concept creation, layouts, colour, furniture, finishes and detailed design development.</p></article><article class="service-copy"><small>02</small><h2>Exterior Architecture</h2><p>We shape the architectural expression of exterior spaces — resolving proportion, materiality, lighting and technical details to create considered, coherent environments.</p></article><article class="service-copy"><small>03</small><h2>Execution & Supervision</h2><p>We coordinate with trusted specialists, monitor quality and maintain the clarity of the original vision through every stage on site.</p></article><article class="service-copy"><small>04</small><h2>Branding</h2><p>We develop distinctive identities and visual systems with the same discipline applied to our spaces — clear, considered and recognisable.</p></article></div></section><section class="cta"><div class="container"><p class="eyebrow">Your project, considered</p><h2>Tell us what you imagine.</h2><a class="button button-outline-light" href="contact.html">Request a consultation</a></div></section></main><footer><div class="container footer-inner"><a class="brand-logo" href="index.html" aria-label="Akili Studio home"><img src="assets/akili-logo.svg" alt="Akili Studio"></a><p>© 2026 Akili Studio · Cairo, Egypt</p><div class="footer-contacts"><a href="mailto:akilis.studios@gmail.com">Email</a><a href="tel:+201149564506">+20 114 956 4506</a><a href="#" aria-label="Akili Studio on Instagram">Instagram</a><a href="#" aria-label="Akili Studio on Facebook">Facebook</a></div></div></footer><script src="site.js?v=8"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Interior architecture, design, execution, supervision, exterior architecture and selected brand identity services by Akili Studio.">
+<title>Services | Akili Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/caviar-dreams">
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="typography.css?v=5">
+<style>
+.services-v2{--sv-dark:#292724;--sv-paper:#eee9e0;--sv-gold:#af863f;--sv-ink:#211f1b}
+.services-v2 .services-intro{padding:150px 0 135px;background:var(--sv-paper)}
+.services-v2 .services-intro .intro-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:90px;align-items:end}
+.services-v2 .services-intro h2{max-width:900px;font-size:clamp(52px,6.5vw,92px);line-height:.96}
+.services-v2 .services-intro p{max-width:460px;margin:0;color:#625c54;font:400 12px/1.9 var(--font-secondary)}
+.services-v2 .core-services{background:#fff;padding:0}
+.services-v2 .service-feature{display:grid;grid-template-columns:1fr 1fr;min-height:650px}
+.services-v2 .service-feature:nth-child(even){background:var(--sv-paper)}
+.services-v2 .service-feature .service-image{min-height:650px;background-position:center;background-size:cover}
+.services-v2 .service-feature:nth-child(even) .service-image{order:2}
+.services-v2 .service-feature .service-copy{display:flex;flex-direction:column;justify-content:center;padding:90px clamp(42px,7vw,110px)}
+.services-v2 .service-number{display:block;margin-bottom:36px;color:var(--sv-gold);font:500 10px/1 var(--font-secondary);letter-spacing:.2em}
+.services-v2 .service-feature h2{font-size:clamp(44px,5vw,70px);line-height:.98;margin-bottom:25px}
+.services-v2 .service-feature p{max-width:520px;margin:0;color:#625c54;font:400 12px/1.9 var(--font-secondary)}
+.services-v2 .service-feature .service-scope{margin-top:42px;padding-top:22px;border-top:1px solid #d9d3c9}
+.services-v2 .service-scope span{display:block;margin-bottom:11px;color:var(--sv-ink);font:500 9px/1 var(--font-secondary);letter-spacing:.16em;text-transform:uppercase}
+.services-v2 .service-scope p{font-size:10.5px;line-height:1.8}
+.services-v2 .approach{padding:145px 0;background:var(--sv-dark);color:#fff}
+.services-v2 .approach-head{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:end;margin-bottom:92px}
+.services-v2 .approach h2{font-size:clamp(54px,6.5vw,92px);line-height:.95}
+.services-v2 .approach-head p{max-width:420px;margin:0;color:#c3beb5;font:400 11px/1.9 var(--font-secondary)}
+.services-v2 .process{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #55514a}
+.services-v2 .process article{position:relative;padding:27px 24px 0;border-left:1px solid #55514a;min-height:205px}
+.services-v2 .process article:last-child{border-right:1px solid #55514a}
+.services-v2 .process .node{width:7px;height:7px;border-radius:50%;background:var(--sv-gold);position:absolute;top:-4px;left:24px}
+.services-v2 .process small{color:#d3a65c;font:500 9px/1 var(--font-secondary);letter-spacing:.18em}
+.services-v2 .process h3{margin:36px 0 13px;font-size:25px}
+.services-v2 .process p{margin:0;color:#bdb7ae;font:400 10px/1.8 var(--font-secondary)}
+.services-v2 .brand-section{padding:135px 0;background:var(--sv-paper)}
+.services-v2 .brand-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:110px;align-items:center}
+.services-v2 .brand-label{color:var(--sv-gold);font:500 9px/1 var(--font-secondary);letter-spacing:.18em;text-transform:uppercase}
+.services-v2 .brand-section h2{margin:25px 0 22px;font-size:clamp(45px,5.4vw,76px);line-height:.96}
+.services-v2 .brand-section p{max-width:600px;margin:0;color:#625c54;font:400 12px/1.9 var(--font-secondary)}
+.services-v2 .brand-note{margin-top:35px;padding-top:20px;border-top:1px solid #d1cabf;color:#211f1b!important;font-size:10px!important}
+.services-v2 .deliver{padding:140px 0;background:#fff}
+.services-v2 .deliver-head{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:end;margin-bottom:78px}
+.services-v2 .deliver h2{font-size:clamp(52px,6vw,86px);line-height:.96}
+.services-v2 .deliver-head p{max-width:430px;margin:0;color:#625c54;font:400 11px/1.9 var(--font-secondary)}
+.services-v2 .deliver-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #d9d3c9}
+.services-v2 .deliver-item{padding:28px 25px 20px;border-left:1px solid #d9d3c9;min-height:210px}
+.services-v2 .deliver-item:last-child{border-right:1px solid #d9d3c9}
+.services-v2 .deliver-item small{color:var(--sv-gold);font:500 9px/1 var(--font-secondary);letter-spacing:.18em}
+.services-v2 .deliver-item h3{margin:42px 0 13px;font-size:25px}
+.services-v2 .deliver-item p{margin:0;color:#625c54;font:400 10px/1.8 var(--font-secondary)}
+.services-v2 .services-close{min-height:650px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:linear-gradient(#0004,#0008),url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90') center/cover}
+.services-v2 .services-close h2{max-width:950px;margin:0 auto 32px;font-size:clamp(50px,6.5vw,94px);line-height:.96}
+.services-v2 .services-close p{margin:0 0 30px;font:400 10px/1.7 var(--font-secondary);letter-spacing:.18em;text-transform:uppercase}
+@media(max-width:760px){
+.services-v2 .services-intro{padding:88px 0}.services-v2 .services-intro .intro-grid,.services-v2 .approach-head,.services-v2 .brand-grid,.services-v2 .deliver-head{grid-template-columns:1fr;gap:38px}
+.services-v2 .services-intro h2{font-size:52px}.services-v2 .services-intro p{font-size:10.5px}
+.services-v2 .service-feature{grid-template-columns:1fr;min-height:0}.services-v2 .service-feature .service-image{min-height:430px;order:0!important}.services-v2 .service-feature .service-copy{padding:75px 22px 85px}.services-v2 .service-feature h2{font-size:47px}
+.services-v2 .approach{padding:90px 0}.services-v2 .approach h2{font-size:54px}.services-v2 .approach-head{margin-bottom:60px}.services-v2 .process{grid-template-columns:1fr}.services-v2 .process article{border-right:1px solid #55514a;min-height:0;padding:26px 22px 34px}.services-v2 .process .node{left:22px}
+.services-v2 .brand-section,.services-v2 .deliver{padding:90px 0}.services-v2 .brand-section h2,.services-v2 .deliver h2{font-size:53px}.services-v2 .deliver-grid{grid-template-columns:1fr}.services-v2 .deliver-item{border-right:1px solid #d9d3c9;min-height:0;padding:27px 22px 34px}.services-v2 .deliver-item h3{margin-top:30px}
+.services-v2 .services-close{min-height:590px;padding:70px 18px}.services-v2 .services-close h2{font-size:52px}
+}
+</style>
+</head>
+<body>
+<header class="site-header is-overlay"><div class="container nav">
+<a class="brand-logo" href="index.html" aria-label="Akili Studio home"><img src="assets/akili-logo.svg" alt="Akili Studio — Interior Design Services"></a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+<nav id="primary-nav" class="nav-links"><a href="index.html">Home</a><a href="projects.html">Projects</a><a class="active" href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+</div></header>
+<main class="services-v2">
+<section class="page-hero">
+<div class="container"><p class="eyebrow">Our Services</p><h1>Design with intention.<br>Delivered with precision.</h1><p>From spatial strategy and interior architecture to design development and execution, we bring the same discipline to every stage of the project — protecting the original idea from first conversation to final detail.</p></div>
+</section>
+<section class="services-intro">
+<div class="container intro-grid"><h2>Spaces shaped around people, purpose and place.</h2><p>Akili Studio brings design, architectural thinking and execution together as one considered process. Every project is developed with clarity from the first decision to the final detail.</p></div>
+</section>
+<section class="core-services">
+<article class="service-feature">
+<div class="service-image" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=90')"></div>
+<div class="service-copy"><span class="service-number">01 / CORE SERVICE</span><h2>Interior Architecture &amp; Design</h2><p>We develop complete interior environments around the people, architecture and purpose of each project — from spatial planning and concept development to materials, lighting, furniture and detailed design. Every decision is resolved to create a space that feels considered, coherent and unmistakably its own.</p><div class="service-scope"><span>Typical scope</span><p>Spatial planning · Concept direction · Materiality · Lighting · Furniture · Detailed design</p></div></div>
+</article>
+<article class="service-feature">
+<div class="service-image" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=90')"></div>
+<div class="service-copy"><span class="service-number">02 / REALISATION</span><h2>Execution &amp; Supervision</h2><p>We remain involved through realisation, coordinating specialists, reviewing workmanship, resolving site conditions and protecting the integrity of the approved design. The objective is simple: what was designed should be what is built.</p><div class="service-scope"><span>What we protect</span><p>Design intent · Quality · Coordination · Site decisions · Programme clarity</p></div></div>
+</article>
+<article class="service-feature">
+<div class="service-image" style="background-image:url('https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1800&q=90')"></div>
+<div class="service-copy"><span class="service-number">03 / SPATIAL EXTENSION</span><h2>Architectural &amp; Exterior Design</h2><p>We shape the architectural expression of exterior spaces through proportion, materiality, lighting and detail — creating a coherent relationship between the building, its surroundings and the interior experience.</p><div class="service-scope"><span>Typical scope</span><p>Exterior concept · Material palette · Façade language · Landscape coordination · Lighting</p></div></div>
+</article>
+</section>
+<section class="approach">
+<div class="container">
+<div class="approach-head"><h2>One vision.<br>From concept<br>to completion.</h2><p>The work does not move through disconnected services. Each stage builds on the one before it, allowing the design to remain coherent as an idea becomes a real space.</p></div>
+<div class="process">
+<article><i class="node"></i><small>01</small><h3>Understand</h3><p>The person, property, context and requirements.</p></article>
+<article><i class="node"></i><small>02</small><h3>Define</h3><p>The spatial strategy and design direction.</p></article>
+<article><i class="node"></i><small>03</small><h3>Compose</h3><p>Architecture, materials, furniture, lighting and atmosphere.</p></article>
+<article><i class="node"></i><small>04</small><h3>Refine</h3><p>Proportion, detail, functionality and buildability.</p></article>
+<article><i class="node"></i><small>05</small><h3>Realise</h3><p>Technical development, coordination and execution.</p></article>
+</div></div>
+</section>
+<section class="brand-section">
+<div class="container brand-grid"><div><span class="brand-label">Selected capability</span><h2>Extending the experience beyond the space.</h2></div><div><p>For selected hospitality, retail and lifestyle projects, Akili Studio also develops visual identities that extend the physical experience into the brand itself. The same principles of clarity, proportion and intention are applied across the identity.</p><p class="brand-note">Brand identity is offered selectively where the physical environment and brand experience are part of the same story.</p></div></div>
+</section>
+<section class="deliver">
+<div class="container">
+<div class="deliver-head"><h2>What clients receive.</h2><p>Beyond individual deliverables, our role is to create clarity across the decisions that shape a project — giving clients a considered framework from strategy through realisation.</p></div>
+<div class="deliver-grid">
+<article class="deliver-item"><small>01</small><h3>Spatial Strategy</h3><p>Planning, hierarchy and project direction established around how the space needs to work.</p></article>
+<article class="deliver-item"><small>02</small><h3>Design Development</h3><p>Materials, furniture, lighting and atmosphere resolved into one coherent design language.</p></article>
+<article class="deliver-item"><small>03</small><h3>Technical Resolution</h3><p>Details and information developed to support procurement, coordination and execution.</p></article>
+<article class="deliver-item"><small>04</small><h3>Execution Oversight</h3><p>Design intent protected through site coordination, review and informed decisions.</p></article>
+</div></div>
+</section>
+<section class="services-close">
+<div><p>Your project deserves more than a finished room.</p><h2>It deserves a considered process from beginning to end.</h2><a class="button button-outline-light" href="contact.html">Begin a Project</a></div>
+</section>
+</main>
+<footer><div class="container footer-inner"><a class="brand-logo" href="index.html" aria-label="Akili Studio home"><img src="assets/akili-logo.svg" alt="Akili Studio"></a><p>© 2026 Akili Studio · Cairo, Egypt</p><div class="footer-contacts"><a href="mailto:akilis.studios@gmail.com">Email</a><a href="tel:+201149564506">+20 114 956 4506</a><a href="#" aria-label="Akili Studio on Instagram">Instagram</a><a href="#" aria-label="Akili Studio on Facebook">Facebook</a></div></div></footer>
+<script src="site.js?v=8"></script>
+</body></html>
