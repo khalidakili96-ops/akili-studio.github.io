@@ -5,7 +5,10 @@ document.addEventListener('DOMContentLoaded',function(){
 
   const setNav=function(index){
     navItems.forEach(function(el,i){
-      el.classList.toggle('is-active',i===index);
+      const active=i===index;
+      el.classList.toggle('is-active',active);
+      if(active) el.setAttribute('aria-current','true');
+      else el.removeAttribute('aria-current');
     });
     const activeSection=sections[index];
     const lightSection=activeSection && activeSection.classList.contains('about6-pov') || activeSection && activeSection.classList.contains('about6-beliefs') || activeSection && activeSection.classList.contains('about6-founder') || activeSection && activeSection.classList.contains('about6-vision-mission');
@@ -26,6 +29,7 @@ document.addEventListener('DOMContentLoaded',function(){
     items.forEach(function(item){
       item.addEventListener('mouseenter',function(){activate(item);});
       item.addEventListener('focusin',function(){activate(item);});
+      item.addEventListener('click',function(){activate(item);});
     });
 
     if('IntersectionObserver' in window){
@@ -51,15 +55,17 @@ document.addEventListener('DOMContentLoaded',function(){
 
   if('IntersectionObserver' in window && sections.length && navItems.length){
     const sectionObserver=new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          const index=sections.indexOf(entry.target);
-          if(index>-1)setNav(index);
-        }
+      const visible=entries.filter(function(entry){return entry.isIntersecting;});
+      if(!visible.length)return;
+      visible.sort(function(a,b){
+        return Math.abs(a.boundingClientRect.top-window.innerHeight*.38)
+             -Math.abs(b.boundingClientRect.top-window.innerHeight*.38);
       });
+      const index=sections.indexOf(visible[0].target);
+      if(index>-1)setNav(index);
     },{
-      rootMargin:'-35% 0px -55% 0px',
-      threshold:0
+      rootMargin:'-18% 0px -58% 0px',
+      threshold:[0,.2,.5]
     });
     sections.forEach(function(section){sectionObserver.observe(section);});
   }
