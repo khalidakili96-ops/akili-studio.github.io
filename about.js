@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded',function(){
   const groups=document.querySelectorAll('.about6-philosophy-principles');
+  const navItems=[...document.querySelectorAll('.about6-page-nav button')];
+  const sections=[...document.querySelectorAll('.about6-track')];
+  const setNav=function(index){navItems.forEach((el,i)=>el.classList.toggle('is-active',i===index));};
   groups.forEach(function(group){
     const items=[...group.children];
     if(!items.length)return;
@@ -20,3 +23,20 @@ document.addEventListener('DOMContentLoaded',function(){
     }
   });
 });
+  navItems.forEach(function(item){
+    item.addEventListener('click',function(){
+      const target=document.getElementById(item.dataset.target);
+      if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+  if('IntersectionObserver' in window && sections.length){
+    const sectionObserver=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          const index=sections.indexOf(entry.target);
+          if(index>-1)setNav(index);
+        }
+      });
+    },{rootMargin:'-35% 0px -55% 0px',threshold:0});
+    sections.forEach(function(section){sectionObserver.observe(section)});
+  }
