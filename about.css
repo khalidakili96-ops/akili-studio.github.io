@@ -1,23 +1,317 @@
-undefined
+/* Akili Studio — About page V6
+   Art-directed editorial system. Only Akili dark + mission light are used as solid backgrounds. */
 
-/* ABOUT V6 — final micro-adjustment: slightly smaller headings, larger body copy */
-.about6-founder-grid h2{
-  font-size:clamp(60px,6.9vw,98px);
-}
-.about6-founder-grid p{
-  font-size:14px;
-  line-height:1.9;
-}
-.about6-vision-mission> .container>h2{
-  font-size:clamp(60px,7.3vw,104px);
-}
-.about6-vm-grid p{
-  font-size:14px;
-  line-height:1.9;
+.about-v6{--about-dark:#292724;--about-light:#eee9e0;--about-gold:#af863f;--about-ink:#211f1b;--about-muted:#625c54;overflow:hidden}
+.about-v6 section{position:relative;box-sizing:border-box}
+.about6-hero{height:100svh;min-height:680px;color:#fff;display:flex;align-items:center;overflow:hidden}
+.about6-hero-media,.about6-hero-shade{position:absolute;inset:0}
+.about6-hero-media{background:var(--about-dark)}
+.about6-hero-media img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.78) contrast(1.03)}
+.about6-hero-shade{background:linear-gradient(90deg,#12110fe6 0%,#12110f72 54%,#12110f18 100%),linear-gradient(0deg,#090807cc 0%,transparent 58%)}
+.about6-hero-inner{position:relative;z-index:2;width:100%;height:100%;padding-top:32px;padding-bottom:30px;display:flex;flex-direction:column;justify-content:space-between}
+.about6-kicker,.about6-meta{display:flex;justify-content:space-between;gap:30px;font:400 8px/1 var(--font-secondary);letter-spacing:.16em;text-transform:uppercase}
+.about6-title{align-self:flex-start;display:flex;flex-direction:column;font:400 clamp(78px,11.5vw,174px)/.77 var(--font);letter-spacing:-.065em}
+.about6-title span:nth-child(2){padding-left:1.08em}
+.about6-title i{font-style:normal;color:#d3a65c;padding-left:2.08em}
+.about6-meta{color:#d6d0c7}
+.about6-label{display:block;font:400 8px/1 var(--font-secondary);letter-spacing:.17em;text-transform:uppercase;color:var(--about-gold)}
+.about6-section-head{display:flex;justify-content:space-between;align-items:flex-start;gap:40px}
+.about6-section-head .eyebrow{margin:0;color:inherit}
+
+.about6-pov{background:var(--about-light);color:var(--about-ink);padding:150px 0 140px}
+.about6-pov-intro{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:8vw;align-items:end;margin-top:78px}
+.about6-pov-intro h2{font:400 clamp(72px,9.3vw,138px)/.77 var(--font);letter-spacing:-.065em;margin:0}
+.about6-pov-intro h2 i{font-style:normal;color:var(--about-gold)}
+.about6-pov-intro>p{max-width:370px;margin:0 0 8px;border-left:1px solid #cfc7bb;padding-left:30px;font:400 11px/1.9 var(--font-secondary);color:var(--about-muted)}
+.about6-pov-list{margin-top:115px;border-top:1px solid #cfc7bb}
+.about6-pov-list>div{display:grid;grid-template-columns:65px minmax(190px,1fr) minmax(280px,.72fr);gap:20px;align-items:center;min-height:105px;border-bottom:1px solid #cfc7bb}
+.about6-pov-list span{font:400 8px/1 var(--font-secondary);letter-spacing:.16em;color:var(--about-gold)}
+.about6-pov-list b{font:400 clamp(28px,3vw,46px)/1 var(--font);letter-spacing:-.03em}
+.about6-pov-list p{margin:0;max-width:380px;justify-self:end;font:400 10px/1.7 var(--font-secondary);color:var(--about-muted)}
+
+.about6-philosophy{background:var(--about-dark);color:#fff;min-height:980px;overflow:hidden}
+.about6-philosophy-image{position:absolute;inset:0 0 0 51%;overflow:hidden}
+.about6-philosophy-image img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.72) contrast(1.03)}
+.about6-philosophy:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--about-dark) 0%,#292724f7 38%,#29272455 67%,#29272418 100%);pointer-events:none}
+.about6-philosophy-inner{position:relative;z-index:2;min-height:980px;display:grid;grid-template-columns:minmax(0,.85fr) minmax(360px,.75fr);gap:8vw;align-items:center}
+.about6-philosophy-copy{padding:120px 0}
+.about6-philosophy-copy h2{font:400 clamp(70px,8vw,118px)/.77 var(--font);letter-spacing:-.06em;margin:72px 0 38px}
+.about6-philosophy-copy h2 i{font-style:normal;color:#d3a65c}
+.about6-philosophy-lead{max-width:390px;margin:0;color:#c4beb5;font:400 11px/1.9 var(--font-secondary)}
+.about6-philosophy-principles{border-top:1px solid #55514a}
+.about6-philosophy-principles>div{display:grid;grid-template-columns:45px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid #55514a;transition:padding .45s cubic-bezier(.22,1,.36,1),background .45s ease}
+.about6-philosophy-principles>div>span{font:400 8px/1 var(--font-secondary);letter-spacing:.16em;color:#d3a65c;padding-top:6px}
+.about6-philosophy-principles b{font:400 28px/1 var(--font);letter-spacing:-.025em}
+.about6-philosophy-principles p{max-height:0;overflow:hidden;opacity:0;margin:0;color:#bdb7ad;font:400 10px/1.75 var(--font-secondary);transition:max-height .55s ease,opacity .45s ease,margin .45s ease}
+.about6-philosophy-principles>div.is-active{padding:28px 22px;background:#292724}
+.about6-philosophy-principles>div.is-active p{max-height:100px;opacity:1;margin-top:14px}
+
+.about6-beliefs{background:var(--about-light);color:var(--about-ink);padding:145px 0 135px}
+.about6-beliefs-head{display:flex;justify-content:space-between;align-items:end;gap:50px}
+.about6-beliefs-head h2{font:400 clamp(55px,6.5vw,92px)/.8 var(--font);letter-spacing:-.055em;margin:0}
+.about6-beliefs-head h2 i{font-style:normal;color:var(--about-gold)}
+.about6-beliefs-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:100px;border-top:1px solid #cfc7bb;border-bottom:1px solid #cfc7bb}
+.about6-beliefs-grid>div{min-height:280px;padding:24px 22px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid #cfc7bb}
+.about6-beliefs-grid>div:first-child{border-left:1px solid #cfc7bb}
+.about6-beliefs-grid span{font:400 8px/1 var(--font-secondary);letter-spacing:.16em;color:var(--about-gold)}
+.about6-beliefs-grid b{font:400 clamp(27px,2.5vw,39px)/1 var(--font);letter-spacing:-.025em}
+.about6-beliefs-grid p{margin:0;font:400 10px/1.6 var(--font-secondary);color:var(--about-muted)}
+
+.about6-method{background:var(--about-dark);color:#fff;padding:150px 0 155px}
+.about6-method-head{display:flex;justify-content:space-between;align-items:end;gap:70px;margin-bottom:105px}
+.about6-method-head h2{font:400 clamp(68px,8vw,116px)/.77 var(--font);letter-spacing:-.06em;margin:58px 0 0}
+.about6-method-head h2 i{font-style:normal;color:#d3a65c}
+.about6-method-head>p{max-width:350px;margin:0 0 5px;color:#bdb7ad;font:400 11px/1.9 var(--font-secondary)}
+.about6-method-list{border-top:1px solid #55514a;border-bottom:1px solid #55514a}
+.about6-method-list>div{display:grid;grid-template-columns:60px minmax(180px,.7fr) 1fr;gap:25px;align-items:center;min-height:125px;border-bottom:1px solid #55514a}
+.about6-method-list>div:last-child{border-bottom:0}
+.about6-method-list span{font:400 8px/1 var(--font-secondary);letter-spacing:.16em;color:#d3a65c}
+.about6-method-list b{font:400 clamp(28px,3vw,44px)/1 var(--font);letter-spacing:-.03em}
+.about6-method-list p{margin:0;max-width:390px;color:#bdb7ad;font:400 10px/1.75 var(--font-secondary)}
+
+.about6-vision-mission{background:var(--about-light);color:var(--about-ink);padding:150px 0 155px}
+.about6-vision-mission> .container>h2{font:400 clamp(72px,9vw,132px)/.77 var(--font);letter-spacing:-.065em;margin:75px 0 105px}
+.about6-vision-mission> .container>h2 i{font-style:normal;color:var(--about-gold)}
+.about6-vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid #cfc7bb}
+.about6-vm-grid>div{padding:30px 45px 0 0;border-right:1px solid #cfc7bb}
+.about6-vm-grid>div+div{padding-left:45px;padding-right:0;border-right:0}
+.about6-vm-grid span{font:400 8px/1 var(--font-secondary);letter-spacing:.17em;color:var(--about-gold)}
+.about6-vm-grid p{max-width:480px;margin:27px 0 0;font:400 11px/1.9 var(--font-secondary);color:var(--about-muted)}
+.about6-vm-grid p+p{margin-top:18px}
+
+.about6-close{height:760px;color:#fff;display:flex;align-items:center;overflow:hidden;background:var(--about-dark)}
+.about6-close>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.78)}
+.about6-close-overlay{position:absolute;inset:0;background:linear-gradient(90deg,#12110fe3 0%,#12110f65 56%,#12110f18 100%),linear-gradient(0deg,#090807cc 0%,transparent 60%)}
+.about6-close .container{position:relative;z-index:2;width:100%}
+.about6-close h2{font:400 clamp(74px,10vw,148px)/.76 var(--font);letter-spacing:-.065em;margin:62px 0 46px}
+.about6-close h2 i{font-style:normal;color:#d3a65c}
+.about6-close .button{display:inline-flex;position:relative;z-index:3}
+
+@media(max-width:900px){
+  .about6-hero{min-height:640px}
+  .about6-hero-inner{padding-left:5vw;padding-right:5vw}
+  .about6-pov-intro{grid-template-columns:1fr;gap:45px}
+  .about6-pov-list>div{grid-template-columns:55px 1fr;min-height:120px}
+  .about6-pov-list p{grid-column:2;justify-self:start}
+  .about6-philosophy{min-height:auto}
+  .about6-philosophy-image{position:relative;inset:auto;height:480px}
+  .about6-philosophy:after{background:linear-gradient(0deg,var(--about-dark) 0%,#29272422 65%,#29272418 100%)}
+  .about6-philosophy-inner{min-height:auto;display:block}
+  .about6-philosophy-copy{padding:95px 0 55px}
+  .about6-philosophy-principles{padding-bottom:90px}
+  .about6-beliefs-head{align-items:flex-start;flex-direction:column;gap:35px}
+  .about6-beliefs-grid{grid-template-columns:1fr 1fr}
+  .about6-beliefs-grid>div:nth-child(odd){border-left:1px solid #cfc7bb}
+  .about6-method-head{align-items:flex-start;flex-direction:column;gap:35px}
+  .about6-method-list>div{grid-template-columns:55px 1fr}
+  .about6-method-list p{grid-column:2;padding-bottom:24px}
+  .about6-vm-grid{grid-template-columns:1fr}
+  .about6-vm-grid>div,.about6-vm-grid>div+div{padding:28px 0 35px;border-right:0;border-bottom:1px solid #cfc7bb}
+  .about6-vm-grid>div:last-child{border-bottom:0}
 }
 @media(max-width:760px){
-  .about6-founder-grid h2{font-size:53px}
-  .about6-founder-grid p{font-size:12.5px;line-height:1.85}
-  .about6-vision-mission> .container>h2{font-size:53px}
-  .about6-vm-grid p{font-size:12.5px;line-height:1.85}
+  .about6-hero{height:calc(100svh - 76px);min-height:590px}
+  .about6-kicker,.about6-meta{font-size:7px}
+  .about6-kicker span:last-child,.about6-meta span:last-child{display:none}
+  .about6-title{font-size:clamp(58px,16vw,94px)}
+  .about6-title span:nth-child(2){padding-left:.7em}
+  .about6-title i{padding-left:1.35em}
+  .about6-pov,.about6-beliefs,.about6-method,.about6-vision-mission{padding:95px 0}
+  .about6-pov-intro{margin-top:55px}
+  .about6-pov-intro h2{font-size:clamp(52px,14vw,76px)}
+  .about6-pov-intro>p{padding-left:20px}
+  .about6-pov-list{margin-top:65px}
+  .about6-pov-list>div{grid-template-columns:38px 1fr;gap:10px;min-height:118px}
+  .about6-pov-list b{font-size:29px}
+  .about6-pov-list p{font-size:10px;line-height:1.7}
+  .about6-philosophy-image{height:360px}
+  .about6-philosophy-copy{padding:75px 0 45px}
+  .about6-philosophy-copy h2{font-size:58px;margin:55px 0 28px}
+  .about6-philosophy-principles>div{grid-template-columns:38px 1fr;gap:10px;padding:20px 0}
+  .about6-philosophy-principles>div.is-active{padding:24px 14px}
+  .about6-philosophy-principles b{font-size:25px}
+  .about6-beliefs-head h2{font-size:52px}
+  .about6-beliefs-grid{grid-template-columns:1fr}
+  .about6-beliefs-grid>div{min-height:180px;border-left:1px solid #cfc7bb!important}
+  .about6-beliefs-grid>div+div{border-top:0}
+  .about6-method-head h2{font-size:58px}
+  .about6-method-list>div{min-height:105px;grid-template-columns:38px 1fr;gap:10px}
+  .about6-method-list b{font-size:27px}
+  .about6-method-list p{font-size:10px;line-height:1.7}
+  .about6-vision-mission> .container>h2{font-size:58px;margin:55px 0 65px}
+  .about6-vm-grid p{font-size:10.5px;line-height:1.8}
+  .about6-close{height:620px}
+  .about6-close h2{font-size:62px;margin:55px 0 38px}
+}
+@media(prefers-reduced-motion:reduce){
+  .about6-philosophy-principles>div{transition:none}
+}
+
+/* ABOUT V6 — final art direction */
+.about6-beliefs{padding-top:155px;padding-bottom:155px}
+.about6-beliefs-head{display:block}
+.about6-beliefs-head .about6-label{margin-bottom:62px}
+.about6-beliefs-head h2{font-size:clamp(64px,8vw,116px);max-width:760px}
+.about6-beliefs-grid{grid-template-columns:repeat(4,1fr);margin-top:115px;border:0;border-top:1px solid #cfc7bb;border-bottom:1px solid #cfc7bb}
+.about6-beliefs-grid>div{min-height:245px;padding:25px 24px 25px 0;border-right:0;border-left:0!important;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.about6-beliefs-grid>div+div{padding-left:24px}
+.about6-beliefs-grid>div:hover{transform:translateY(-7px)}
+.about6-beliefs-grid b{font-size:clamp(34px,3.2vw,52px)}
+.about6-beliefs-grid p{opacity:0;transform:translateY(8px);transition:opacity .35s ease,transform .35s ease}
+.about6-beliefs-grid>div:hover p{opacity:1;transform:translateY(0)}
+
+.about6-method{padding-top:160px;padding-bottom:165px}
+.about6-method-head{margin-bottom:92px}
+.about6-method-list{display:grid;grid-template-columns:repeat(5,1fr);border:0;position:relative}
+.about6-method-list:before{content:'';position:absolute;left:0;right:0;top:8px;height:1px;background:#55514a}
+.about6-method-list>div{display:block;min-height:205px;padding:42px 25px 0 0;border:0;border-right:1px solid #55514a;position:relative}
+.about6-method-list>div+div{padding-left:25px}
+.about6-method-list>div:last-child{border-right:0}
+.about6-method-list>div>span{display:block;position:relative;margin-bottom:34px}
+.about6-method-list b{display:block;font-size:clamp(24px,2.3vw,37px)}
+.about6-method-list p{margin-top:17px;max-width:190px}
+.about6-method-list>div:after{content:'';position:absolute;top:3px;left:0;width:10px;height:10px;border:1px solid #d3a65c;border-radius:50%;background:#292724;transition:transform .4s ease,background .4s ease}
+.about6-method-list>div:hover:after{transform:scale(1.45);background:#d3a65c}
+
+.about6-founder{background:var(--about-light);color:var(--about-ink);padding:155px 0 165px}
+.about6-founder-head{display:flex;justify-content:space-between;align-items:flex-start}
+.about6-founder-head .eyebrow{margin:0}
+.about6-founder-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:9vw;align-items:end;margin-top:105px}
+.about6-founder-grid h2{font:400 clamp(70px,8.5vw,125px)/.77 var(--font);letter-spacing:-.06em;margin:0}
+.about6-founder-grid h2 i{font-style:normal;color:var(--about-gold)}
+.about6-founder-grid>div{border-left:1px solid #cfc7bb;padding-left:35px;max-width:390px}
+.about6-founder-role{font:400 8px/1 var(--font-secondary);letter-spacing:.17em;text-transform:uppercase;color:var(--about-gold)}
+.about6-founder-grid p{font:400 11px/1.9 var(--font-secondary);color:var(--about-muted);margin:28px 0 0}
+
+.about6-vision-mission{padding-top:155px}
+.about6-vm-grid span{font-size:8px}
+.about6-vm-grid p{font-size:11px}
+
+@media(max-width:900px){
+  .about6-beliefs-grid{grid-template-columns:1fr 1fr}
+  .about6-beliefs-grid>div{min-height:210px;padding-left:0}
+  .about6-beliefs-grid>div+div{padding-left:20px}
+  .about6-method-list{grid-template-columns:1fr}
+  .about6-method-list:before{left:4px;right:auto;top:0;bottom:0;width:1px;height:auto}
+  .about6-method-list>div,.about6-method-list>div+div{min-height:auto;padding:28px 0 34px 40px;border:0}
+  .about6-method-list>div>span{margin-bottom:18px}
+  .about6-method-list>div:after{left:0;top:31px}
+  .about6-method-list p{max-width:420px}
+  .about6-founder-grid{grid-template-columns:1fr;gap:55px;margin-top:75px}
+  .about6-founder-grid>div{padding-left:25px}
+}
+@media(max-width:760px){
+  .about6-beliefs{padding:100px 0}
+  .about6-beliefs-head .about6-label{margin-bottom:50px}
+  .about6-beliefs-head h2{font-size:52px}
+  .about6-beliefs-grid{grid-template-columns:1fr;margin-top:70px}
+  .about6-beliefs-grid>div,.about6-beliefs-grid>div+div{min-height:150px;padding:22px 0}
+  .about6-beliefs-grid p{opacity:1;transform:none;margin-top:12px}
+  .about6-method{padding:105px 0}
+  .about6-method-head{margin-bottom:65px}
+  .about6-method-list>div,.about6-method-list>div+div{padding-left:32px}
+  .about6-founder{padding:100px 0}
+  .about6-founder-grid h2{font-size:58px}
+  .about6-founder-grid{margin-top:60px}
+}
+
+.about6-page-nav{position:fixed;z-index:30;right:28px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:7px;padding:8px 0}
+.about6-page-nav button{appearance:none;border:0;background:transparent;padding:6px;cursor:pointer;display:flex;align-items:center;gap:7px;color:#fff;opacity:.5;font:400 7px/1 var(--font-secondary);letter-spacing:.14em}
+.about6-page-nav button span{display:block;width:17px;text-align:right}
+.about6-page-nav button:after{content:'';display:block;width:4px;height:4px;border:1px solid currentColor;border-radius:50%;transition:transform .3s ease,background .3s ease}
+.about6-page-nav button.is-active{opacity:1}
+.about6-page-nav button.is-active:after{background:currentColor;transform:scale(1.35)}
+.about6-page-nav button:focus-visible{outline:1px solid currentColor;outline-offset:3px}
+@media(max-width:900px){.about6-page-nav{display:none}}
+
+/* ABOUT V6 — section refinement pass
+   Preserve the frozen structure and palette while improving editorial rhythm. */
+.about6-pov-list>div{grid-template-columns:48px minmax(190px,1fr) minmax(300px,.72fr);min-height:118px}
+.about6-pov-list b{letter-spacing:-.035em}
+.about6-pov-list p{line-height:1.8}
+.about6-philosophy-principles>div{background:transparent}
+.about6-philosophy-principles>div.is-active{background:rgba(255,255,255,.025)}
+.about6-beliefs-grid>div:hover{transform:none}
+.about6-beliefs-grid>div:focus-within{transform:none}
+.about6-beliefs-grid p{transition:opacity .35s ease,transform .35s ease}
+.about6-method-list:before{background:linear-gradient(90deg,#d3a65c 0%,#55514a 18%,#55514a 100%)}
+.about6-vision-mission> .container>h2{max-width:920px}
+.about6-vm-grid{margin-top:0}
+.about6-page-nav.is-light button{color:var(--about-ink)}
+.about6-page-nav.is-light button.is-active:after{background:currentColor}
+@media(max-width:900px){
+.about6-pov-list>div{grid-template-columns:55px 1fr;min-height:120px}
+.about6-method-list:before{background:#55514a}
+}
+@media(max-width:760px){.about6-pov-list>div{grid-template-columns:38px 1fr;min-height:118px}}
+
+/* ABOUT V6 — typography, spacing & margin correction
+   Final refinement: consistent editorial scale, alignment and breathing room. */
+.about-v6{--about-gutter:28px}
+.about-v6 .about6-label{font:500 8.5px/1 var(--font-secondary);letter-spacing:.19em}
+.about-v6 .eyebrow{font:500 10px/1.4 var(--font-secondary);letter-spacing:.18em}
+.about-v6 p{font-weight:400}
+.about6-title{font-weight:500}
+.about6-kicker,.about6-meta{font-size:8px;line-height:1.2;letter-spacing:.18em}
+.about6-pov{padding:132px 0 138px}
+.about6-pov-intro{margin-top:72px;gap:9vw}
+.about6-pov-intro h2{font-size:clamp(64px,7.8vw,108px);line-height:.8;font-weight:500}
+.about6-pov-intro>p{max-width:390px;margin-bottom:4px;padding-left:26px;font-size:11px;line-height:1.85}
+.about6-pov-list{margin-top:100px}
+.about6-pov-list>div{grid-template-columns:54px minmax(180px,1fr) minmax(300px,.72fr);min-height:112px;gap:24px}
+.about6-pov-list b{font-size:clamp(27px,2.55vw,38px);line-height:1;font-weight:500}
+.about6-pov-list p{max-width:390px;font-size:10.5px;line-height:1.8}
+.about6-philosophy{min-height:900px}
+.about6-philosophy-inner{min-height:900px;grid-template-columns:minmax(0,.82fr) minmax(350px,.68fr);gap:7vw}
+.about6-philosophy-copy{padding:105px 0}
+.about6-philosophy-copy h2{font-size:clamp(64px,7.2vw,102px);line-height:.8;font-weight:500;margin:64px 0 34px}
+.about6-philosophy-lead{max-width:400px;font-size:11px;line-height:1.85}
+.about6-philosophy-principles>div{grid-template-columns:42px 1fr;gap:18px;padding:20px 0}
+.about6-philosophy-principles>div.is-active{padding:25px 20px}
+.about6-philosophy-principles b{font-size:26px;font-weight:500}
+.about6-philosophy-principles p{font-size:10px;line-height:1.75}
+.about6-beliefs{padding:132px 0 138px}
+.about6-beliefs-head .about6-label{margin-bottom:55px}
+.about6-beliefs-head h2{max-width:720px;font-size:clamp(60px,7.2vw,102px);line-height:.8;font-weight:500}
+.about6-beliefs-grid{margin-top:92px}
+.about6-beliefs-grid>div{min-height:230px;padding:23px 22px 23px 0}
+.about6-beliefs-grid>div+div{padding-left:22px}
+.about6-beliefs-grid b{font-size:clamp(30px,2.8vw,43px);line-height:1;font-weight:500}
+.about6-beliefs-grid p{font-size:10.5px;line-height:1.7}
+.about6-method{padding:138px 0 145px}
+.about6-method-head{margin-bottom:86px}
+.about6-method-head h2{font-size:clamp(64px,7.3vw,104px);line-height:.8;font-weight:500;margin-top:54px}
+.about6-method-head>p{max-width:360px;font-size:11px;line-height:1.85}
+.about6-method-list>div{min-height:190px;padding-top:39px}
+.about6-method-list>div+div{padding-left:24px}
+.about6-method-list>div>span{margin-bottom:30px}
+.about6-method-list b{font-size:clamp(22px,2.1vw,32px);font-weight:500}
+.about6-method-list p{max-width:190px;margin-top:15px;font-size:10px;line-height:1.75}
+.about6-founder{padding:138px 0 148px}
+.about6-founder-grid{grid-template-columns:1.1fr .9fr;gap:8vw;margin-top:92px}
+.about6-founder-grid h2{font-size:clamp(64px,7.4vw,106px);line-height:.8;font-weight:500}
+.about6-founder-grid>div{padding-left:32px;max-width:400px}
+.about6-founder-grid p{margin-top:25px;font-size:11px;line-height:1.85}
+.about6-vision-mission{padding:138px 0 148px}
+.about6-vision-mission> .container>h2{max-width:820px;font-size:clamp(64px,7.8vw,110px);line-height:.8;font-weight:500;margin:68px 0 92px}
+.about6-vm-grid>div{padding-top:28px}
+.about6-vm-grid>div+div{padding-left:42px}
+.about6-vm-grid span{font:500 8px/1 var(--font-secondary);letter-spacing:.18em}
+.about6-vm-grid p{max-width:500px;margin-top:24px;font-size:11px;line-height:1.85}
+.about6-close{height:720px}
+.about6-close h2{font-size:clamp(68px,8.5vw,122px);line-height:.78;font-weight:500;margin:58px 0 42px}
+@media(min-width:901px){.about-v6 .container{width:min(1180px,calc(100% - 56px))}}
+@media(max-width:900px){
+.about6-pov,.about6-beliefs,.about6-method,.about6-founder,.about6-vision-mission{padding-top:105px;padding-bottom:110px}
+.about6-pov-intro{margin-top:58px}.about6-pov-list{margin-top:72px}.about6-philosophy-copy{padding:82px 0 50px}.about6-philosophy-copy h2{margin-top:54px}.about6-beliefs-head .about6-label{margin-bottom:48px}.about6-beliefs-grid{margin-top:78px}.about6-method-head{margin-bottom:70px}.about6-founder-grid{margin-top:70px}.about6-vision-mission> .container>h2{margin-top:58px;margin-bottom:72px}}
+@media(max-width:760px){
+.about-v6 .container{width:calc(100% - 36px)}.about-v6 .about6-label{font-size:8px;letter-spacing:.18em}.about-v6 .eyebrow{font-size:9px;letter-spacing:.17em}
+.about6-pov,.about6-beliefs,.about6-method,.about6-founder,.about6-vision-mission{padding-top:88px;padding-bottom:92px}
+.about6-pov-intro{margin-top:48px;gap:34px}.about6-pov-intro h2{font-size:clamp(50px,13.5vw,70px)}.about6-pov-intro>p{max-width:430px;padding-left:18px;font-size:10.5px;line-height:1.8}.about6-pov-list{margin-top:58px}.about6-pov-list>div{min-height:112px}.about6-pov-list b{font-size:27px}.about6-pov-list p{font-size:10px;line-height:1.75}
+.about6-philosophy-image{height:340px}.about6-philosophy-copy{padding:68px 0 42px}.about6-philosophy-copy h2{font-size:56px;margin:48px 0 27px}.about6-philosophy-lead{font-size:10.5px;line-height:1.8}.about6-philosophy-principles>div{padding:18px 0}.about6-philosophy-principles>div.is-active{padding:22px 12px}.about6-philosophy-principles b{font-size:24px}.about6-philosophy-principles p{font-size:10px;line-height:1.7}
+.about6-beliefs-head h2{font-size:50px}.about6-beliefs-head .about6-label{margin-bottom:44px}.about6-beliefs-grid{margin-top:62px}.about6-beliefs-grid>div,.about6-beliefs-grid>div+div{min-height:145px;padding:20px 0}.about6-beliefs-grid b{font-size:31px}.about6-beliefs-grid p{font-size:10px;line-height:1.7}
+.about6-method{padding-top:92px;padding-bottom:98px}.about6-method-head{margin-bottom:58px}.about6-method-head h2{font-size:56px}.about6-method-head>p{font-size:10.5px;line-height:1.8}.about6-method-list>div,.about6-method-list>div+div{padding-left:31px;padding-top:25px;padding-bottom:30px}.about6-method-list b{font-size:25px}.about6-method-list p{font-size:10px;line-height:1.7}
+.about6-founder{padding-top:92px;padding-bottom:100px}.about6-founder-grid{margin-top:58px;gap:48px}.about6-founder-grid h2{font-size:56px}.about6-founder-grid>div{padding-left:20px}.about6-founder-grid p{font-size:10.5px;line-height:1.8}
+.about6-vision-mission{padding-top:92px;padding-bottom:100px}.about6-vision-mission> .container>h2{font-size:56px;margin:52px 0 62px}.about6-vm-grid p{font-size:10.5px;line-height:1.8}
+.about6-close{height:600px}.about6-close h2{font-size:60px;margin:52px 0 36px}
 }
