@@ -301,3 +301,456 @@
     min-height:118px;
   }
 }
+
+
+/* ABOUT V6 — typography, spacing & margin correction
+   Final refinement: consistent editorial scale, alignment and breathing room. */
+
+.about-v6{
+  --about-gutter:28px;
+}
+
+/* Shared type contract */
+.about-v6 .about6-label{
+  font:500 8.5px/1 var(--font-secondary);
+  letter-spacing:.19em;
+}
+.about-v6 .eyebrow{
+  font:500 10px/1.4 var(--font-secondary);
+  letter-spacing:.18em;
+}
+.about-v6 p{
+  font-weight:400;
+}
+
+/* 01 — Hero */
+.about6-title{
+  font-weight:500;
+}
+.about6-kicker,.about6-meta{
+  font-size:8px;
+  line-height:1.2;
+  letter-spacing:.18em;
+}
+
+/* 02 — Point of View */
+.about6-pov{
+  padding:132px 0 138px;
+}
+.about6-pov-intro{
+  margin-top:72px;
+  gap:9vw;
+}
+.about6-pov-intro h2{
+  font-size:clamp(64px,7.8vw,108px);
+  line-height:.8;
+  font-weight:500;
+}
+.about6-pov-intro>p{
+  max-width:390px;
+  margin-bottom:4px;
+  padding-left:26px;
+  font-size:11px;
+  line-height:1.85;
+}
+.about6-pov-list{
+  margin-top:100px;
+}
+.about6-pov-list>div{
+  grid-template-columns:54px minmax(180px,1fr) minmax(300px,.72fr);
+  min-height:112px;
+  gap:24px;
+}
+.about6-pov-list b{
+  font-size:clamp(27px,2.55vw,38px);
+  line-height:1;
+  font-weight:500;
+}
+.about6-pov-list p{
+  max-width:390px;
+  font-size:10.5px;
+  line-height:1.8;
+}
+
+/* 03 — Philosophy */
+.about6-philosophy{
+  min-height:900px;
+}
+.about6-philosophy-inner{
+  min-height:900px;
+  grid-template-columns:minmax(0,.82fr) minmax(350px,.68fr);
+  gap:7vw;
+}
+.about6-philosophy-copy{
+  padding:105px 0;
+}
+.about6-philosophy-copy h2{
+  font-size:clamp(64px,7.2vw,102px);
+  line-height:.8;
+  font-weight:500;
+  margin:64px 0 34px;
+}
+.about6-philosophy-lead{
+  max-width:400px;
+  font-size:11px;
+  line-height:1.85;
+}
+.about6-philosophy-principles>div{
+  grid-template-columns:42px 1fr;
+  gap:18px;
+  padding:20px 0;
+}
+.about6-philosophy-principles>div.is-active{
+  padding:25px 20px;
+}
+.about6-philosophy-principles b{
+  font-size:26px;
+  font-weight:500;
+}
+.about6-philosophy-principles p{
+  font-size:10px;
+  line-height:1.75;
+}
+
+/* 04 — What We Believe */
+.about6-beliefs{
+  padding:132px 0 138px;
+}
+.about6-beliefs-head .about6-label{
+  margin-bottom:55px;
+}
+.about6-beliefs-head h2{
+  max-width:720px;
+  font-size:clamp(60px,7.2vw,102px);
+  line-height:.8;
+  font-weight:500;
+}
+.about6-beliefs-grid{
+  margin-top:92px;
+}
+.about6-beliefs-grid>div{
+  min-height:230px;
+  padding:23px 22px 23px 0;
+}
+.about6-beliefs-grid>div+div{
+  padding-left:22px;
+}
+.about6-beliefs-grid b{
+  font-size:clamp(30px,2.8vw,43px);
+  line-height:1;
+  font-weight:500;
+}
+.about6-beliefs-grid p{
+  font-size:10.5px;
+  line-height:1.7;
+}
+
+/* 05 — Method */
+.about6-method{
+  padding:138px 0 145px;
+}
+.about6-method-head{
+  margin-bottom:86px;
+}
+.about6-method-head h2{
+  font-size:clamp(64px,7.3vw,104px);
+  line-height:.8;
+  font-weight:500;
+  margin-top:54px;
+}
+.about6-method-head>p{
+  max-width:360px;
+  font-size:11px;
+  line-height:1.85;
+}
+.about6-method-list>div{
+  min-height:190px;
+  padding-top:39px;
+}
+.about6-method-list>div+div{
+  padding-left:24px;
+}
+.about6-method-list>div>span{
+  margin-bottom:30px;
+}
+.about6-method-list b{
+  font-size:clamp(22px,2.1vw,32px);
+  font-weight:500;
+}
+.about6-method-list p{
+  max-width:190px;
+  margin-top:15px;
+  font-size:10px;
+  line-height:1.75;
+}
+
+/* 06 — Founder */
+.about6-founder{
+  padding:138px 0 148px;
+}
+.about6-founder-grid{
+  grid-template-columns:1.1fr .9fr;
+  gap:8vw;
+  margin-top:92px;
+}
+.about6-founder-grid h2{
+  font-size:clamp(64px,7.4vw,106px);
+  line-height:.8;
+  font-weight:500;
+}
+.about6-founder-grid>div{
+  padding-left:32px;
+  max-width:400px;
+}
+.about6-founder-grid p{
+  margin-top:25px;
+  font-size:11px;
+  line-height:1.85;
+}
+
+/* 07 — Vision / Mission */
+.about6-vision-mission{
+  padding:138px 0 148px;
+}
+.about6-vision-mission> .container>h2{
+  max-width:820px;
+  font-size:clamp(64px,7.8vw,110px);
+  line-height:.8;
+  font-weight:500;
+  margin:68px 0 92px;
+}
+.about6-vm-grid>div{
+  padding-top:28px;
+}
+.about6-vm-grid>div+div{
+  padding-left:42px;
+}
+.about6-vm-grid span{
+  font:500 8px/1 var(--font-secondary);
+  letter-spacing:.18em;
+}
+.about6-vm-grid p{
+  max-width:500px;
+  margin-top:24px;
+  font-size:11px;
+  line-height:1.85;
+}
+
+/* 08 — Closing */
+.about6-close{
+  height:720px;
+}
+.about6-close h2{
+  font-size:clamp(68px,8.5vw,122px);
+  line-height:.78;
+  font-weight:500;
+  margin:58px 0 42px;
+}
+
+/* Desktop alignment: keep every section on the same 1180px editorial grid. */
+@media(min-width:901px){
+  .about-v6 .container{
+    width:min(1180px,calc(100% - 56px));
+  }
+}
+
+/* Tablet */
+@media(max-width:900px){
+  .about6-pov,.about6-beliefs,.about6-method,.about6-founder,.about6-vision-mission{
+    padding-top:105px;
+    padding-bottom:110px;
+  }
+  .about6-pov-intro{
+    margin-top:58px;
+  }
+  .about6-pov-list{
+    margin-top:72px;
+  }
+  .about6-philosophy-copy{
+    padding:82px 0 50px;
+  }
+  .about6-philosophy-copy h2{
+    margin-top:54px;
+  }
+  .about6-beliefs-head .about6-label{
+    margin-bottom:48px;
+  }
+  .about6-beliefs-grid{
+    margin-top:78px;
+  }
+  .about6-method-head{
+    margin-bottom:70px;
+  }
+  .about6-founder-grid{
+    margin-top:70px;
+  }
+  .about6-vision-mission> .container>h2{
+    margin-top:58px;
+    margin-bottom:72px;
+  }
+}
+
+/* Mobile: larger body copy, controlled display scale, consistent 18px side margin. */
+@media(max-width:760px){
+  .about-v6 .container{
+    width:calc(100% - 36px);
+  }
+  .about-v6 .about6-label{
+    font-size:8px;
+    letter-spacing:.18em;
+  }
+  .about-v6 .eyebrow{
+    font-size:9px;
+    letter-spacing:.17em;
+  }
+
+  .about6-pov,.about6-beliefs,.about6-method,.about6-founder,.about6-vision-mission{
+    padding-top:88px;
+    padding-bottom:92px;
+  }
+
+  .about6-pov-intro{
+    margin-top:48px;
+    gap:34px;
+  }
+  .about6-pov-intro h2{
+    font-size:clamp(50px,13.5vw,70px);
+  }
+  .about6-pov-intro>p{
+    max-width:430px;
+    padding-left:18px;
+    font-size:10.5px;
+    line-height:1.8;
+  }
+  .about6-pov-list{
+    margin-top:58px;
+  }
+  .about6-pov-list>div{
+    min-height:112px;
+  }
+  .about6-pov-list b{
+    font-size:27px;
+  }
+  .about6-pov-list p{
+    font-size:10px;
+    line-height:1.75;
+  }
+
+  .about6-philosophy-image{
+    height:340px;
+  }
+  .about6-philosophy-copy{
+    padding:68px 0 42px;
+  }
+  .about6-philosophy-copy h2{
+    font-size:56px;
+    margin:48px 0 27px;
+  }
+  .about6-philosophy-lead{
+    font-size:10.5px;
+    line-height:1.8;
+  }
+  .about6-philosophy-principles>div{
+    padding:18px 0;
+  }
+  .about6-philosophy-principles>div.is-active{
+    padding:22px 12px;
+  }
+  .about6-philosophy-principles b{
+    font-size:24px;
+  }
+  .about6-philosophy-principles p{
+    font-size:10px;
+    line-height:1.7;
+  }
+
+  .about6-beliefs-head h2{
+    font-size:50px;
+  }
+  .about6-beliefs-head .about6-label{
+    margin-bottom:44px;
+  }
+  .about6-beliefs-grid{
+    margin-top:62px;
+  }
+  .about6-beliefs-grid>div,
+  .about6-beliefs-grid>div+div{
+    min-height:145px;
+    padding:20px 0;
+  }
+  .about6-beliefs-grid b{
+    font-size:31px;
+  }
+  .about6-beliefs-grid p{
+    font-size:10px;
+    line-height:1.7;
+  }
+
+  .about6-method{
+    padding-top:92px;
+    padding-bottom:98px;
+  }
+  .about6-method-head{
+    margin-bottom:58px;
+  }
+  .about6-method-head h2{
+    font-size:56px;
+  }
+  .about6-method-head>p{
+    font-size:10.5px;
+    line-height:1.8;
+  }
+  .about6-method-list>div,
+  .about6-method-list>div+div{
+    padding-left:31px;
+    padding-top:25px;
+    padding-bottom:30px;
+  }
+  .about6-method-list b{
+    font-size:25px;
+  }
+  .about6-method-list p{
+    font-size:10px;
+    line-height:1.7;
+  }
+
+  .about6-founder{
+    padding-top:92px;
+    padding-bottom:100px;
+  }
+  .about6-founder-grid{
+    margin-top:58px;
+    gap:48px;
+  }
+  .about6-founder-grid h2{
+    font-size:56px;
+  }
+  .about6-founder-grid>div{
+    padding-left:20px;
+  }
+  .about6-founder-grid p{
+    font-size:10.5px;
+    line-height:1.8;
+  }
+
+  .about6-vision-mission{
+    padding-top:92px;
+    padding-bottom:100px;
+  }
+  .about6-vision-mission> .container>h2{
+    font-size:56px;
+    margin:52px 0 62px;
+  }
+  .about6-vm-grid p{
+    font-size:10.5px;
+    line-height:1.8;
+  }
+
+  .about6-close{
+    height:600px;
+  }
+  .about6-close h2{
+    font-size:60px;
+    margin:52px 0 36px;
+  }
+}
