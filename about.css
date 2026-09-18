@@ -780,3 +780,26 @@
   .about6-founder-grid h2{font-size:66px}
   .about6-vision-mission> .container>h2{font-size:66px}
 }
+
+
+/* ABOUT V6 — correction: body copy only for Founder + Vision / Mission */
+.about6-founder-grid h2{
+  font-size:clamp(64px,7.4vw,106px);
+}
+.about6-vision-mission> .container>h2{
+  font-size:clamp(64px,7.8vw,110px);
+}
+.about6-founder-grid p{
+  font-size:13px;
+  line-height:1.9;
+}
+.about6-vm-grid p{
+  font-size:13px;
+  line-height:1.9;
+}
+@media(max-width:760px){
+  .about6-founder-grid h2{font-size:56px}
+  .about6-vision-mission> .container>h2{font-size:56px}
+  .about6-founder-grid p{font-size:12px;line-height:1.85}
+  .about6-vm-grid p{font-size:12px;line-height:1.85}
+}
