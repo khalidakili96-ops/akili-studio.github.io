@@ -54,7 +54,7 @@
 .about6-beliefs{padding:132px 0 138px;background:var(--about-light);color:var(--about-ink)}
 .about6-beliefs-head .about6-label{margin-bottom:55px}
 .about6-beliefs-head h2{max-width:720px;margin:0;font:500 clamp(60px,7.2vw,102px)/.8 var(--font);letter-spacing:-.055em}
-.about6-beliefs-head h2 i{color:var(--about-gold);font-style:normal}
+.about6-beliefs-head h2 i{color:var(--about-gold);font-style:normal}.about6-beliefs-lead{max-width:720px;margin:34px 0 0;color:var(--about-muted);font:400 11px/1.85 var(--font-secondary)}
 .about6-beliefs-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:92px;border-top:1px solid #cfc7bb;border-bottom:1px solid #cfc7bb}
 .about6-beliefs-grid>div{min-height:230px;padding:23px 22px 23px 0;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid #cfc7bb}
 .about6-beliefs-grid>div:first-child{border-left:1px solid #cfc7bb}
@@ -188,7 +188,7 @@
   .about6-philosophy-principles b{font-size:24px}
   .about6-philosophy-principles p{font-size:10px;line-height:1.7}
   .about6-beliefs-head .about6-label{margin-bottom:44px}
-  .about6-beliefs-head h2{font-size:50px}
+  .about6-beliefs-head h2{font-size:50px}.about6-beliefs-lead{font-size:10.5px;line-height:1.8}
   .about6-beliefs-grid{grid-template-columns:1fr;margin-top:62px}
   .about6-beliefs-grid>div,.about6-beliefs-grid>div+div{min-height:145px;padding:20px 0;border-left:1px solid #cfc7bb!important;border-right:0!important}
   .about6-beliefs-grid>div+div{border-top:1px solid #cfc7bb!important}
