@@ -329,3 +329,31 @@
 
 /* About page — remove oversized decorative background words */
 .about-v4-statement-word{display:none!important}
+
+
+/* ABOUT PAGE — two-colour background system */
+body{background:#eee9e0}
+.about-v4-statement{background:#292724}
+.about-pov-list{background:#eee9e0;color:#211f1b}
+.about-pov-list .about-v4-values{border-color:#cfc7bb}
+.about-pov-list .about-v4-values>div{border-color:#cfc7bb}
+.about-pov-list .about-v4-values small{color:#625c54}
+.about-pov-list .about-v4-values span{color:#af863f}
+.about-pov-list .about-v4-values>div:hover{background:#e7e1d8}
+.about-welcome-list{background:#292724}
+.about-philosophy-list{background:#eee9e0;color:#211f1b}
+.about-philosophy-list .about-v4-values{border-color:#cfc7bb}
+.about-philosophy-list .about-v4-values>div{border-color:#cfc7bb}
+.about-philosophy-list .about-v4-values small{color:#625c54}
+.about-philosophy-list .about-v4-values span{color:#af863f}
+.about-philosophy-list .about-v4-values>div:hover{background:#e7e1d8}
+.about-v4-method{background:#292724;color:#fff}
+.about-v4-method .about-v4-method-top>p{color:#bdb7ad}
+.about-v4-method-line{border-color:#55514a}
+.about-v4-method-line>div{border-color:#55514a}
+.about-v4-method-line>div:hover{background:#292724}
+.about-v4-method-line small{color:#bdb7ad}
+.about-v4-mission{background:#eee9e0}
+.about-v4-close{background:#292724}
+.cta{background:#292724}
+footer{background:#292724}
