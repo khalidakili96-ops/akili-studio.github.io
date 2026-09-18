@@ -224,3 +224,80 @@
 .about6-page-nav button.is-active:after{background:currentColor;transform:scale(1.35)}
 .about6-page-nav button:focus-visible{outline:1px solid currentColor;outline-offset:3px}
 @media(max-width:900px){.about6-page-nav{display:none}}
+
+
+/* ABOUT V6 — section refinement pass
+   Preserve the frozen structure and palette while improving editorial rhythm. */
+
+/* 01 — Hero: unchanged by design. */
+
+/* 02 — Point of View: quieter manifesto treatment. */
+.about6-pov-list>div{
+  grid-template-columns:48px minmax(190px,1fr) minmax(300px,.72fr);
+  min-height:118px;
+}
+.about6-pov-list b{
+  letter-spacing:-.035em;
+}
+.about6-pov-list p{
+  line-height:1.8;
+}
+
+/* 03 — Philosophy: retain as the visual centrepiece. */
+.about6-philosophy-principles>div{
+  background:transparent;
+}
+.about6-philosophy-principles>div.is-active{
+  background:rgba(255,255,255,.025);
+}
+
+/* 04 — Beliefs: typography-led, no card-like movement. */
+.about6-beliefs-grid>div:hover{
+  transform:none;
+}
+.about6-beliefs-grid>div:focus-within{
+  transform:none;
+}
+.about6-beliefs-grid p{
+  transition:opacity .35s ease,transform .35s ease;
+}
+
+/* 05 — Method: strengthen the single continuous Akili line. */
+.about6-method-list:before{
+  background:linear-gradient(90deg,#d3a65c 0%,#55514a 18%,#55514a 100%);
+}
+
+/* 06 — Founder: preserve the restrained editorial treatment. */
+
+/* 07 — Vision / Mission: give the statement more breathing room. */
+.about6-vision-mission> .container>h2{
+  max-width:920px;
+}
+.about6-vm-grid{
+  margin-top:0;
+}
+
+/* Section navigation: correct contrast when it crosses light sections. */
+.about6-page-nav.is-light button{
+  color:var(--about-ink);
+}
+.about6-page-nav.is-light button.is-active:after{
+  background:currentColor;
+}
+
+/* Mobile: retain the existing responsive composition. */
+@media(max-width:900px){
+  .about6-pov-list>div{
+    grid-template-columns:55px 1fr;
+    min-height:120px;
+  }
+  .about6-method-list:before{
+    background:#55514a;
+  }
+}
+@media(max-width:760px){
+  .about6-pov-list>div{
+    grid-template-columns:38px 1fr;
+    min-height:118px;
+  }
+}
