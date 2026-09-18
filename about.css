@@ -754,3 +754,17 @@
     margin:52px 0 36px;
   }
 }
+
+
+/* ABOUT V6 — final QA: navigation, interaction and anchor alignment */
+.about6-track{scroll-margin-top:92px}
+.about6-philosophy-principles>div{cursor:pointer}
+.about6-philosophy-principles>div:focus-visible{outline:1px solid #d3a65c;outline-offset:-1px}
+.about6-page-nav button{transition:opacity .3s ease,color .3s ease}
+.about6-page-nav button.is-active span{transform:translateX(-2px);transition:transform .35s cubic-bezier(.22,1,.36,1)}
+@media(max-width:760px){
+  .about6-track{scroll-margin-top:76px}
+}
+@media(prefers-reduced-motion:reduce){
+  .about6-page-nav button,.about6-page-nav button.is-active span{transition:none}
+}
