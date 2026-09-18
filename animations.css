@@ -307,3 +307,22 @@
 .about-philosophy-editorial-intro{min-height:590px;padding:80px 18px}.about-philosophy-editorial-intro h2{font-size:58px;margin:58px 0 30px}.about-philosophy-editorial-body{padding:0 18px 70px;display:block}.about-philosophy-statement{display:grid;grid-template-columns:38px 1fr;gap:8px;padding:25px 0 40px}.about-philosophy-statement strong{font-size:31px}.about-philosophy-statement p{grid-column:2;max-width:290px}.about-philosophy-editorial-body figure,.about-philosophy-editorial-body figure:nth-of-type(2),.about-philosophy-editorial-body figure:nth-of-type(3){margin:0 0 65px}.about-philosophy-editorial-body figure img{height:420px}
 .about-v4-mission{padding:95px 0 100px}.about-mission-grid{gap:45px}.about-mission-grid h2{font-size:58px;margin-top:50px}.about-mission-grid>div:last-child{padding-left:20px}.about-mission-grid>div:last-child p{font-size:11px}
 }
+
+
+/* ABOUT PAGE — principles-style editorial lists */
+.about-editorial-list{padding:135px 0 135px}
+.about-editorial-list .about-list-heading{position:relative;z-index:1;font-size:clamp(58px,7vw,100px);line-height:.82;letter-spacing:-.055em;margin:58px 0 80px;max-width:900px}
+.about-editorial-list .about-list-heading i{font-style:normal;color:var(--gold)}
+.about-editorial-list .about-v4-values{margin-top:0}
+.about-editorial-list .about-v4-values>div{min-height:115px}
+.about-editorial-list .about-v4-values b{font-size:clamp(28px,3vw,46px)}
+.about-editorial-list .about-v4-values small{max-width:390px;justify-self:end}
+.about-welcome-list{background:#302e2a}
+.about-philosophy-list{background:#292724}
+.about-pov-list{background:#292724}
+@media(max-width:760px){
+ .about-editorial-list{padding:95px 0}
+ .about-editorial-list .about-list-heading{font-size:58px;margin:48px 0 55px}
+ .about-editorial-list .about-v4-values>div{min-height:125px}
+ .about-editorial-list .about-v4-values small{justify-self:start}
+}
