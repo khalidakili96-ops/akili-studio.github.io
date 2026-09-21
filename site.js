@@ -115,3 +115,24 @@ if(heroContent&&!reducedMotion&&!touchDevice){window.addEventListener('scroll',(
 const header=document.querySelector('.site-header');
 if(header&&!reducedMotion){const updateHeader=()=>header.classList.toggle('is-scrolled',window.scrollY>24);updateHeader();window.addEventListener('scroll',updateHeader,{passive:true});}
 document.querySelectorAll('.nav-links a').forEach(link=>link.addEventListener('click',()=>{if(nav&&nav.classList.contains('open')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu';}}));
+
+
+// Defer heavy hero video downloads until the page has loaded; the poster remains the immediate visual.
+document.querySelectorAll('video[data-defer-video]').forEach(video=>{
+ const source=video.querySelector('source[data-src]');
+ if(!source)return;
+ const loadVideo=()=>{
+   if(video.dataset.loaded)return;
+   video.dataset.loaded='true';
+   source.src=source.dataset.src;
+   video.load();
+   video.play().catch(()=>{});
+ };
+ if('requestIdleCallback' in window) window.requestIdleCallback(loadVideo,{timeout:1800});
+ else window.setTimeout(loadVideo,900);
+});
+
+// Keep image boxes stable while assets decode, reducing layout shift on portfolio pages.
+document.querySelectorAll('.project-gallery img,.villa-gallery img,.case-card img,.project-card img,.about6-hero-media img,.about6-close img').forEach(img=>{
+ img.style.contentVisibility='auto';
+});
