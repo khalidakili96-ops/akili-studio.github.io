@@ -48,3 +48,7 @@
  .villa-gallery-grid + .wide{margin-top:14px}
 }
 @media(prefers-reduced-motion:reduce){.villa-back:after,.villa-sound-toggle{transition:none}}
+
+
+/* Hero media performance */
+.villa-hero video{contain:paint;will-change:auto}
