@@ -1,0 +1,34 @@
+name: Generate Akili Studio favicon
+
+on:
+  push:
+    paths:
+      - 'assets/akili-logo.svg'
+      - '.github/workflows/generate-favicon.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  favicon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate square favicon
+        run: |
+          mkdir -p assets
+          convert -size 256x256 xc:"#2D2C2A" \
+            -fill "#B68A3A" -font DejaVu-Sans -gravity center \
+            -pointsize 150 -annotate +0+8 "A" \
+            assets/favicon.png
+
+      - name: Commit favicon
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/favicon.png
+          git diff --cached --quiet && exit 0
+          git commit -m "feat: add Akili Studio favicon"
+          git push
