@@ -71,8 +71,8 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
      const rect=card.getBoundingClientRect();
      const x=(event.clientX-rect.left)/rect.width-.5;
      const y=(event.clientY-rect.top)/rect.height-.5;
-     card.style.setProperty('--tilt-x',`${(y*-2.2).toFixed(2)}deg`);
-     card.style.setProperty('--tilt-y',`${(x*2.2).toFixed(2)}deg`);
+     card.style.setProperty('--tilt-x',`${(y*-1.15).toFixed(2)}deg`);
+     card.style.setProperty('--tilt-y',`${(x*1.15).toFixed(2)}deg`);
      card.classList.add('is-pointer-active');
    });
    card.addEventListener('pointerleave',()=>{
@@ -83,15 +83,15 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  }
 });
 
-if(!touchDevice && !reducedMotion){
+if(!touchDevice&&!reducedMotion){
  document.querySelectorAll('.service-grid article').forEach(service=>{
    service.addEventListener('pointerenter',()=>{
      document.querySelectorAll('.service-grid article').forEach(item=>{
-       item.style.opacity=item===service?'1':'.48';
+       item.style.opacity=item===service?'1':'.78';
        if(item===service){
-         item.style.transform='translateY(-10px) scale(1.10)';
+         item.style.transform='translateY(-5px) scale(1.02)';
          item.style.zIndex='20';
-         item.style.boxShadow='0 30px 70px rgba(0,0,0,.34)';
+         item.style.boxShadow='0 22px 55px rgba(0,0,0,.22)';
        }else{
          item.style.transform='scale(1)';
          item.style.zIndex='1';
@@ -115,7 +115,6 @@ if(heroContent&&!reducedMotion&&!touchDevice){window.addEventListener('scroll',(
 const header=document.querySelector('.site-header');
 if(header&&!reducedMotion){const updateHeader=()=>header.classList.toggle('is-scrolled',window.scrollY>24);updateHeader();window.addEventListener('scroll',updateHeader,{passive:true});}
 document.querySelectorAll('.nav-links a').forEach(link=>link.addEventListener('click',()=>{if(nav&&nav.classList.contains('open')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu';}}));
-
 
 // Defer heavy hero video downloads until the page has loaded; the poster remains the immediate visual.
 document.querySelectorAll('video[data-defer-video]').forEach(video=>{
