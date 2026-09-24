@@ -357,3 +357,40 @@ body{background:#eee9e0}
 .about-v4-close{background:#292724}
 .cta{background:#292724}
 footer{background:#292724}
+
+
+/* AKILI MOTION SYSTEM V1 — Editorial Spatial Experience */
+html{scroll-behavior:smooth}
+body{background:var(--paper);overflow-x:hidden}
+.hero-home{position:relative;isolation:isolate;overflow:hidden;background-position:center center}
+.hero-home:after{content:'';position:absolute;inset:-3%;z-index:-1;background:inherit;transform:scale(1.035);animation:akiliHeroScale 1.8s cubic-bezier(.22,1,.36,1) both}
+.hero-home{background-image:linear-gradient(90deg,#000b 0%,#0005 45%,#0001 100%),url('assets/hero-poster.jpg')}
+.hero-content{position:relative;z-index:2}
+.hero-content .eyebrow,.hero-content h1,.hero-content>p:not(.eyebrow),.hero-content .actions{opacity:0;transform:translateY(28px)}
+.hero-content .eyebrow{animation:akiliReveal .9s .25s cubic-bezier(.22,1,.36,1) forwards}
+.hero-content h1{animation:akiliReveal 1.05s .36s cubic-bezier(.22,1,.36,1) forwards}
+.hero-content>p:not(.eyebrow){animation:akiliReveal .95s .52s cubic-bezier(.22,1,.36,1) forwards}
+.hero-content .actions{animation:akiliReveal .9s .66s cubic-bezier(.22,1,.36,1) forwards}
+.intro-section .split{position:relative}
+.intro-section .split:before{content:'01';position:absolute;left:-2px;top:-34px;color:var(--gold);font:400 9px/1 var(--font-secondary);letter-spacing:.18em}
+.projects-section{position:relative}
+.projects-section .section-head{position:relative}
+.projects-section .section-head:before{content:'02';position:absolute;left:0;top:-28px;color:var(--gold);font:400 9px/1 var(--font-secondary);letter-spacing:.18em}
+.project-card{border-radius:0;overflow:hidden}
+.project-card:after{content:'';position:absolute;inset:0;z-index:4;pointer-events:none;border:1px solid rgba(255,255,255,.08);opacity:0;transition:opacity .7s ease}
+.project-card:hover:after{opacity:1}
+.project-card .project-media:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),transparent 35%,rgba(0,0,0,.12));pointer-events:none}
+.project-card .project-index{font-variant-numeric:tabular-nums}
+.services-band{position:relative;overflow:hidden}
+.services-band:before{content:'03';position:absolute;top:42px;right:max(28px,calc((100vw - 1180px)/2));color:#d3a65c;font:400 9px/1 var(--font-secondary);letter-spacing:.18em}
+.service-grid article:hover{transform:translateY(-5px) scale(1.035)!important;box-shadow:0 22px 55px rgba(0,0,0,.22)!important}
+.service-grid:hover article:not(:hover){opacity:.68}
+.quote{position:relative}
+.quote:before{content:'04';position:absolute;left:max(28px,calc((100vw - 1180px)/2));top:52px;color:var(--gold);font:400 9px/1 var(--font-secondary);letter-spacing:.18em}
+.cta{position:relative;overflow:hidden}
+.cta:after{content:'AKILI';position:absolute;right:-2vw;bottom:-.16em;font:500 clamp(100px,20vw,290px)/.7 var(--font);letter-spacing:-.06em;color:rgba(255,255,255,.055);pointer-events:none}
+.cta .container{position:relative;z-index:1}
+@keyframes akiliReveal{to{opacity:1;transform:none}}
+@keyframes akiliHeroScale{from{transform:scale(1.08);filter:saturate(.9)}to{transform:scale(1.035);filter:saturate(1)}}
+@media(max-width:760px){.hero-home:after{animation-duration:1.3s}.intro-section .split:before{top:-24px}.projects-section .section-head:before{top:-22px}.services-band:before{top:30px;right:18px}.quote:before{left:18px;top:36px}.cta:after{right:-10vw;bottom:-.06em;font-size:32vw}}
+@media(prefers-reduced-motion:reduce){.hero-home:after,.hero-content .eyebrow,.hero-content h1,.hero-content>p:not(.eyebrow),.hero-content .actions{animation:none;opacity:1;transform:none}}
