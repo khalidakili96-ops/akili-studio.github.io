@@ -22,7 +22,8 @@ if(menu&&nav){
  window.addEventListener('resize',()=>{if(window.innerWidth>760)setNavState(false);},{passive:true});
 }
 
-const revealTargets=document.querySelectorAll('main>section,.project-card,.case-card,.service-copy,.contact-grid>* ,.about-image,.project-gallery img');
+const isProjectDetail=!!document.querySelector('.villa-hero,.celeste-hero,.dolce-hero');
+const revealTargets=isProjectDetail?document.querySelectorAll('.project-card,.case-card,.service-copy,.contact-grid>* ,.about-image,.project-gallery img'):document.querySelectorAll('main>section,.project-card,.case-card,.service-copy,.contact-grid>* ,.about-image,.project-gallery img');
 revealTargets.forEach((el,index)=>{el.classList.add('reveal');el.style.transitionDelay=`${Math.min(index*35,280)}ms`;});
 if('IntersectionObserver' in window){
  const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});},{threshold:.12,rootMargin:'0px 0px -40px'});
