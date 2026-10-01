@@ -27,6 +27,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  let images=[];
  try{images=JSON.parse(card.dataset.gallery);}catch(e){return;}
  if(!Array.isArray(images)||images.length<2)return;
+ if(touchDevice&&images.length>4)images=images.slice(0,4);
  media.replaceChildren();
  images.forEach((src,index)=>{
    const img=document.createElement('img');
