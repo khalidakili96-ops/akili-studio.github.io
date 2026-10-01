@@ -18,8 +18,8 @@
 .villa-gallery{background:#211f1b;padding:clamp(10px,1.25vw,19px) clamp(14px,2vw,28px) clamp(18px,2.5vw,38px)}
 .villa-image{display:block;width:100%;height:auto;object-fit:cover}
 .villa-gallery .wide{aspect-ratio:16/9;object-fit:cover;margin-bottom:clamp(9px,1.1vw,16px)}
-.villa-gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(7px,.875vw,14px);background:#211f1b;margin-top:0}
-.villa-gallery-grid img{width:100%;height:100%;min-height:520px;object-fit:cover;display:block}
+.villa-gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(7px,.875vw,14px);background:#211f1b;margin-top:0}
+.villa-gallery-grid img{width:100%;height:auto;min-height:0;aspect-ratio:4/3;object-fit:cover;display:block;content-visibility:visible}
 .villa-gallery-grid + .wide{margin-top:clamp(18px,2.25vw,32px)}
 .villa-section{padding:150px 0;background:var(--va-paper)}
 .villa-section.dark{background:#211f1b;color:#fff}
@@ -31,7 +31,7 @@
 .villa-back:after{content:'→';font-size:16px;transition:transform .35s ease}
 .villa-back:hover:after{transform:translateX(5px)}
 @media(max-width:760px){
- .villa-hero{min-height:88vh}
+ .villa-hero{min-height:88vh;min-height:88svh}
  .villa-hero .container{width:min(100% - 40px,1180px);padding-bottom:9vh}
  .villa-hero h1{font-size:clamp(50px,17vw,82px);margin:14px 0 22px}
  .villa-meta{gap:8px 16px;font-size:9px}
@@ -52,3 +52,17 @@
 
 /* Hero media performance */
 .villa-hero video{contain:paint;will-change:auto}
+
+
+/* Stable project-page rendering: keep the gallery and navigation independent of reveal/lazy-layout behaviour. */
+.villa-gallery,.villa-intro,.villa-section{width:100%;max-width:100%;overflow:hidden}
+.villa-gallery img{max-width:100%;}
+@media(max-width:760px){
+ .site-header,.site-header.is-overlay{width:100%;left:0;right:0;}
+ .site-header .nav{position:relative;z-index:1002;min-height:76px;}
+ .menu-toggle{position:relative;z-index:1003;min-width:48px;min-height:44px;}
+ .nav-links{width:100vw;max-height:calc(100vh - 76px);overflow-y:auto;overscroll-behavior:contain;}
+ body.nav-open{overflow:hidden;}
+ .villa-hero,.villa-intro,.villa-gallery,.villa-section{opacity:1!important;transform:none!important;}
+ .villa-gallery-grid img{width:100%;max-width:100%;height:auto;min-height:0;aspect-ratio:4/3;}
+}
