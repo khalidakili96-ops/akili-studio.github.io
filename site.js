@@ -2,14 +2,25 @@
 if(!document.querySelector('link[data-akili-typography]')){
  const typography=document.createElement('link');
  typography.rel='stylesheet';
- typography.href='typography.css?v=5';
+ typography.href='typography.css?v=6';
  typography.dataset.akiliTypography='true';
  document.head.appendChild(typography);
 }
 
 const menu=document.querySelector('.menu-toggle');
 const nav=document.querySelector('.nav-links');
-if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close':'Menu';});}
+const setNavState=open=>{
+ if(!menu||!nav)return;
+ nav.classList.toggle('open',open);
+ document.body.classList.toggle('nav-open',open);
+ menu.setAttribute('aria-expanded',String(open));
+ menu.textContent=open?'Close':'Menu';
+};
+if(menu&&nav){
+ menu.addEventListener('click',()=>setNavState(!nav.classList.contains('open')));
+ document.addEventListener('keydown',event=>{if(event.key==='Escape')setNavState(false);});
+ window.addEventListener('resize',()=>{if(window.innerWidth>760)setNavState(false);},{passive:true});
+}
 
 const revealTargets=document.querySelectorAll('main>section,.project-card,.case-card,.service-copy,.contact-grid>* ,.about-image,.project-gallery img');
 revealTargets.forEach((el,index)=>{el.classList.add('reveal');el.style.transitionDelay=`${Math.min(index*35,280)}ms`;});
@@ -115,7 +126,7 @@ const heroContent=document.querySelector('.hero-home .hero-content');
 if(heroContent&&!reducedMotion&&!touchDevice){window.addEventListener('scroll',()=>{const y=Math.min(window.scrollY*.08,36);heroContent.style.transform=`translate3d(0,${y}px,0)`;},{passive:true});}
 const header=document.querySelector('.site-header');
 if(header&&!reducedMotion){const updateHeader=()=>header.classList.toggle('is-scrolled',window.scrollY>24);updateHeader();window.addEventListener('scroll',updateHeader,{passive:true});}
-document.querySelectorAll('.nav-links a').forEach(link=>link.addEventListener('click',()=>{if(nav&&nav.classList.contains('open')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu';}}));
+document.querySelectorAll('.nav-links a').forEach(link=>link.addEventListener('click',()=>setNavState(false)));
 
 
 // Defer heavy hero video downloads until the page has loaded; the poster remains the immediate visual.
@@ -135,5 +146,5 @@ document.querySelectorAll('video[data-defer-video]').forEach(video=>{
 
 // Keep image boxes stable while assets decode, reducing layout shift on portfolio pages.
 document.querySelectorAll('.project-gallery img,.villa-gallery img,.case-card img,.project-card img,.about6-hero-media img,.about6-close img').forEach(img=>{
- img.style.contentVisibility='auto';
+ if(!img.closest('.residenza-gallery'))img.style.contentVisibility='visible';
 });
