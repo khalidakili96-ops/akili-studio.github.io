@@ -1,0 +1,17 @@
+/* Akili Studio — shared project case-study system */
+.project-facts{padding:0;background:#fff;border-top:1px solid rgba(33,31,27,.12);border-bottom:1px solid rgba(33,31,27,.12)}
+.project-facts .container{display:grid;grid-template-columns:repeat(4,1fr)}
+.project-fact{padding:28px 24px 30px;border-left:1px solid rgba(33,31,27,.12)}
+.project-fact:last-child{border-right:1px solid rgba(33,31,27,.12)}
+.project-fact small{display:block;margin-bottom:15px;color:#af863f;font:500 9px/1 Montserrat,Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.project-fact strong{display:block;color:#211f1b;font:500 11px/1.55 Montserrat,Arial,sans-serif;letter-spacing:.02em}
+.project-case-link{display:inline-flex;align-items:center;gap:10px;margin-top:30px;color:inherit;text-decoration:none;font:500 10px/1.4 Montserrat,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.project-case-link:after{content:'→';font-size:15px;transition:transform .3s ease}
+.project-case-link:hover:after{transform:translateX(4px)}
+@media(max-width:760px){
+ .project-facts .container{grid-template-columns:1fr 1fr}
+ .project-fact{padding:23px 18px 25px}
+ .project-fact:nth-child(odd){border-left:0}
+ .project-fact:nth-child(-n+2){border-bottom:1px solid rgba(33,31,27,.12)}
+ .project-fact:nth-child(2){border-right:0}
+}
