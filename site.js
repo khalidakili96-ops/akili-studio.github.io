@@ -27,7 +27,9 @@ if(menu&&nav){
      if(lastMenuTrigger&&typeof lastMenuTrigger.focus==='function')lastMenuTrigger.focus();
    }
  };
- menu.addEventListener('click',()=>setNavState(!nav.classList.contains('open')));
+ const toggleNavigation=event=>{event.preventDefault();event.stopPropagation();setNavState(!nav.classList.contains('open'));};
+ menu.addEventListener('click',toggleNavigation);
+ menu.addEventListener('pointerup',toggleNavigation,{passive:false});
  document.addEventListener('keydown',event=>{
    if(!nav.classList.contains('open'))return;
    if(event.key==='Escape'){event.preventDefault();setNavState(false);return;}
