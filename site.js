@@ -53,6 +53,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  media.appendChild(counter);
  card.classList.add('has-gallery');
  let current=0;
+ let galleryTimer=null;
  const restartProgress=()=>{
    const bar=progress.querySelector('span');
    if(!bar)return;
@@ -66,11 +67,27 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    slides[current].classList.remove('is-active');
    current=(current+1)%slides.length;
    slides[current].classList.add('is-active');
-   counter.textContent=`${String(current+1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;
+   counter.textContent=`\${String(current+1).padStart(2,'0')} / \${String(slides.length).padStart(2,'0')}\`;
    restartProgress();
  };
- restartProgress();
- window.setInterval(advance,3800);
+ const startGallery=()=>{
+   if(galleryTimer||reducedMotion)return;
+   restartProgress();
+   galleryTimer=window.setInterval(advance,3800);
+ };
+ const stopGallery=()=>{
+   if(!galleryTimer)return;
+   window.clearInterval(galleryTimer);
+   galleryTimer=null;
+ };
+ if('IntersectionObserver' in window){
+   const galleryObserver=new IntersectionObserver(entries=>{
+     entries.forEach(entry=>entry.isIntersecting?startGallery():stopGallery());
+   },{threshold:.05});
+   galleryObserver.observe(card);
+ }else{
+   startGallery();
+ }
  if(!touchDevice&&!reducedMotion){
    card.addEventListener('pointermove',event=>{
      const rect=card.getBoundingClientRect();
