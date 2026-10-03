@@ -71,7 +71,8 @@
     message.textContent=getError(field);
     field.setAttribute('aria-invalid','true');
     field.setAttribute('aria-describedby',message.id);
-    field.insertAdjacentElement('afterend',message);
+    var container=field.closest('label')||field.parentElement;
+    if(container)container.insertAdjacentElement('afterend',message);
     return message;
   };
   fields.forEach(function(field){
