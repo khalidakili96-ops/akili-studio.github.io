@@ -72,8 +72,8 @@
 .about6-method-head h2 i{color:#d3a65c;font-style:normal}
 .about6-method-head>p{max-width:360px;margin:0 0 5px;color:#bdb7ad;font:400 11px/1.85 var(--font-secondary)}
 .about6-method-list{position:relative;display:grid;grid-template-columns:repeat(5,1fr)}
-.about6-method-list:before{content:'';position:absolute;top:8px;left:0;right:0;height:1px;background:#55514a}
-.about6-method-list:after{content:'';position:absolute;top:8px;left:0;width:var(--method-progress-width,0px);height:1px;background:linear-gradient(90deg,#d3a65c 0%,#ead3a2 55%,#d3a65c 100%);box-shadow:0 0 7px rgba(211,166,92,.18);pointer-events:none;transition:width .7s cubic-bezier(.22,1,.36,1)}
+.about6-method-list:before{content:'';position:absolute;top:8px;left:5px;right:0;height:1px;background:#55514a}
+.about6-method-list:after{content:'';position:absolute;top:8px;left:5px;width:var(--method-progress-width,0px);height:1px;background:linear-gradient(90deg,#d3a65c 0%,#ead3a2 55%,#d3a65c 100%);box-shadow:0 0 7px rgba(211,166,92,.18);pointer-events:none;transition:width .7s cubic-bezier(.22,1,.36,1)}
 .about6-method-list>div{position:relative;min-height:190px;padding:39px 25px 0 0;border-right:1px solid #55514a}
 .about6-method-list>div+div{padding-left:24px}
 .about6-method-list>div:last-child{border-right:0}
@@ -222,4 +222,28 @@
 
 @media(prefers-reduced-motion:reduce){
   .about6-philosophy-principles>div,.about6-page-nav button,.about6-page-nav button span,.about6-method-list>div:after{transition:none}
+}
+/* Akili Method — intentional endpoint alignment */
+@media(min-width:901px){
+  .about6-method-list>div:nth-child(1){text-align:left}
+  .about6-method-list>div:nth-child(2),
+  .about6-method-list>div:nth-child(3),
+  .about6-method-list>div:nth-child(4){text-align:center}
+  .about6-method-list>div:nth-child(5){text-align:right}
+  .about6-method-list>div:nth-child(2)>span,
+  .about6-method-list>div:nth-child(3)>span,
+  .about6-method-list>div:nth-child(4)>span{display:block}
+  .about6-method-list>div:nth-child(2) p,
+  .about6-method-list>div:nth-child(3) p,
+  .about6-method-list>div:nth-child(4) p{margin-left:auto;margin-right:auto}
+  .about6-method-list>div:nth-child(5) p{margin-left:auto}
+  .about6-method-list>div:nth-child(1):after{left:0}
+  .about6-method-list>div:nth-child(2):after,
+  .about6-method-list>div:nth-child(3):after,
+  .about6-method-list>div:nth-child(4):after{left:50%;transform:translateX(-50%)}
+  .about6-method-list>div:nth-child(5):after{left:100%;transform:translateX(-100%)}
+  .about6-method-list>div:nth-child(2).is-hovered:after,
+  .about6-method-list>div:nth-child(3).is-hovered:after,
+  .about6-method-list>div:nth-child(4).is-hovered:after{transform:translateX(-50%) scale(1.45)}
+  .about6-method-list>div:nth-child(5).is-hovered:after{transform:translateX(-100%) scale(1.45)}
 }
