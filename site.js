@@ -6,10 +6,16 @@ const setNavState=open=>{
  document.body.classList.toggle('nav-open',open);
  menu.setAttribute('aria-expanded',String(open));
  menu.textContent=open?'Close':'Menu';
+ if(open){
+   const firstLink=nav.querySelector('a');
+   if(firstLink)firstLink.focus();
+ }else if(document.activeElement&&nav.contains(document.activeElement)){
+   menu.focus();
+ }
 };
 if(menu&&nav){
  menu.addEventListener('click',()=>setNavState(!nav.classList.contains('open')));
- document.addEventListener('keydown',event=>{if(event.key==='Escape')setNavState(false);});
+ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&nav.classList.contains('open')){setNavState(false);menu.focus();}});
  window.addEventListener('resize',()=>{if(window.innerWidth>760)setNavState(false);},{passive:true});
 }
 
