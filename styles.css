@@ -27,3 +27,5 @@
 /* Accessible text accent: preserve the signature gold visually while meeting AA contrast on light surfaces. */
 :root{--gold-text:#7d5b1c}
 cite,.case-card small,.service-copy small,.contact-options span{color:var(--gold-text)}
+
+.application-form input:focus-visible,.application-form select:focus-visible,.application-form textarea:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
