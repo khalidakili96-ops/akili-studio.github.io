@@ -1,18 +1,5 @@
 const menu=document.querySelector('.menu-toggle');
 const nav=document.querySelector('.nav-links');
-const setNavState=open=>{
- if(!menu||!nav)return;
- nav.classList.toggle('open',open);
- document.body.classList.toggle('nav-open',open);
- menu.setAttribute('aria-expanded',String(open));
- menu.textContent=open?'Close':'Menu';
- if(open){
-   const firstLink=nav.querySelector('a');
-   if(firstLink)firstLink.focus();
- }else if(document.activeElement&&nav.contains(document.activeElement)){
-   menu.focus();
- }
-};
 if(menu&&nav){
  const focusableSelector='a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
  const announcement=document.createElement('div');
@@ -45,7 +32,7 @@ if(menu&&nav){
    if(!nav.classList.contains('open'))return;
    if(event.key==='Escape'){event.preventDefault();setNavState(false);return;}
    if(event.key!=='Tab')return;
-   const focusables=[...nav.querySelectorAll(focusableSelector),menu].filter(el=>el.offsetParent!==null);
+   const focusables=[...nav.querySelectorAll(focusableSelector),menu].filter(el=>el.getClientRects().length>0);
    if(!focusables.length)return;
    const first=focusables[0],last=focusables[focusables.length-1];
    if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
