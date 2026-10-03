@@ -101,7 +101,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    slides[current].classList.remove('is-active');
    current=(current+1)%slides.length;
    slides[current].classList.add('is-active');
-   counter.textContent=`\${String(current+1).padStart(2,'0')} / \${String(slides.length).padStart(2,'0')}\`;
+   counter.textContent=`${String(current+1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;
    restartProgress();
  };
  const startGallery=()=>{
