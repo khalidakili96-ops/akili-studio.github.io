@@ -122,10 +122,13 @@
     text-align:left;
   }
 
-  /* First node: left edge aligned with the dot. */
+  /* First node: icon centre sits directly on the left-hand dot. */
   .about6-method-list>div:nth-child(1){
     justify-items:start;
     text-align:left;
+  }
+  .about6-method-list>div:nth-child(1)>.about6-method-icon{
+    margin-left:-15px;
   }
 
   /* Middle nodes: every element centred on the dot. */
