@@ -269,3 +269,88 @@
   .about6-method-list>div:nth-child(4).is-hovered:after{transform:translateX(-50%) scale(1.45)}
   .about6-method-list>div:nth-child(5).is-hovered:after{transform:translateX(-100%) scale(1.45)}
 }
+
+
+/* Akili Method — align each icon, label, title and body to its method node */
+@media(min-width:901px){
+  .about6-method-list>div{
+    padding-right:0;
+    padding-left:0;
+  }
+
+  .about6-method-list>div>.about6-method-icon{
+    display:block;
+    width:30px;
+    height:30px;
+    margin:0 0 18px;
+    object-fit:contain;
+  }
+
+  .about6-method-list>div>span{
+    margin-bottom:22px;
+  }
+
+  .about6-method-list>div>b{
+    display:block;
+    width:100%;
+    margin:0;
+  }
+
+  .about6-method-list>div>p{
+    width:min(190px,100%);
+    margin-top:14px;
+  }
+
+  /* Understand — left edge */
+  .about6-method-list>div:nth-child(1)>.about6-method-icon,
+  .about6-method-list>div:nth-child(1)>span,
+  .about6-method-list>div:nth-child(1)>b{
+    margin-left:0;
+    margin-right:auto;
+    text-align:left;
+  }
+  .about6-method-list>div:nth-child(1)>p{
+    margin-left:0;
+    margin-right:auto;
+    text-align:left;
+  }
+
+  /* Define / Compose / Refine — centred on their circles */
+  .about6-method-list>div:nth-child(2)>.about6-method-icon,
+  .about6-method-list>div:nth-child(3)>.about6-method-icon,
+  .about6-method-list>div:nth-child(4)>.about6-method-icon{
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .about6-method-list>div:nth-child(2)>span,
+  .about6-method-list>div:nth-child(3)>span,
+  .about6-method-list>div:nth-child(4)>span{
+    text-align:center;
+  }
+  .about6-method-list>div:nth-child(2)>b,
+  .about6-method-list>div:nth-child(3)>b,
+  .about6-method-list>div:nth-child(4)>b{
+    text-align:center;
+  }
+  .about6-method-list>div:nth-child(2)>p,
+  .about6-method-list>div:nth-child(3)>p,
+  .about6-method-list>div:nth-child(4)>p{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+  }
+
+  /* Realise — right edge */
+  .about6-method-list>div:nth-child(5)>.about6-method-icon,
+  .about6-method-list>div:nth-child(5)>span,
+  .about6-method-list>div:nth-child(5)>b{
+    margin-left:auto;
+    margin-right:0;
+    text-align:right;
+  }
+  .about6-method-list>div:nth-child(5)>p{
+    margin-left:auto;
+    margin-right:0;
+    text-align:right;
+  }
+}
