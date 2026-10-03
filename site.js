@@ -181,7 +181,7 @@ const heroContent=document.querySelector('.hero-home .hero-content');
 if(heroContent&&!reducedMotion&&!touchDevice){window.addEventListener('scroll',()=>{const y=Math.min(window.scrollY*.08,36);heroContent.style.transform=`translate3d(0,${y}px,0)`;},{passive:true});}
 const header=document.querySelector('.site-header');
 if(header&&!reducedMotion){const updateHeader=()=>header.classList.toggle('is-scrolled',window.scrollY>24);updateHeader();window.addEventListener('scroll',updateHeader,{passive:true});}
-document.querySelectorAll('.nav-links a').forEach(link=>link.addEventListener('click',()=>{if(nav&&nav.classList.contains('open'))setNavState(false);}));
+
 
 
 // Defer heavy hero video downloads until the page has loaded; the poster remains the immediate visual.
