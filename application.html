@@ -22,13 +22,14 @@
 <header class="site-header application-header"><div class="container nav"><a class="brand-logo" href="/" aria-label="Akili Studio home"><img src="assets/akili-logo.svg" alt="Akili Studio — Interior Design Services"></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button><nav id="primary-nav" class="nav-links"><a href="/">Home</a><a href="/projects">Projects</a><a href="/services">Services</a><a href="/about">About</a><a href="/contact">Contact</a></nav></div></header>
 <main><section class="application-page"><div class="container application-layout">
 <aside class="application-sidebar"><p class="eyebrow gold">Project Application</p><h1>Begin with<br><em>your space.</em></h1><p class="application-lead">A considered project begins with a considered brief. Tell us what you are building, what you need and where you are in the process. We review each enquiry personally before recommending the appropriate next step.</p><div class="application-side-note"><span>01</span><p>We review selected projects personally and respond with the appropriate next step.</p></div></aside>
-<div class="application-success" id="application-success" role="status" aria-live="polite"><p class="eyebrow">Application received</p><h2>Thank you. We have your brief.</h2><p>Your project has been submitted for review. If it appears aligned with our scope, Akili Studio will contact you using your preferred method to discuss the appropriate next step.</p></div><form class="application-form" action="https://formsubmit.co/akilis.studios@gmail.com" method="POST">
+<div class="application-success" id="application-success" role="status" aria-live="polite"><p class="eyebrow">Application received</p><h2>Thank you. We have your brief.</h2><p>Your project has been submitted for review. If it appears aligned with our scope, Akili Studio will contact you using your preferred method to discuss the appropriate next step.</p></div><form class="application-form" novalidate action="https://formsubmit.co/akilis.studios@gmail.com" method="POST">
 <input type="hidden" name="_subject" value="New Akili Studio Project Application"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://akilis.studio/application.html?submitted=true"><input type="text" name="_honey" tabindex="-1" autocomplete="off" class="form-honeypot" aria-hidden="true">
 <fieldset class="application-block"><legend><span>01</span> Contact</legend><div class="form-grid"><label>Full Name <b>*</b><input type="text" id="full-name" name="Full Name" autocomplete="name" required></label><label>Phone / WhatsApp <b>*</b><input type="tel" id="phone-whatsapp" name="Phone / WhatsApp" autocomplete="tel" required></label><label class="full-width">Email Address <b>*</b><input type="email" id="email-address" name="Email Address" autocomplete="email" required></label></div></fieldset>
 <fieldset class="application-block"><legend><span>02</span> Project</legend><div class="form-grid"><label>Project Location <b>*</b><input type="text" id="project-location" name="Project Location" placeholder="City, country" required></label><label>Project Type <b>*</b><select id="project-type" name="Project Type" required><option value="" selected disabled>Select one</option><option>Residential</option><option>Commercial</option><option>Hospitality</option><option>Retail</option><option>Other</option></select></label><label>Project Stage <b>*</b><select id="project-stage" name="Project Stage" required><option value="" selected disabled>Select one</option><option>Early planning</option><option>Architecture / construction underway</option><option>Ready for interior design</option><option>Under construction</option><option>Existing space / renovation</option></select></label><label>Approximate Area <b>*</b><input type="text" id="approximate-area" name="Approximate Area" placeholder="e.g. 250 m²" required></label></div></fieldset>
 <fieldset class="application-block"><legend><span>03</span> Brief</legend><div class="form-grid"><label>Service Required <b>*</b><select id="service-required" name="Service Required" required><option value="" selected disabled>Select one</option><option>Interior Design</option><option>Execution &amp; Supervision</option><option>Interior Design + Execution</option><option>Brand Identity</option><option>Not sure yet</option></select></label><label>Target Start <b>*</b><select id="target-start" name="Target Start" required><option value="" selected disabled>Select one</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>6+ months</option><option>Still exploring</option></select></label><label class="full-width">Tell us about the project <b>*</b><textarea id="project-description" name="Project Description" rows="6" placeholder="What are you creating, what matters most to you, and what would you like Akili Studio to solve?" required></textarea></label></div></fieldset>
 <fieldset class="application-block application-final"><legend><span>04</span> Next step</legend><div class="form-grid"><label>Preferred Contact Method <b>*</b><select id="preferred-contact-method" name="Preferred Contact Method" required><option value="" selected disabled>Select one</option><option>WhatsApp</option><option>Phone Call</option><option>Email</option></select></label></div><label class="consent"><input id="consent" type="checkbox" name="Consent" value="I agree to be contacted by Akili Studio regarding this project." required><span>I agree to be contacted by Akili Studio regarding this project.</span></label><div class="submit-row"><p>Submitting this form requests an initial project review. It does not constitute a booking or commitment. If the project appears aligned with our scope, we will contact you to discuss the appropriate next step.</p><button class="application-submit" type="submit">Submit application <span>↗</span></button></div></fieldset>
-</form></div></section></main>
+</form></div></section><div id="application-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+</main>
 <footer><div class="container footer-inner"><a class="brand-logo" href="/" aria-label="Akili Studio home"><img src="assets/akili-logo.svg" alt="Akili Studio"></a><p>© 2026 Akili Studio · Cairo, Egypt</p><div class="footer-contacts"><a href="mailto:akilis.studios@gmail.com">Email</a><a href="tel:+201149564506">+20 114 956 4506</a><a href="https://www.instagram.com/akili.studios/" aria-label="Akili Studio on Instagram" rel="me">Instagram</a></div></div></footer>
 <script src="site.js?v=8"></script><script>
 (function(){
@@ -44,4 +45,53 @@
     }
   }
 })();
-</script></body></html>
+<script>
+(function(){
+  var form=document.querySelector('.application-form');
+  if(!form)return;
+  var fields=[].slice.call(form.querySelectorAll('input:not([type="hidden"]):not([type="checkbox"]),select,textarea,input[type="checkbox"]'));
+  var announcer=document.getElementById('application-announcement');
+  var getError=function(field){
+    if(field.validity.valueMissing)return 'This field is required.';
+    if(field.validity.typeMismatch)return 'Enter a valid email address.';
+    if(field.validity.patternMismatch)return 'Enter the information in the requested format.';
+    return 'Please check this field.';
+  };
+  var clearError=function(field){
+    var id=field.id+'-error',error=document.getElementById(id);
+    field.removeAttribute('aria-invalid');
+    field.removeAttribute('aria-describedby');
+    if(error)error.remove();
+  };
+  var showError=function(field){
+    clearError(field);
+    var message=document.createElement('p');
+    message.id=field.id+'-error';
+    message.className='form-error';
+    message.textContent=getError(field);
+    field.setAttribute('aria-invalid','true');
+    field.setAttribute('aria-describedby',message.id);
+    field.insertAdjacentElement('afterend',message);
+    return message;
+  };
+  fields.forEach(function(field){
+    field.addEventListener('input',function(){if(field.checkValidity())clearError(field);});
+    field.addEventListener('change',function(){if(field.checkValidity())clearError(field);});
+  });
+  form.addEventListener('submit',function(event){
+    var firstInvalid=null,invalidCount=0;
+    fields.forEach(function(field){
+      if(!field.checkValidity()){invalidCount++;if(!firstInvalid)firstInvalid=field;showError(field);}
+      else clearError(field);
+    });
+    if(invalidCount){
+      event.preventDefault();
+      if(announcer)announcer.textContent=invalidCount===1?'Please correct the highlighted field.':('Please correct '+invalidCount+' highlighted fields.');
+      if(firstInvalid)firstInvalid.focus({preventScroll:true});
+      return;
+    }
+    if(announcer)announcer.textContent='Submitting your project application.';
+  });
+  form.addEventListener('invalid',function(event){showError(event.target);},true);
+})();
+</script></script></body></html>
