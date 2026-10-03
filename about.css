@@ -45,11 +45,11 @@
 .about6-philosophy-principles>div{display:grid;grid-template-columns:44px minmax(0,1fr);grid-template-rows:auto auto auto;column-gap:20px;padding:24px 0;border-bottom:1px solid #55514a;cursor:pointer;transition:padding .45s cubic-bezier(.22,1,.36,1),background .45s ease}
 .about6-philosophy-principles>div .about6-principle-icon{grid-column:1;grid-row:1;align-self:start;width:26px;height:26px;margin:0 0 10px}
 .about6-philosophy-principles>div>span{grid-column:1;grid-row:2;padding-top:2px;color:#d3a65c;font:400 8px/1 var(--font-secondary);letter-spacing:.16em}
-.about6-philosophy-principles>div>div{grid-column:2;grid-row:1 / span 3;min-width:0}
-.about6-philosophy-principles b{display:block;margin:0;font:500 clamp(30px,2.5vw,38px)/.98 var(--font);letter-spacing:-.04em}
-.about6-philosophy-principles p{display:block;width:min(100%,520px);max-width:520px;max-height:0;overflow:hidden;margin:0;opacity:0;color:#bdb7ad;font:400 12px/1.75 var(--font-secondary);letter-spacing:.005em;transition:max-height .55s ease,opacity .45s ease,margin .45s ease}
+.about6-philosophy-principles>div>div{grid-column:2;grid-row:1 / span 3;min-width:0;display:flex;align-items:baseline;gap:22px}
+.about6-philosophy-principles b{display:block;flex:0 0 auto;margin:0;font:500 clamp(30px,2.5vw,38px)/1 var(--font);letter-spacing:-.04em;white-space:nowrap}
+.about6-philosophy-principles p{display:block;flex:1;min-width:0;width:auto;max-width:none;max-height:none;overflow:visible;margin:0;opacity:1;color:#bdb7ad;font:400 12px/1.75 var(--font-secondary);letter-spacing:.005em}
 .about6-philosophy-principles>div.is-active{padding:30px 24px;background:rgba(255,255,255,.025)}
-.about6-philosophy-principles>div.is-active p{max-height:180px;margin-top:14px;opacity:1}
+.about6-philosophy-principles>div.is-active p{margin:0;opacity:1}
 .about6-philosophy-principles>div:focus-visible{outline:1px solid #d3a65c;outline-offset:-1px}
 
 /* Mission */
@@ -187,8 +187,9 @@
   .about6-philosophy-principles{padding-bottom:68px}
   .about6-philosophy-principles>div{grid-template-columns:38px 1fr;gap:10px;padding:18px 0}
   .about6-philosophy-principles>div.is-active{padding:22px 12px}
+  .about6-philosophy-principles>div>div{display:block}
   .about6-philosophy-principles b{font-size:24px}
-  .about6-philosophy-principles p{font-size:10px;line-height:1.7}
+  .about6-philosophy-principles p{margin-top:9px;font-size:10px;line-height:1.7}
   .about6-beliefs-head .about6-label{margin-bottom:44px}
   .about6-beliefs-head h2{font-size:50px}.about6-beliefs-lead{font-size:10.5px;line-height:1.8}
   .about6-beliefs-grid{grid-template-columns:1fr;margin-top:62px}
