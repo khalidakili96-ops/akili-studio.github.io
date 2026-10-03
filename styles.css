@@ -23,3 +23,7 @@
 
 /* Portfolio placeholders — used only where final project photography has not yet been supplied. */
 .case-card-placeholder{width:100%;aspect-ratio:16/10;background:#e9e6df;display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(45,44,42,.48)}
+
+/* Accessible text accent: preserve the signature gold visually while meeting AA contrast on light surfaces. */
+:root{--gold-text:#7d5b1c}
+cite,.case-card small,.service-copy small,.contact-options span{color:var(--gold-text)}
