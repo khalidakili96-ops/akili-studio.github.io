@@ -1,6 +1,4 @@
 /* Akili Studio — global typography contract */
-@import url('https://fonts.cdnfonts.com/css/caviar-dreams');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
 :root{
   --font-primary:'Caviar Dreams',Arial,sans-serif;
