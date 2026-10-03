@@ -37,9 +37,10 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    img.className=`project-slide${index===0?' is-active':''}`;
    img.src=src;
    img.alt=card.dataset.alt||'';
-   img.loading=index===0?'eager':'lazy';
+   // The homepage hero is the only intentionally preloaded visual.
+   // Keep portfolio galleries lazy so below-the-fold project imagery never competes with LCP.
+   img.loading='lazy';
    img.decoding='async';
-   if(index===0)img.fetchPriority='high';
    media.appendChild(img);
  });
  const progress=document.createElement('div');
