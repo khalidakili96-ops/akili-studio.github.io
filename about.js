@@ -58,8 +58,12 @@ document.addEventListener('DOMContentLoaded',function(){
       }else{
         const target=methods[index];
         if(target){
-          const end=target.offsetLeft+8;
-          methodList.style.setProperty('--method-progress-width',end+'px');
+          const lastIndex=methods.length-1;
+          let end;
+          if(index===0) end=5;
+          else if(index===lastIndex) end=target.offsetLeft+target.offsetWidth;
+          else end=target.offsetLeft+(target.offsetWidth/2);
+          methodList.style.setProperty('--method-progress-width',Math.max(0,end-5)+'px');
         }
       }
     };
