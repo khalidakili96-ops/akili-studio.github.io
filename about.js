@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded',function(){
         const target=methods[index];
         if(target){
           const end=target.offsetTop+8;
-          methodList.style.setProperty('--method-progress',end+'px');
           methodList.style.setProperty('--method-progress-height',end+'px');
         }
       }else{
