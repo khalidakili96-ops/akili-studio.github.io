@@ -43,3 +43,11 @@ cite,.case-card small,.service-copy small,.contact-options span{color:var(--gold
 @media(max-width:760px){
  .nav-links a,.footer-contacts a,.contact-options a{min-height:44px}
 }
+
+/* Phase 4 contrast sweep — contextualise gold by surface. */
+.about6-pov .about6-label,.about6-beliefs .about6-label,.about6-founder .about6-label,.about6-vision-mission .about6-label,
+.about6-founder-role,.about6-vm-grid span,
+.category-editorial .selected-meta small,.category-editorial .archive small,
+.project-fact small,.villa-label{color:var(--gold-text)}
+.about6-philosophy .about6-label,.about6-method .about6-label,.about6-close .about6-label{color:#d3a65c}
+.villa-section.dark .villa-label{color:#d0a45b}
