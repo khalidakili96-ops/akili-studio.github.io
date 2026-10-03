@@ -40,6 +40,45 @@ document.addEventListener('DOMContentLoaded',function(){
     });
   });
 
+  const methodList=document.querySelector('.about6-method-list');
+  if(methodList){
+    const methods=[...methodList.children];
+    const setMethodProgress=function(index){
+      if(index<0)return;
+      methods.forEach(function(el,i){
+        el.classList.toggle('is-reached',i<=index);
+        el.classList.toggle('is-hovered',i===index);
+      });
+      if(window.matchMedia('(max-width: 900px)').matches){
+        const target=methods[index];
+        if(target){
+          const end=target.offsetTop+8;
+          methodList.style.setProperty('--method-progress',end+'px');
+          methodList.style.setProperty('--method-progress-height',end+'px');
+        }
+      }else{
+        const target=methods[index];
+        if(target){
+          const end=target.offsetLeft+8;
+          methodList.style.setProperty('--method-progress-width',end+'px');
+        }
+      }
+    };
+    const resetMethodProgress=function(){
+      methods.forEach(function(el){el.classList.remove('is-reached','is-hovered');});
+      methodList.style.setProperty('--method-progress-width','0px');
+      methodList.style.setProperty('--method-progress-height','0px');
+    };
+    methods.forEach(function(method,index){
+      method.addEventListener('mouseenter',function(){setMethodProgress(index);});
+      method.addEventListener('focusin',function(){setMethodProgress(index);});
+      method.addEventListener('mouseleave',function(){resetMethodProgress();});
+      method.addEventListener('focusout',function(){
+        if(!method.contains(document.activeElement))resetMethodProgress();
+      });
+    });
+  }
+
   if('IntersectionObserver' in window && sections.length && navItems.length){
     const sectionObserver=new IntersectionObserver(function(entries){
       const visible=entries.filter(function(entry){return entry.isIntersecting;});
