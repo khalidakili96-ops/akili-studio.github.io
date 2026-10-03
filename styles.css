@@ -29,3 +29,17 @@
 cite,.case-card small,.service-copy small,.contact-options span{color:var(--gold-text)}
 
 .application-form input:focus-visible,.application-form select:focus-visible,.application-form textarea:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+
+/* Phase 4 accessibility hardening — interactive targets, errors and live regions. */
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.nav-links a,.footer-contacts a,.contact-options a,.project-case-link,.villa-back{min-height:44px;display:inline-flex;align-items:center}
+.contact-options a{display:flex}
+.project-next-actions a{min-height:64px}
+.about6-page-nav button{min-width:44px;min-height:44px;justify-content:flex-end}
+.about6-philosophy-principles>div,.about6-method-list>div{min-height:44px}
+.form-error{margin:7px 0 0;color:#8a1f1f;font:500 10px/1.5 var(--font-secondary);letter-spacing:.01em}
+.application-form [aria-invalid="true"]{border-color:#8a1f1f}
+.application-form .consent[aria-invalid="true"]{outline:2px solid #8a1f1f;outline-offset:5px}
+@media(max-width:760px){
+ .nav-links a,.footer-contacts a,.contact-options a{min-height:44px}
+}
