@@ -2,7 +2,7 @@
 
 /* Project navigation — concise footer actions. */
 .project-next-links{margin-top:64px;padding-top:30px;display:block}
-.project-next-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid rgba(255,255,255,.14)}
+.project-next-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:0}
 .project-next-actions a{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:64px;padding:0 20px;color:inherit;text-decoration:none;font:500 10px/1.4 var(--font-secondary,Montserrat,sans-serif);letter-spacing:.1em;text-transform:uppercase;opacity:.86;border-right:1px solid rgba(255,255,255,.14);transition:opacity .25s ease,transform .25s ease}
 .project-next-actions a:first-child{padding-left:2px}
 .project-next-actions a:last-child{border-right:0}
