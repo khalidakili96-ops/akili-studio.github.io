@@ -1,12 +1,3 @@
-// Load the global Akili typography contract on every page, including mobile.
-if(!document.querySelector('link[data-akili-typography]')){
- const typography=document.createElement('link');
- typography.rel='stylesheet';
- typography.href='typography.css?v=6';
- typography.dataset.akiliTypography='true';
- document.head.appendChild(typography);
-}
-
 const menu=document.querySelector('.menu-toggle');
 const nav=document.querySelector('.nav-links');
 const setNavState=open=>{
