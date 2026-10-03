@@ -84,26 +84,96 @@
 .about6-method-list b{display:block;font:500 clamp(22px,2.1vw,32px)/1 var(--font)}
 .about6-method-list p{max-width:190px;margin:15px 0 0;color:#bdb7ad;font:400 10px/1.75 var(--font-secondary)}
 
-/* Desktop method alignment */
+/* Desktop method alignment — content axis follows each node */
 @media(min-width:901px){
-  .about6-method-list>div:nth-child(1){text-align:left}
+  .about6-method-list>div{
+    padding-left:0;
+    padding-right:0;
+    display:grid;
+    grid-template-columns:1fr;
+    align-content:start;
+    justify-items:start;
+  }
+
+  .about6-method-list>div>.about6-method-icon{
+    display:block;
+    width:30px;
+    height:30px;
+    margin:0 0 18px;
+    object-fit:contain;
+  }
+
+  .about6-method-list>div>span{
+    display:block;
+    margin:0 0 22px;
+  }
+
+  .about6-method-list>div>b{
+    display:block;
+    width:100%;
+    margin:0;
+    text-align:left;
+  }
+
+  .about6-method-list>div>p{
+    width:190px;
+    max-width:100%;
+    margin:14px 0 0;
+    text-align:left;
+  }
+
+  /* First node: left edge aligned with the dot. */
+  .about6-method-list>div:nth-child(1){
+    justify-items:start;
+    text-align:left;
+  }
+
+  /* Middle nodes: every element centred on the dot. */
   .about6-method-list>div:nth-child(2),
   .about6-method-list>div:nth-child(3),
-  .about6-method-list>div:nth-child(4){text-align:center}
-  .about6-method-list>div:nth-child(5){text-align:right}
-  .about6-method-list>div:nth-child(2) p,
-  .about6-method-list>div:nth-child(3) p,
-  .about6-method-list>div:nth-child(4) p{margin-left:auto;margin-right:auto}
-  .about6-method-list>div:nth-child(5) p{margin-left:auto}
+  .about6-method-list>div:nth-child(4){
+    justify-items:center;
+    text-align:center;
+  }
+  .about6-method-list>div:nth-child(2)>b,
+  .about6-method-list>div:nth-child(3)>b,
+  .about6-method-list>div:nth-child(4)>b,
+  .about6-method-list>div:nth-child(2)>p,
+  .about6-method-list>div:nth-child(3)>p,
+  .about6-method-list>div:nth-child(4)>p{
+    text-align:center;
+  }
+
+  /* Last node: right edge aligned with the dot. */
+  .about6-method-list>div:nth-child(5){
+    justify-items:end;
+    text-align:right;
+  }
+  .about6-method-list>div:nth-child(5)>b,
+  .about6-method-list>div:nth-child(5)>p{
+    text-align:right;
+  }
+
+  /* Keep the node positions themselves unchanged. */
   .about6-method-list>div:nth-child(1):after{left:0}
   .about6-method-list>div:nth-child(2):after,
   .about6-method-list>div:nth-child(3):after,
-  .about6-method-list>div:nth-child(4):after{left:50%;transform:translateX(-50%)}
-  .about6-method-list>div:nth-child(5):after{left:100%;transform:translateX(-100%)}
+  .about6-method-list>div:nth-child(4):after{
+    left:50%;
+    transform:translateX(-50%);
+  }
+  .about6-method-list>div:nth-child(5):after{
+    left:100%;
+    transform:translateX(-100%);
+  }
   .about6-method-list>div:nth-child(2).is-hovered:after,
   .about6-method-list>div:nth-child(3).is-hovered:after,
-  .about6-method-list>div:nth-child(4).is-hovered:after{transform:translateX(-50%) scale(1.45)}
-  .about6-method-list>div:nth-child(5).is-hovered:after{transform:translateX(-100%) scale(1.45)}
+  .about6-method-list>div:nth-child(4).is-hovered:after{
+    transform:translateX(-50%) scale(1.45);
+  }
+  .about6-method-list>div:nth-child(5).is-hovered:after{
+    transform:translateX(-100%) scale(1.45);
+  }
 }
 
 /* Founder */
