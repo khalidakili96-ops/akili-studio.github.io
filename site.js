@@ -74,7 +74,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    img.className=`project-slide${index===0?' is-active':''}`;
    img.src=src;
    img.alt=card.dataset.alt||'';
-   img.loading=index===0?'lazy':'lazy';
+   img.loading='lazy';
    img.decoding='async';
    img.dataset.gallerySrc=src;
    if(index>0)img.dataset.deferred='true';
@@ -87,7 +87,10 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    first.alt=card.dataset.alt||'';
    first.loading='lazy';
    first.decoding='async';
-   first.src=images[0];
+   const initialSrc=first.dataset.src||first.getAttribute('src');
+   if(initialSrc&&initialSrc.startsWith('data:image/')) first.src=images[0];
+   else if(initialSrc) first.src=initialSrc;
+   first.removeAttribute('data-src');
    media.appendChild(first);
  }else{
    media.appendChild(makeSlide(images[0],0));
