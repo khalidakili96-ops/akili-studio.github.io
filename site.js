@@ -66,9 +66,6 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  if(!Array.isArray(images)||images.length<2)return;
  if(touchDevice&&images.length>4)images=images.slice(0,4);
 
- // Keep only the first frame in the initial DOM. Additional gallery frames are
- // requested on demand when the card is visible, preventing below-the-fold
- // portfolio imagery from competing with the homepage hero and LCP.
  const makeSlide=(src,index)=>{
    const img=document.createElement('img');
    img.className=`project-slide${index===0?' is-active':''}`;
@@ -78,29 +75,28 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    img.decoding='async';
    img.fetchPriority='low';
    img.dataset.gallerySrc=src;
-   if(index>0)img.dataset.deferred='true';
    return img;
  };
- const first=media.querySelector('.project-slide.is-active')||media.querySelector('.project-slide');
+
+ const existing=media.querySelector('.project-slide.is-active')||media.querySelector('.project-slide');
  media.replaceChildren();
- if(first){
-   first.className='project-slide is-active';
-   first.alt=card.dataset.alt||'';
-   first.loading='lazy';
-   first.decoding='async';
-   first.fetchPriority='low';
-   const initialSrc=first.dataset.src||first.getAttribute('src');
-   if(initialSrc)first.src=initialSrc;
-   first.removeAttribute('data-src');
-   first.removeAttribute('data-deferred');
-   media.appendChild(first);
- }else{
-   media.appendChild(makeSlide(images[0],0));
- }
+
+ const first=existing||makeSlide(images[0],0);
+ first.className='project-slide is-active';
+ first.alt=card.dataset.alt||'';
+ first.loading='lazy';
+ first.decoding='async';
+ first.fetchPriority='low';
+ first.src=first.dataset.src||first.getAttribute('src')||images[0];
+ first.removeAttribute('data-src');
+ first.removeAttribute('data-deferred');
+ media.appendChild(first);
+
  const progress=document.createElement('div');
  progress.className='project-progress';
  progress.innerHTML='<span></span>';
  media.appendChild(progress);
+
  const counter=document.createElement('span');
  counter.className='project-index';
  counter.textContent=`01 / ${String(images.length).padStart(2,'0')}`;
@@ -109,88 +105,62 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  card.classList.add('has-gallery');
  let current=0;
  let galleryTimer=null;
- let loadedCount=1;
 
- const loadSlide=(index)=>{
-   if(index<0||index>=images.length)return;
+ const loadSlide=index=>{
+   if(index<0||index>=images.length)return null;
    let slide=media.querySelectorAll('.project-slide')[index];
    if(!slide){
      slide=makeSlide(images[index],index);
      media.insertBefore(slide,progress);
    }
-   if(slide.dataset.deferred==='true'){
-     slide.src=images[index];
-     slide.removeAttribute('data-deferred');
-     loadedCount=Math.max(loadedCount,index+1);
-   }
+   if(slide.src!==new URL(images[index],document.baseURI).href)slide.src=images[index];
+   return slide;
  };
 
  const restartProgress=()=>{
+   if(reducedMotion)return;
    const bar=progress.querySelector('span');
    if(!bar)return;
    bar.style.animation='none';
    requestAnimationFrame(()=>{bar.style.animation='projectProgress 3.8s linear infinite';});
  };
+
  const advance=()=>{
    const nextIndex=(current+1)%images.length;
-   loadSlide(nextIndex);
+   const next=loadSlide(nextIndex);
    const slides=media.querySelectorAll('.project-slide');
-   const next=media.querySelectorAll('.project-slide')[nextIndex];
    const currentSlide=slides[current];
    if(!next)return;
    currentSlide?.classList.remove('is-active');
-   current=nextIndex;
    next.classList.add('is-active');
+   current=nextIndex;
    counter.textContent=`${String(current+1).padStart(2,'0')} / ${String(images.length).padStart(2,'0')}`;
    restartProgress();
-   // Warm one frame ahead without loading the entire gallery.
    loadSlide((current+1)%images.length);
  };
+
  const startGallery=()=>{
    if(galleryTimer)return;
-   loadSlide(0);
-   if(reducedMotion)return;
-   restartProgress();
    galleryTimer=window.setInterval(advance,3800);
+   restartProgress();
  };
+
  const stopGallery=()=>{
    if(!galleryTimer)return;
    window.clearInterval(galleryTimer);
    galleryTimer=null;
  };
- if('IntersectionObserver' in window){
-   const galleryObserver=new IntersectionObserver(entries=>{
-     entries.forEach(entry=>entry.isIntersecting?startGallery():stopGallery());
-   },{threshold:.01,rootMargin:'200px 0px'});
-   galleryObserver.observe(card);
-   // Start immediately when the card is already visible at script initialisation.
-   requestAnimationFrame(()=>{
-     const rect=card.getBoundingClientRect();
-     if(rect.bottom>0&&rect.top<window.innerHeight)startGallery();
-   });
- }else{
-   startGallery();
- }
- if(!touchDevice&&!reducedMotion){
-   let pointerRect=null;
-   card.addEventListener('pointerenter',()=>{pointerRect=card.getBoundingClientRect();});
-   card.addEventListener('pointermove',event=>{
-     const rect=pointerRect||card.getBoundingClientRect();
-     const x=(event.clientX-rect.left)/rect.width-.5;
-     const y=(event.clientY-rect.top)/rect.height-.5;
-     card.style.setProperty('--tilt-x',`${(y*-2.2).toFixed(2)}deg`);
-     card.style.setProperty('--tilt-y',`${(x*2.2).toFixed(2)}deg`);
-     card.classList.add('is-pointer-active');
-   });
-   card.addEventListener('pointerleave',()=>{
-     pointerRect=null;
-     card.classList.remove('is-pointer-active');
-     card.style.setProperty('--tilt-x','0deg');
-     card.style.setProperty('--tilt-y','0deg');
-   });
- }
-});
 
+ // Start the slideshow directly. Visibility-based observers were causing
+ // cards to lose their timers during normal desktop scrolling/rendering.
+ startGallery();
+
+ // Pause only while the browser tab is hidden; resume without resetting the frame.
+ document.addEventListener('visibilitychange',()=>{
+   if(document.hidden)stopGallery();
+   else startGallery();
+ });
+});
 if(!touchDevice && !reducedMotion){
  document.querySelectorAll('.service-grid article').forEach(service=>{
    service.addEventListener('pointerenter',()=>{
