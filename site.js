@@ -90,8 +90,9 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    first.decoding='async';
    first.fetchPriority='low';
    const initialSrc=first.dataset.src||first.getAttribute('src');
-   first.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3C/svg%3E';
-   first.dataset.deferred='true';
+   if(initialSrc)first.src=initialSrc;
+   first.removeAttribute('data-src');
+   first.removeAttribute('data-deferred');
    media.appendChild(first);
  }else{
    media.appendChild(makeSlide(images[0],0));
@@ -145,8 +146,9 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    if(current+1<images.length)loadSlide(current+1);
  };
  const startGallery=()=>{
-   if(galleryTimer||reducedMotion)return;
+   if(galleryTimer)return;
    loadSlide(0);
+   if(reducedMotion)return;
    restartProgress();
    galleryTimer=window.setInterval(advance,3800);
  };
