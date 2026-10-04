@@ -126,8 +126,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    const bar=progress.querySelector('span');
    if(!bar)return;
    bar.style.animation='none';
-   void bar.offsetWidth;
-   bar.style.animation='projectProgress 3.8s linear infinite';
+   requestAnimationFrame(()=>{bar.style.animation='projectProgress 3.8s linear infinite';});
  };
  const advance=()=>{
    const slides=media.querySelectorAll('.project-slide');
@@ -211,7 +210,7 @@ if(!touchDevice && !reducedMotion){
 }
 
 const heroContent=document.querySelector('.hero-home .hero-content');
-if(heroContent&&!reducedMotion&&!touchDevice){window.addEventListener('scroll',()=>{const y=Math.min(window.scrollY*.08,36);heroContent.style.transform=`translate3d(0,${y}px,0)`;},{passive:true});}
+if(heroContent&&!reducedMotion&&!touchDevice){let heroScrollFrame=0;window.addEventListener('scroll',()=>{if(heroScrollFrame)return;heroScrollFrame=requestAnimationFrame(()=>{heroScrollFrame=0;const y=Math.min(window.scrollY*.08,36);heroContent.style.transform=`translate3d(0,${y}px,0)`;});},{passive:true});}
 const header=document.querySelector('.site-header');
 if(header&&!reducedMotion){const updateHeader=()=>header.classList.toggle('is-scrolled',window.scrollY>24);updateHeader();window.addEventListener('scroll',updateHeader,{passive:true});}
 
