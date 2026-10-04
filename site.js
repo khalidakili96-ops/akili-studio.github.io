@@ -48,7 +48,7 @@ if(menu&&nav){
 }
 
 const isProjectDetail=!!document.querySelector('.villa-hero,.celeste-hero,.dolce-hero');
-const revealTargets=isProjectDetail?document.querySelectorAll('.project-card,.case-card,.service-copy,.contact-grid>* ,.about-image,.project-gallery img'):document.querySelectorAll('main>section,.project-card,.case-card,.service-copy,.contact-grid>* ,.about-image,.project-gallery img');
+const revealTargets=isProjectDetail?document.querySelectorAll('.project-card,.case-card,.service-copy,.contact-grid>* ,.about-image,.project-gallery img'):document.querySelectorAll('main>section:not(.hero-home),.project-card,.case-card,.service-copy,.contact-grid>* ,.about-image,.project-gallery img');
 revealTargets.forEach((el,index)=>{el.classList.add('reveal');el.style.transitionDelay=`${Math.min(index*35,280)}ms`;});
 if('IntersectionObserver' in window){
  const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});},{threshold:.12,rootMargin:'0px 0px -40px'});
@@ -88,9 +88,8 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    first.loading='lazy';
    first.decoding='async';
    const initialSrc=first.dataset.src||first.getAttribute('src');
-   if(initialSrc&&initialSrc.startsWith('data:image/')) first.src=images[0];
-   else if(initialSrc) first.src=initialSrc;
-   first.removeAttribute('data-src');
+   first.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3C/svg%3E';
+   first.dataset.deferred='true';
    media.appendChild(first);
  }else{
    media.appendChild(makeSlide(images[0],0));
@@ -146,6 +145,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  };
  const startGallery=()=>{
    if(galleryTimer||reducedMotion)return;
+   loadSlide(0);
    loadSlide(1);
    restartProgress();
    galleryTimer=window.setInterval(advance,3800);
@@ -164,8 +164,10 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    startGallery();
  }
  if(!touchDevice&&!reducedMotion){
+   let pointerRect=null;
+   card.addEventListener('pointerenter',()=>{pointerRect=card.getBoundingClientRect();});
    card.addEventListener('pointermove',event=>{
-     const rect=card.getBoundingClientRect();
+     const rect=pointerRect||card.getBoundingClientRect();
      const x=(event.clientX-rect.left)/rect.width-.5;
      const y=(event.clientY-rect.top)/rect.height-.5;
      card.style.setProperty('--tilt-x',`${(y*-2.2).toFixed(2)}deg`);
@@ -173,6 +175,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
      card.classList.add('is-pointer-active');
    });
    card.addEventListener('pointerleave',()=>{
+     pointerRect=null;
      card.classList.remove('is-pointer-active');
      card.style.setProperty('--tilt-x','0deg');
      card.style.setProperty('--tilt-y','0deg');
