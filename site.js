@@ -132,18 +132,19 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    requestAnimationFrame(()=>{bar.style.animation='projectProgress 3.8s linear infinite';});
  };
  const advance=()=>{
+   const nextIndex=(current+1)%images.length;
+   loadSlide(nextIndex);
    const slides=media.querySelectorAll('.project-slide');
-   if(current+1>=images.length)return;
-   loadSlide(current+1);
-   const next=media.querySelectorAll('.project-slide')[current+1];
+   const next=media.querySelectorAll('.project-slide')[nextIndex];
+   const currentSlide=slides[current];
    if(!next)return;
-   slides[current]?.classList.remove('is-active');
-   current++;
+   currentSlide?.classList.remove('is-active');
+   current=nextIndex;
    next.classList.add('is-active');
    counter.textContent=`${String(current+1).padStart(2,'0')} / ${String(images.length).padStart(2,'0')}`;
    restartProgress();
    // Warm one frame ahead without loading the entire gallery.
-   if(current+1<images.length)loadSlide(current+1);
+   loadSlide((current+1)%images.length);
  };
  const startGallery=()=>{
    if(galleryTimer)return;
