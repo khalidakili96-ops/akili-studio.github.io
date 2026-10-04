@@ -65,18 +65,33 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  try{images=JSON.parse(card.dataset.gallery);}catch(e){return;}
  if(!Array.isArray(images)||images.length<2)return;
  if(touchDevice&&images.length>4)images=images.slice(0,4);
- media.replaceChildren();
- images.forEach((src,index)=>{
+
+ // Keep only the first frame in the initial DOM. Additional gallery frames are
+ // requested on demand when the card is visible, preventing below-the-fold
+ // portfolio imagery from competing with the homepage hero and LCP.
+ const makeSlide=(src,index)=>{
    const img=document.createElement('img');
    img.className=`project-slide${index===0?' is-active':''}`;
    img.src=src;
    img.alt=card.dataset.alt||'';
-   // The homepage hero is the only intentionally preloaded visual.
-   // Keep portfolio galleries lazy so below-the-fold project imagery never competes with LCP.
-   img.loading='lazy';
+   img.loading=index===0?'lazy':'lazy';
    img.decoding='async';
-   media.appendChild(img);
- });
+   img.dataset.gallerySrc=src;
+   if(index>0)img.dataset.deferred='true';
+   return img;
+ };
+ const first=media.querySelector('.project-slide.is-active')||media.querySelector('.project-slide');
+ media.replaceChildren();
+ if(first){
+   first.className='project-slide is-active';
+   first.alt=card.dataset.alt||'';
+   first.loading='lazy';
+   first.decoding='async';
+   first.src=images[0];
+   media.appendChild(first);
+ }else{
+   media.appendChild(makeSlide(images[0],0));
+ }
  const progress=document.createElement('div');
  progress.className='project-progress';
  progress.innerHTML='<span></span>';
@@ -85,9 +100,26 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  counter.className='project-index';
  counter.textContent=`01 / ${String(images.length).padStart(2,'0')}`;
  media.appendChild(counter);
+
  card.classList.add('has-gallery');
  let current=0;
  let galleryTimer=null;
+ let loadedCount=1;
+
+ const loadSlide=(index)=>{
+   if(index<0||index>=images.length)return;
+   let slide=media.querySelectorAll('.project-slide')[index];
+   if(!slide){
+     slide=makeSlide(images[index],index);
+     media.insertBefore(slide,progress);
+   }
+   if(slide.dataset.deferred==='true'){
+     slide.src=images[index];
+     slide.removeAttribute('data-deferred');
+     loadedCount=Math.max(loadedCount,index+1);
+   }
+ };
+
  const restartProgress=()=>{
    const bar=progress.querySelector('span');
    if(!bar)return;
@@ -97,15 +129,21 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  };
  const advance=()=>{
    const slides=media.querySelectorAll('.project-slide');
-   if(slides.length<2)return;
-   slides[current].classList.remove('is-active');
-   current=(current+1)%slides.length;
-   slides[current].classList.add('is-active');
-   counter.textContent=`${String(current+1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;
+   if(current+1>=images.length)return;
+   loadSlide(current+1);
+   const next=media.querySelectorAll('.project-slide')[current+1];
+   if(!next)return;
+   slides[current]?.classList.remove('is-active');
+   current++;
+   next.classList.add('is-active');
+   counter.textContent=`${String(current+1).padStart(2,'0')} / ${String(images.length).padStart(2,'0')}`;
    restartProgress();
+   // Warm one frame ahead without loading the entire gallery.
+   if(current+1<images.length)loadSlide(current+1);
  };
  const startGallery=()=>{
    if(galleryTimer||reducedMotion)return;
+   loadSlide(1);
    restartProgress();
    galleryTimer=window.setInterval(advance,3800);
  };
@@ -117,7 +155,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  if('IntersectionObserver' in window){
    const galleryObserver=new IntersectionObserver(entries=>{
      entries.forEach(entry=>entry.isIntersecting?startGallery():stopGallery());
-   },{threshold:.05});
+   },{threshold:.05,rootMargin:'120px 0px'});
    galleryObserver.observe(card);
  }else{
    startGallery();
