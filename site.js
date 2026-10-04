@@ -76,6 +76,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    img.alt=card.dataset.alt||'';
    img.loading='lazy';
    img.decoding='async';
+   img.fetchPriority='low';
    img.dataset.gallerySrc=src;
    if(index>0)img.dataset.deferred='true';
    return img;
@@ -87,6 +88,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    first.alt=card.dataset.alt||'';
    first.loading='lazy';
    first.decoding='async';
+   first.fetchPriority='low';
    const initialSrc=first.dataset.src||first.getAttribute('src');
    first.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3C/svg%3E';
    first.dataset.deferred='true';
@@ -145,7 +147,6 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  const startGallery=()=>{
    if(galleryTimer||reducedMotion)return;
    loadSlide(0);
-   loadSlide(1);
    restartProgress();
    galleryTimer=window.setInterval(advance,3800);
  };
@@ -157,7 +158,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  if('IntersectionObserver' in window){
    const galleryObserver=new IntersectionObserver(entries=>{
      entries.forEach(entry=>entry.isIntersecting?startGallery():stopGallery());
-   },{threshold:.05,rootMargin:'120px 0px'});
+   },{threshold:.05,rootMargin:'0px'});
    galleryObserver.observe(card);
  }else{
    startGallery();
