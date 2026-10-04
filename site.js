@@ -161,8 +161,13 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  if('IntersectionObserver' in window){
    const galleryObserver=new IntersectionObserver(entries=>{
      entries.forEach(entry=>entry.isIntersecting?startGallery():stopGallery());
-   },{threshold:.05,rootMargin:'0px'});
+   },{threshold:.01,rootMargin:'200px 0px'});
    galleryObserver.observe(card);
+   // Start immediately when the card is already visible at script initialisation.
+   requestAnimationFrame(()=>{
+     const rect=card.getBoundingClientRect();
+     if(rect.bottom>0&&rect.top<window.innerHeight)startGallery();
+   });
  }else{
    startGallery();
  }
