@@ -12,7 +12,62 @@
   <link rel="icon" type="image/x-portable-pixmap" href="/assets/favicon.ppm">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="styles.css?v=18"><link rel="stylesheet" href="project-template.css">
-  <link rel="stylesheet" href="typography.css?v=8">
+  <style>/* Akili Studio — global typography contract */
+
+:root{
+  --font-primary:'Caviar Dreams',Arial,sans-serif;
+  --font-secondary:'Montserrat',Arial,sans-serif;
+  --font:var(--font-primary);
+}
+
+html,body{font-family:var(--font-secondary)!important}
+
+h1,h2,h3,h4,h5,h6,
+blockquote,cite,
+.case-card h2,
+.service-copy h2,
+.project-closing h2,
+.application-sidebar h1,
+.application-block legend{
+  font-family:'Caviar Dreams',Arial,sans-serif!important;
+  font-synthesis:none!important;
+  font-weight:500;
+}
+
+p,small,label,input,select,textarea,button,
+a,.eyebrow,.lead,.project-meta,
+.nav-links,.menu-toggle,.button,.text-link,
+.service-grid small,.service-grid p,
+.project-card p,.case-card small,.service-copy small,
+.contact-options a,.application-lead,.application-side-note p,
+.form-grid label,.consent,.submit-row p,.application-submit,
+footer{
+  font-family:'Montserrat',Arial,sans-serif!important;
+}
+
+@media(max-width:760px){
+  h1,h2,h3,h4,h5,h6,
+  blockquote,cite,
+  .case-card h2,
+  .service-copy h2,
+  .project-closing h2,
+  .application-sidebar h1,
+  .application-block legend{
+    font-family:'Caviar Dreams',Arial,sans-serif!important;
+    font-synthesis:none!important;
+    font-weight:500;
+  }
+  p,small,label,input,select,textarea,button,a,
+  .eyebrow,.lead,.project-meta,.nav-links,.menu-toggle,
+  .button,.text-link,.service-grid small,.service-grid p,
+  .project-card p,.case-card small,.service-copy small,
+  .contact-options a,.application-lead,.application-side-note p,
+  .form-grid label,.consent,.submit-row p,.application-submit,
+  footer{
+    font-family:'Montserrat',Arial,sans-serif!important;
+  }
+}
+</style>
   <link rel="stylesheet" href="villa-aurea.css?v=2">
   <style>
     html, body { max-width: 100%; overflow-x: hidden; }
