@@ -23,3 +23,5 @@ jobs:
           python-version: "3.x"
       - name: Run SEO static audit
         run: python scripts/seo_audit.py
+      - name: Validate responsive images and derivative hashes
+        run: python scripts/media_audit.py

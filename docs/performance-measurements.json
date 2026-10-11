@@ -1,0 +1,1389 @@
+{
+  "baseCommit": "55340ef2011c78fb40df85c573a2f6d800b29532",
+  "productionAfterMeasured": false,
+  "note": "Live baseline timed out. Use two local baseline runs versus two final candidate runs for comparison. Interim WebP-only after run excluded.",
+  "runs": [
+    {
+      "file": "live-before",
+      "date": "2026-10-11T21:11:13.906Z",
+      "lighthouseVersion": "12.8.2",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "settings": {
+        "output": [
+          "json",
+          "html"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "seo"
+        ],
+        "skipAudits": null
+      },
+      "url": "https://akilis.studio/",
+      "warnings": [
+        "The page loaded too slowly to finish within the time limit. Results may be incomplete."
+      ],
+      "performanceScore": 0.62,
+      "seoScore": 0.92,
+      "metrics": {
+        "firstContentfulPaint": 3124,
+        "largestContentfulPaint": 8857,
+        "interactive": 8869,
+        "speedIndex": 7601,
+        "totalBlockingTime": 0,
+        "maxPotentialFID": 46,
+        "cumulativeLayoutShift": 0.00895120611049653,
+        "cumulativeLayoutShiftMainFrame": 0.00895120611049653,
+        "lcpLoadStart": 792,
+        "lcpLoadEnd": 8833,
+        "timeToFirstByte": 792,
+        "observedTimeOrigin": 0,
+        "observedTimeOriginTs": 1315784818072,
+        "observedNavigationStart": 0,
+        "observedNavigationStartTs": 1315784818072,
+        "observedFirstPaint": 1452,
+        "observedFirstPaintTs": 1315786270187,
+        "observedFirstContentfulPaint": 1452,
+        "observedFirstContentfulPaintTs": 1315786270187,
+        "observedFirstContentfulPaintAllFrames": 1452,
+        "observedFirstContentfulPaintAllFramesTs": 1315786270187,
+        "observedLargestContentfulPaint": 10036,
+        "observedLargestContentfulPaintTs": 1315794853657,
+        "observedLargestContentfulPaintAllFrames": 10036,
+        "observedLargestContentfulPaintAllFramesTs": 1315794853657,
+        "observedTraceEnd": 45006,
+        "observedTraceEndTs": 1315829823726,
+        "observedDomContentLoaded": 1300,
+        "observedDomContentLoadedTs": 1315786117970,
+        "observedCumulativeLayoutShift": 0.00895120611049653,
+        "observedCumulativeLayoutShiftMainFrame": 0.00895120611049653,
+        "observedFirstVisualChange": 1469,
+        "observedFirstVisualChangeTs": 1315786287072,
+        "observedLastVisualChange": 10052,
+        "observedLastVisualChangeTs": 1315794870072,
+        "observedSpeedIndex": 4536,
+        "observedSpeedIndexTs": 1315789354497
+      },
+      "bytes": 9352019,
+      "lcp": {
+        "type": "list",
+        "items": [
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "label": "Element"
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "page-12-SECTION",
+                  "path": "1,HTML,1,BODY,1,MAIN,0,SECTION",
+                  "selector": "body > main > section.hero",
+                  "boundingRect": {
+                    "top": 0,
+                    "bottom": 760,
+                    "left": 0,
+                    "right": 412,
+                    "width": 412,
+                    "height": 760
+                  },
+                  "snippet": "<section class=\"hero hero-home\">",
+                  "nodeLabel": "INTERIOR DESIGN · CAIRO, EGYPT & WORLDWIDE\n\nDesign Studio in Cairo, Egypt\n\nDesi…"
+                }
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "phase",
+                "valueType": "text",
+                "label": "Phase"
+              },
+              {
+                "key": "percent",
+                "valueType": "text",
+                "label": "% of LCP"
+              },
+              {
+                "key": "timing",
+                "valueType": "ms",
+                "label": "Timing"
+              }
+            ],
+            "items": [
+              {
+                "phase": "TTFB",
+                "timing": 792.328,
+                "percent": "9%"
+              },
+              {
+                "phase": "Load Delay",
+                "timing": 0,
+                "percent": "0%"
+              },
+              {
+                "phase": "Load Time",
+                "timing": 8041.1580286112985,
+                "percent": "91%"
+              },
+              {
+                "phase": "Render Delay",
+                "timing": 23.77597138870442,
+                "percent": "0%"
+              }
+            ]
+          }
+        ]
+      },
+      "heroRequests": [
+        {
+          "url": "https://akilis.studio/assets/apartment-celeste/Apartment-Celeste-08.webp",
+          "sessionTargetType": "page",
+          "protocol": "h2",
+          "rendererStartTime": 499.98200011253357,
+          "networkRequestTime": 500.9869999885559,
+          "networkEndTime": 10008.144000053406,
+          "finished": true,
+          "transferSize": 1221796,
+          "resourceSize": 1217620,
+          "statusCode": 200,
+          "mimeType": "image/webp",
+          "resourceType": "Image",
+          "priority": "High",
+          "isLinkPreload": true,
+          "experimentalFromMainFrame": true,
+          "entity": "akilis.studio"
+        }
+      ]
+    },
+    {
+      "file": "local-before-1",
+      "date": "2026-10-11T21:14:41.262Z",
+      "lighthouseVersion": "12.8.2",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "settings": {
+        "output": [
+          "json",
+          "html"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "seo"
+        ],
+        "skipAudits": null
+      },
+      "url": "http://127.0.0.1:8081/",
+      "warnings": [],
+      "performanceScore": 0.74,
+      "seoScore": 1,
+      "metrics": {
+        "firstContentfulPaint": 1572,
+        "largestContentfulPaint": 17013,
+        "interactive": 17973,
+        "speedIndex": 1572,
+        "totalBlockingTime": 0,
+        "maxPotentialFID": 16,
+        "cumulativeLayoutShift": 0.01790241222099306,
+        "cumulativeLayoutShiftMainFrame": 0.01790241222099306,
+        "lcpLoadStart": 2768,
+        "lcpLoadEnd": 3535,
+        "timeToFirstByte": 477,
+        "observedTimeOrigin": 0,
+        "observedTimeOriginTs": 1315992196849,
+        "observedNavigationStart": 0,
+        "observedNavigationStartTs": 1315992196849,
+        "observedFirstPaint": 292,
+        "observedFirstPaintTs": 1315992488389,
+        "observedFirstContentfulPaint": 292,
+        "observedFirstContentfulPaintTs": 1315992488389,
+        "observedFirstContentfulPaintAllFrames": 292,
+        "observedFirstContentfulPaintAllFramesTs": 1315992488389,
+        "observedLargestContentfulPaint": 292,
+        "observedLargestContentfulPaintTs": 1315992488389,
+        "observedLargestContentfulPaintAllFrames": 292,
+        "observedLargestContentfulPaintAllFramesTs": 1315992488389,
+        "observedTraceEnd": 2782,
+        "observedTraceEndTs": 1315994978393,
+        "observedLoad": 306,
+        "observedLoadTs": 1315992502994,
+        "observedDomContentLoaded": 124,
+        "observedDomContentLoadedTs": 1315992321326,
+        "observedCumulativeLayoutShift": 0.01790241222099306,
+        "observedCumulativeLayoutShiftMainFrame": 0.01790241222099306,
+        "observedFirstVisualChange": 425,
+        "observedFirstVisualChangeTs": 1315992621849,
+        "observedLastVisualChange": 857,
+        "observedLastVisualChangeTs": 1315993053849,
+        "observedSpeedIndex": 435,
+        "observedSpeedIndexTs": 1315992632335
+      },
+      "bytes": 4789428,
+      "lcp": {
+        "type": "list",
+        "items": [
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "label": "Element"
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "page-5-SECTION",
+                  "path": "1,HTML,1,BODY,1,MAIN,0,SECTION",
+                  "selector": "body > main > section.hero",
+                  "boundingRect": {
+                    "top": 0,
+                    "bottom": 760,
+                    "left": 0,
+                    "right": 412,
+                    "width": 412,
+                    "height": 760
+                  },
+                  "snippet": "<section class=\"hero hero-home\">",
+                  "nodeLabel": "INTERIOR DESIGN · CAIRO, EGYPT & WORLDWIDE\n\nDesign Studio in Cairo, Egypt\n\nDesi…"
+                }
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "phase",
+                "valueType": "text",
+                "label": "Phase"
+              },
+              {
+                "key": "percent",
+                "valueType": "text",
+                "label": "% of LCP"
+              },
+              {
+                "key": "timing",
+                "valueType": "ms",
+                "label": "Timing"
+              }
+            ],
+            "items": [
+              {
+                "phase": "TTFB",
+                "timing": 476.63155,
+                "percent": "3%"
+              },
+              {
+                "phase": "Load Delay",
+                "timing": 2290.96889846208,
+                "percent": "13%"
+              },
+              {
+                "phase": "Load Time",
+                "timing": 766.9591656141133,
+                "percent": "5%"
+              },
+              {
+                "phase": "Render Delay",
+                "timing": 13478.243935923814,
+                "percent": "79%"
+              }
+            ]
+          }
+        ]
+      },
+      "heroRequests": [
+        {
+          "url": "http://127.0.0.1:8081/assets/apartment-celeste/Apartment-Celeste-08.webp",
+          "sessionTargetType": "page",
+          "protocol": "http/1.1",
+          "rendererStartTime": 46.33200001716614,
+          "networkRequestTime": 46.90499997138977,
+          "networkEndTime": 60.0479998588562,
+          "finished": true,
+          "transferSize": 1217802,
+          "resourceSize": 1217620,
+          "statusCode": 200,
+          "mimeType": "image/webp",
+          "resourceType": "Image",
+          "priority": "High",
+          "isLinkPreload": true,
+          "experimentalFromMainFrame": true,
+          "entity": "127.0.0.1"
+        }
+      ]
+    },
+    {
+      "file": "local-before-2",
+      "date": "2026-10-11T21:18:00.043Z",
+      "lighthouseVersion": "12.8.2",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "settings": {
+        "output": [
+          "json",
+          "html"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "seo"
+        ],
+        "skipAudits": null
+      },
+      "url": "http://127.0.0.1:8081/",
+      "warnings": [],
+      "performanceScore": 0.75,
+      "seoScore": 1,
+      "metrics": {
+        "firstContentfulPaint": 1559,
+        "largestContentfulPaint": 17410,
+        "interactive": 18370,
+        "speedIndex": 1559,
+        "totalBlockingTime": 0,
+        "maxPotentialFID": 16,
+        "cumulativeLayoutShift": 0.01790241222099306,
+        "cumulativeLayoutShiftMainFrame": 0.01790241222099306,
+        "lcpLoadStart": 501,
+        "lcpLoadEnd": 1195,
+        "timeToFirstByte": 455,
+        "observedTimeOrigin": 0,
+        "observedTimeOriginTs": 1316190935049,
+        "observedNavigationStart": 0,
+        "observedNavigationStartTs": 1316190935049,
+        "observedFirstPaint": 355,
+        "observedFirstPaintTs": 1316191289888,
+        "observedFirstContentfulPaint": 355,
+        "observedFirstContentfulPaintTs": 1316191289888,
+        "observedFirstContentfulPaintAllFrames": 355,
+        "observedFirstContentfulPaintAllFramesTs": 1316191289888,
+        "observedLargestContentfulPaint": 355,
+        "observedLargestContentfulPaintTs": 1316191289888,
+        "observedLargestContentfulPaintAllFrames": 355,
+        "observedLargestContentfulPaintAllFramesTs": 1316191289888,
+        "observedTraceEnd": 2762,
+        "observedTraceEndTs": 1316193696690,
+        "observedLoad": 252,
+        "observedLoadTs": 1316191186593,
+        "observedDomContentLoaded": 68,
+        "observedDomContentLoadedTs": 1316191002655,
+        "observedCumulativeLayoutShift": 0.01790241222099306,
+        "observedCumulativeLayoutShiftMainFrame": 0.01790241222099306,
+        "observedFirstVisualChange": 360,
+        "observedFirstVisualChangeTs": 1316191295049,
+        "observedLastVisualChange": 822,
+        "observedLastVisualChangeTs": 1316191757049,
+        "observedSpeedIndex": 369,
+        "observedSpeedIndexTs": 1316191303867
+      },
+      "bytes": 4789905,
+      "lcp": {
+        "type": "list",
+        "items": [
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "label": "Element"
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "page-5-SECTION",
+                  "path": "1,HTML,1,BODY,1,MAIN,0,SECTION",
+                  "selector": "body > main > section.hero",
+                  "boundingRect": {
+                    "top": 0,
+                    "bottom": 760,
+                    "left": 0,
+                    "right": 412,
+                    "width": 412,
+                    "height": 760
+                  },
+                  "snippet": "<section class=\"hero hero-home\">",
+                  "nodeLabel": "INTERIOR DESIGN · CAIRO, EGYPT & WORLDWIDE\n\nDesign Studio in Cairo, Egypt\n\nDesi…"
+                }
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "phase",
+                "valueType": "text",
+                "label": "Phase"
+              },
+              {
+                "key": "percent",
+                "valueType": "text",
+                "label": "% of LCP"
+              },
+              {
+                "key": "timing",
+                "valueType": "ms",
+                "label": "Timing"
+              }
+            ],
+            "items": [
+              {
+                "phase": "TTFB",
+                "timing": 454.77685,
+                "percent": "3%"
+              },
+              {
+                "phase": "Load Delay",
+                "timing": 46.158897734495554,
+                "percent": "0%"
+              },
+              {
+                "phase": "Load Time",
+                "timing": 693.9505877689078,
+                "percent": "4%"
+              },
+              {
+                "phase": "Render Delay",
+                "timing": 16214.667364496594,
+                "percent": "93%"
+              }
+            ]
+          }
+        ]
+      },
+      "heroRequests": [
+        {
+          "url": "http://127.0.0.1:8081/assets/apartment-celeste/Apartment-Celeste-08.webp",
+          "sessionTargetType": "page",
+          "protocol": "http/1.1",
+          "rendererStartTime": 9.078999996185303,
+          "networkRequestTime": 9.694000005722046,
+          "networkEndTime": 23.838000297546387,
+          "finished": true,
+          "transferSize": 1217802,
+          "resourceSize": 1217620,
+          "statusCode": 200,
+          "mimeType": "image/webp",
+          "resourceType": "Image",
+          "priority": "High",
+          "isLinkPreload": true,
+          "experimentalFromMainFrame": true,
+          "entity": "127.0.0.1"
+        }
+      ]
+    },
+    {
+      "file": "local-after-2",
+      "date": "2026-10-11T21:20:07.815Z",
+      "lighthouseVersion": "12.8.2",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "settings": {
+        "output": [
+          "json",
+          "html"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "seo"
+        ],
+        "skipAudits": null
+      },
+      "url": "http://127.0.0.1:8082/",
+      "warnings": [],
+      "performanceScore": 0.79,
+      "seoScore": 1,
+      "metrics": {
+        "firstContentfulPaint": 912,
+        "largestContentfulPaint": 5863,
+        "interactive": 6103,
+        "speedIndex": 912,
+        "totalBlockingTime": 0,
+        "maxPotentialFID": 16,
+        "cumulativeLayoutShift": 0.018273927909107056,
+        "cumulativeLayoutShiftMainFrame": 0.018273927909107056,
+        "lcpLoadStart": 1334,
+        "lcpLoadEnd": 1613,
+        "timeToFirstByte": 456,
+        "observedTimeOrigin": 0,
+        "observedTimeOriginTs": 1316318706730,
+        "observedNavigationStart": 0,
+        "observedNavigationStartTs": 1316318706730,
+        "observedFirstPaint": 184,
+        "observedFirstPaintTs": 1316318890860,
+        "observedFirstContentfulPaint": 184,
+        "observedFirstContentfulPaintTs": 1316318890860,
+        "observedFirstContentfulPaintAllFrames": 184,
+        "observedFirstContentfulPaintAllFramesTs": 1316318890860,
+        "observedLargestContentfulPaint": 184,
+        "observedLargestContentfulPaintTs": 1316318890860,
+        "observedLargestContentfulPaintAllFrames": 184,
+        "observedLargestContentfulPaintAllFramesTs": 1316318890860,
+        "observedTraceEnd": 2749,
+        "observedTraceEndTs": 1316321455913,
+        "observedLoad": 254,
+        "observedLoadTs": 1316318960675,
+        "observedDomContentLoaded": 107,
+        "observedDomContentLoadedTs": 1316318813760,
+        "observedCumulativeLayoutShift": 0.018273927909107056,
+        "observedCumulativeLayoutShiftMainFrame": 0.018273927909107056,
+        "observedFirstVisualChange": 316,
+        "observedFirstVisualChangeTs": 1316319022730,
+        "observedLastVisualChange": 766,
+        "observedLastVisualChangeTs": 1316319472730,
+        "observedSpeedIndex": 326,
+        "observedSpeedIndexTs": 1316319032764
+      },
+      "bytes": 1389098,
+      "lcp": {
+        "type": "list",
+        "items": [
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "label": "Element"
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "page-0-SECTION",
+                  "path": "1,HTML,1,BODY,1,MAIN,0,SECTION",
+                  "selector": "body > main > section.hero",
+                  "boundingRect": {
+                    "top": 0,
+                    "bottom": 760,
+                    "left": 0,
+                    "right": 412,
+                    "width": 412,
+                    "height": 760
+                  },
+                  "snippet": "<section class=\"hero hero-home\">",
+                  "nodeLabel": "INTERIOR DESIGN · CAIRO, EGYPT & WORLDWIDE\n\nDesign Studio in Cairo, Egypt\n\nDesi…"
+                }
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "phase",
+                "valueType": "text",
+                "label": "Phase"
+              },
+              {
+                "key": "percent",
+                "valueType": "text",
+                "label": "% of LCP"
+              },
+              {
+                "key": "timing",
+                "valueType": "ms",
+                "label": "Timing"
+              }
+            ],
+            "items": [
+              {
+                "phase": "TTFB",
+                "timing": 456.10145,
+                "percent": "8%"
+              },
+              {
+                "phase": "Load Delay",
+                "timing": 878.0322075630435,
+                "percent": "15%"
+              },
+              {
+                "phase": "Load Time",
+                "timing": 278.6530110790002,
+                "percent": "5%"
+              },
+              {
+                "phase": "Render Delay",
+                "timing": 4250.357881357959,
+                "percent": "72%"
+              }
+            ]
+          }
+        ]
+      },
+      "heroRequests": [
+        {
+          "url": "http://127.0.0.1:8082/assets/responsive/apartment-celeste/apartment-celeste-08-1920-8ebcbd026925.avif",
+          "sessionTargetType": "page",
+          "protocol": "http/1.1",
+          "rendererStartTime": 40.74300003051758,
+          "networkRequestTime": 41.390000104904175,
+          "networkEndTime": 50.141000270843506,
+          "finished": true,
+          "transferSize": 445547,
+          "resourceSize": 445352,
+          "statusCode": 200,
+          "mimeType": "application/octet-stream",
+          "resourceType": "Image",
+          "priority": "High",
+          "isLinkPreload": true,
+          "experimentalFromMainFrame": true,
+          "entity": "127.0.0.1"
+        }
+      ]
+    },
+    {
+      "file": "local-after-3",
+      "date": "2026-10-11T21:22:31.556Z",
+      "lighthouseVersion": "12.8.2",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "settings": {
+        "output": [
+          "json",
+          "html"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "seo"
+        ],
+        "skipAudits": null
+      },
+      "url": "http://127.0.0.1:8082/",
+      "warnings": [],
+      "performanceScore": 0.79,
+      "seoScore": 1,
+      "metrics": {
+        "firstContentfulPaint": 908,
+        "largestContentfulPaint": 5858,
+        "interactive": 6098,
+        "speedIndex": 908,
+        "totalBlockingTime": 0,
+        "maxPotentialFID": 16,
+        "cumulativeLayoutShift": 0.018273927909107056,
+        "cumulativeLayoutShiftMainFrame": 0.018273927909107056,
+        "lcpLoadStart": 510,
+        "lcpLoadEnd": 857,
+        "timeToFirstByte": 454,
+        "observedTimeOrigin": 0,
+        "observedTimeOriginTs": 1316462470447,
+        "observedNavigationStart": 0,
+        "observedNavigationStartTs": 1316462470447,
+        "observedFirstPaint": 155,
+        "observedFirstPaintTs": 1316462625314,
+        "observedFirstContentfulPaint": 155,
+        "observedFirstContentfulPaintTs": 1316462625314,
+        "observedFirstContentfulPaintAllFrames": 155,
+        "observedFirstContentfulPaintAllFramesTs": 1316462625314,
+        "observedLargestContentfulPaint": 155,
+        "observedLargestContentfulPaintTs": 1316462625314,
+        "observedLargestContentfulPaintAllFrames": 155,
+        "observedLargestContentfulPaintAllFramesTs": 1316462625314,
+        "observedTraceEnd": 2796,
+        "observedTraceEndTs": 1316465266887,
+        "observedLoad": 271,
+        "observedLoadTs": 1316462741098,
+        "observedDomContentLoaded": 74,
+        "observedDomContentLoadedTs": 1316462544716,
+        "observedCumulativeLayoutShift": 0.018273927909107056,
+        "observedCumulativeLayoutShiftMainFrame": 0.018273927909107056,
+        "observedFirstVisualChange": 279,
+        "observedFirstVisualChangeTs": 1316462749447,
+        "observedLastVisualChange": 722,
+        "observedLastVisualChangeTs": 1316463192447,
+        "observedSpeedIndex": 289,
+        "observedSpeedIndexTs": 1316462759532
+      },
+      "bytes": 1389103,
+      "lcp": {
+        "type": "list",
+        "items": [
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "label": "Element"
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "page-0-SECTION",
+                  "path": "1,HTML,1,BODY,1,MAIN,0,SECTION",
+                  "selector": "body > main > section.hero",
+                  "boundingRect": {
+                    "top": 0,
+                    "bottom": 760,
+                    "left": 0,
+                    "right": 412,
+                    "width": 412,
+                    "height": 760
+                  },
+                  "snippet": "<section class=\"hero hero-home\">",
+                  "nodeLabel": "INTERIOR DESIGN · CAIRO, EGYPT & WORLDWIDE\n\nDesign Studio in Cairo, Egypt\n\nDesi…"
+                }
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "phase",
+                "valueType": "text",
+                "label": "Phase"
+              },
+              {
+                "key": "percent",
+                "valueType": "text",
+                "label": "% of LCP"
+              },
+              {
+                "key": "timing",
+                "valueType": "ms",
+                "label": "Timing"
+              }
+            ],
+            "items": [
+              {
+                "phase": "TTFB",
+                "timing": 454.1188,
+                "percent": "8%"
+              },
+              {
+                "phase": "Load Delay",
+                "timing": 55.493811244514404,
+                "percent": "1%"
+              },
+              {
+                "phase": "Load Time",
+                "timing": 346.91636728255475,
+                "percent": "6%"
+              },
+              {
+                "phase": "Render Delay",
+                "timing": 5001.708621472932,
+                "percent": "85%"
+              }
+            ]
+          }
+        ]
+      },
+      "heroRequests": [
+        {
+          "url": "http://127.0.0.1:8082/assets/responsive/apartment-celeste/apartment-celeste-08-1920-8ebcbd026925.avif",
+          "sessionTargetType": "page",
+          "protocol": "http/1.1",
+          "rendererStartTime": 12.447999954223633,
+          "networkRequestTime": 12.977999925613403,
+          "networkEndTime": 22.1489999294281,
+          "finished": true,
+          "transferSize": 445547,
+          "resourceSize": 445352,
+          "statusCode": 200,
+          "mimeType": "application/octet-stream",
+          "resourceType": "Image",
+          "priority": "High",
+          "isLinkPreload": true,
+          "experimentalFromMainFrame": true,
+          "entity": "127.0.0.1"
+        }
+      ]
+    }
+  ],
+  "browserChecks": [
+    {
+      "viewport": 390,
+      "route": "/",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Caviar Dreams",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/"
+    },
+    {
+      "viewport": 390,
+      "route": "/projects",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/projects"
+    },
+    {
+      "viewport": 390,
+      "route": "/services",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/services"
+    },
+    {
+      "viewport": 390,
+      "route": "/about",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/about"
+    },
+    {
+      "viewport": 390,
+      "route": "/interior-design-cairo",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/interior-design-cairo"
+    },
+    {
+      "viewport": 390,
+      "route": "/villa-aurea.html",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/villa-aurea.html"
+    },
+    {
+      "viewport": 390,
+      "route": "/apartment-celeste.html",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/apartment-celeste.html"
+    },
+    {
+      "viewport": 390,
+      "route": "/dolce-divano.html",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/dolce-divano.html"
+    },
+    {
+      "viewport": 390,
+      "route": "/eleven.html",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/eleven.html"
+    },
+    {
+      "viewport": 390,
+      "route": "/residenza-verde.html",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/residenza-verde.html"
+    },
+    {
+      "viewport": 390,
+      "route": "/application.html",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/application.html"
+    },
+    {
+      "viewport": 1440,
+      "route": "/",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Caviar Dreams",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/"
+    },
+    {
+      "viewport": 1440,
+      "route": "/projects",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/projects"
+    },
+    {
+      "viewport": 1440,
+      "route": "/services",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/services"
+    },
+    {
+      "viewport": 1440,
+      "route": "/about",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/about"
+    },
+    {
+      "viewport": 1440,
+      "route": "/interior-design-cairo",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/interior-design-cairo"
+    },
+    {
+      "viewport": 1440,
+      "route": "/villa-aurea.html",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/villa-aurea.html"
+    },
+    {
+      "viewport": 1440,
+      "route": "/apartment-celeste.html",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/apartment-celeste.html"
+    },
+    {
+      "viewport": 1440,
+      "route": "/dolce-divano.html",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/dolce-divano.html"
+    },
+    {
+      "viewport": 1440,
+      "route": "/eleven.html",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/eleven.html"
+    },
+    {
+      "viewport": 1440,
+      "route": "/residenza-verde.html",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/residenza-verde.html"
+    },
+    {
+      "viewport": 1440,
+      "route": "/application.html",
+      "errors": [],
+      "bad": [],
+      "overflow": false,
+      "broken": [],
+      "fonts": [
+        "Montserrat",
+        "Montserrat",
+        "Caviar Dreams"
+      ],
+      "canonical": "https://akilis.studio/application.html"
+    }
+  ],
+  "fidelity": [
+    {
+      "src": "assets/apartment-celeste/Apartment-Celeste-08.webp",
+      "width": 1280,
+      "url": "assets/responsive/apartment-celeste/apartment-celeste-08-1280-8f2fe57e657d.avif",
+      "ssim": 0.9867646450448635,
+      "mcs": 0.9869761347774186
+    },
+    {
+      "src": "assets/apartment-celeste/Apartment-Celeste-08.webp",
+      "width": 1920,
+      "url": "assets/responsive/apartment-celeste/apartment-celeste-08-1920-8ebcbd026925.avif",
+      "ssim": 0.9884231962493361,
+      "mcs": 0.9886422302246601
+    },
+    {
+      "src": "assets/apartment-celeste/Apartment-Celeste-08.webp",
+      "width": 3000,
+      "url": "assets/responsive/apartment-celeste/apartment-celeste-08-3000-7d47160ed4d4.avif",
+      "ssim": 0.9911472802648522,
+      "mcs": 0.991383649762187
+    },
+    {
+      "src": "assets/dolce-divano/dolce-divano-01.webp",
+      "width": 1200,
+      "url": "assets/responsive/dolce-divano/dolce-divano-01-1200-851249b129db.webp",
+      "ssim": 0.980287478181153,
+      "mcs": 0.980313310777089
+    },
+    {
+      "src": "assets/villa-aurea/villa-aurea-03.webp",
+      "width": 1280,
+      "url": "assets/responsive/villa-aurea/villa-aurea-03-1280-a8c36013346f.webp",
+      "ssim": 0.9888199101052407,
+      "mcs": 0.9888904455801133
+    },
+    {
+      "src": "assets/Residenza Verde/Residenza Verde-01.webp",
+      "width": 1280,
+      "url": "assets/responsive/residenza-verde/residenza-verde-01-1280-61ca06857e6e.webp",
+      "ssim": 0.9819015802916762,
+      "mcs": 0.9819138339485668
+    }
+  ]
+}

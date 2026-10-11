@@ -64,17 +64,31 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  let images=[];
  try{images=JSON.parse(card.dataset.gallery);}catch(e){return;}
  if(!Array.isArray(images)||images.length<2)return;
+ // New galleries carry responsive metadata; retain support for legacy strings.
+ images=images.map(image=>typeof image==='string'?{src:image}:image);
  if(touchDevice&&images.length>4)images=images.slice(0,4);
 
- const makeSlide=(src,index)=>{
+ const setSlideSource=(img,image)=>{
+   if(image.width&&image.height){img.width=image.width;img.height=image.height;}
+   if(image.srcset){
+     // object-fit:cover can require more pixels than the card's visible width.
+     const ratio=image.width/image.height;
+     const box=media.getBoundingClientRect();
+     img.sizes=`${Math.ceil(Math.max(box.width,box.height*ratio))}px`;
+     img.srcset=image.srcset;
+   }
+   img.src=image.src;
+ };
+ const makeSlide=(image,index)=>{
    const img=document.createElement('img');
    img.className=`project-slide${index===0?' is-active':''}`;
-   img.src=src;
    img.alt=card.dataset.alt||'';
    img.loading='lazy';
    img.decoding='async';
    img.fetchPriority='low';
-   img.dataset.gallerySrc=src;
+   img.dataset.gallerySrc=image.src;
+   img.dataset.slideIndex=String(index);
+   setSlideSource(img,image);
    return img;
  };
 
@@ -87,10 +101,18 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  first.loading='lazy';
  first.decoding='async';
  first.fetchPriority='low';
- first.src=first.dataset.src||first.getAttribute('src')||images[0];
  first.removeAttribute('data-src');
  first.removeAttribute('data-deferred');
+ first.dataset.slideIndex='0';
+ setSlideSource(first,images[0]);
  media.appendChild(first);
+ // Refresh sizes when rotating a phone or resizing a desktop window.
+ if('ResizeObserver' in window){
+   new ResizeObserver(()=>media.querySelectorAll('.project-slide').forEach(slide=>{
+     const image=images[Number(slide.dataset.slideIndex)];
+     if(image?.srcset){const box=media.getBoundingClientRect();slide.sizes=`${Math.ceil(Math.max(box.width,box.height*image.width/image.height))}px`;}
+   })).observe(media);
+ }
 
  const progress=document.createElement('div');
  progress.className='project-progress';
@@ -108,12 +130,11 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
 
  const loadSlide=index=>{
    if(index<0||index>=images.length)return null;
-   let slide=media.querySelectorAll('.project-slide')[index];
+   let slide=media.querySelector(`[data-slide-index="${index}"]`);
    if(!slide){
      slide=makeSlide(images[index],index);
      media.insertBefore(slide,progress);
    }
-   if(slide.src!==new URL(images[index],document.baseURI).href)slide.src=images[index];
    return slide;
  };
 
@@ -128,8 +149,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  const advance=()=>{
    const nextIndex=(current+1)%images.length;
    const next=loadSlide(nextIndex);
-   const slides=media.querySelectorAll('.project-slide');
-   const currentSlide=slides[current];
+   const currentSlide=media.querySelector(`[data-slide-index="${current}"]`);
    if(!next)return;
    currentSlide?.classList.remove('is-active');
    next.classList.add('is-active');
@@ -151,14 +171,22 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    galleryTimer=null;
  };
 
- // Start the slideshow directly. Visibility-based observers were causing
- // cards to lose their timers during normal desktop scrolling/rendering.
- startGallery();
+ // Advance visible cards only; offscreen slides should not compete with the hero.
+ // Each observer callback and tab visibility change reconciles the same state.
+ let inView=!('IntersectionObserver' in window);
+ const syncGallery=()=>{if(inView&&!document.hidden)startGallery();else stopGallery();};
+ if('IntersectionObserver' in window){
+   const galleryObserver=new IntersectionObserver(entries=>{
+     inView=entries[0].isIntersecting;
+     syncGallery();
+   },{threshold:0});
+   galleryObserver.observe(card);
+ }
+ syncGallery();
 
- // Pause only while the browser tab is hidden; resume without resetting the frame.
+ // Resume without resetting the frame when the card and browser tab are visible.
  document.addEventListener('visibilitychange',()=>{
-   if(document.hidden)stopGallery();
-   else startGallery();
+   syncGallery();
  });
 });
 if(!touchDevice && !reducedMotion){
@@ -206,8 +234,13 @@ document.querySelectorAll('video[data-defer-video]').forEach(video=>{
    video.load();
    video.play().catch(()=>{});
  };
- if('requestIdleCallback' in window) window.requestIdleCallback(loadVideo,{timeout:1800});
- else window.setTimeout(loadVideo,900);
+ // Idle callbacks can run before the poster arrives. Wait for the page first.
+ const scheduleVideo=()=>{
+   if('requestIdleCallback' in window)window.requestIdleCallback(loadVideo,{timeout:1800});
+   else window.setTimeout(loadVideo,900);
+ };
+ if(document.readyState==='complete')scheduleVideo();
+ else window.addEventListener('load',scheduleVideo,{once:true});
 });
 
 // Keep image boxes stable while assets decode, reducing layout shift on portfolio pages.

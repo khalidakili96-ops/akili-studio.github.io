@@ -1,0 +1,12 @@
+{
+  "name": "akili-studio-static-site",
+  "private": true,
+  "engines": { "node": ">=22" },
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "images": "node scripts/generate_images.mjs"
+  },
+  "devDependencies": {
+    "sharp": "0.34.5"
+  }
+}
