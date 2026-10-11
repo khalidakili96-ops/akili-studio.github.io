@@ -116,6 +116,12 @@ else:
     except ET.ParseError as exc:
         fail(f"sitemap.xml is invalid XML: {exc}")
 
+# Every page intended for indexing must be discoverable through the sitemap.
+normalized_sitemap_urls = {url.rstrip("/") for url in sitemap_urls}
+for canonical, page in canonical_to_page.items():
+    if canonical.rstrip("/") not in normalized_sitemap_urls:
+        fail(f"{page}: indexable canonical missing from sitemap: {canonical}")
+
 print(f"Audited {len(html_files)} HTML files and {len(sitemap_urls)} sitemap URLs.")
 if ERRORS:
     print(f"FAILED: {len(ERRORS)} issue(s)")
