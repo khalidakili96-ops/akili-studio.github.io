@@ -127,6 +127,7 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
  card.classList.add('has-gallery');
  let current=0;
  let galleryTimer=null;
+ let advancing=false;
 
  const loadSlide=index=>{
    if(index<0||index>=images.length)return null;
@@ -146,21 +147,29 @@ document.querySelectorAll('.project-card[data-gallery]').forEach(card=>{
    requestAnimationFrame(()=>{bar.style.animation='projectProgress 3.8s linear infinite';});
  };
 
- const advance=()=>{
-   const nextIndex=(current+1)%images.length;
-   const next=loadSlide(nextIndex);
-   const currentSlide=media.querySelector(`[data-slide-index="${current}"]`);
-   if(!next)return;
-   currentSlide?.classList.remove('is-active');
-   next.classList.add('is-active');
-   current=nextIndex;
-   counter.textContent=`${String(current+1).padStart(2,'0')} / ${String(images.length).padStart(2,'0')}`;
-   restartProgress();
-   loadSlide((current+1)%images.length);
+ const advance=async()=>{
+   if(advancing)return;
+   advancing=true;
+   try{
+     const nextIndex=(current+1)%images.length;
+     const next=loadSlide(nextIndex);
+     const currentSlide=media.querySelector(`[data-slide-index="${current}"]`);
+     if(!next)return;
+     // Keep the current frame visible on slow connections or failed requests.
+     if(typeof next.decode==='function')await next.decode().catch(()=>{});
+     if(!inView||document.hidden||!next.naturalWidth)return;
+     currentSlide?.classList.remove('is-active');
+     next.classList.add('is-active');
+     current=nextIndex;
+     counter.textContent=`${String(current+1).padStart(2,'0')} / ${String(images.length).padStart(2,'0')}`;
+     restartProgress();
+     loadSlide((current+1)%images.length);
+   }finally{advancing=false;}
  };
 
  const startGallery=()=>{
    if(galleryTimer)return;
+   loadSlide((current+1)%images.length);
    galleryTimer=window.setInterval(advance,3800);
    restartProgress();
  };

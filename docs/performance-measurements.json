@@ -1,7 +1,7 @@
 {
   "baseCommit": "55340ef2011c78fb40df85c573a2f6d800b29532",
   "productionAfterMeasured": false,
-  "note": "Live baseline timed out. Use two local baseline runs versus two final candidate runs for comparison. Interim WebP-only after run excluded.",
+  "note": "Live baseline timed out. Compare two local baseline runs with two final candidate runs. Interim after runs excluded.",
   "runs": [
     {
       "file": "live-before",
@@ -622,8 +622,8 @@
       ]
     },
     {
-      "file": "local-after-2",
-      "date": "2026-10-11T21:20:07.815Z",
+      "file": "local-final-1",
+      "date": "2026-10-11T21:30:31.769Z",
       "lighthouseVersion": "12.8.2",
       "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
       "settings": {
@@ -688,47 +688,47 @@
       "performanceScore": 0.79,
       "seoScore": 1,
       "metrics": {
-        "firstContentfulPaint": 912,
-        "largestContentfulPaint": 5863,
-        "interactive": 6103,
-        "speedIndex": 912,
+        "firstContentfulPaint": 907,
+        "largestContentfulPaint": 5857,
+        "interactive": 6097,
+        "speedIndex": 907,
         "totalBlockingTime": 0,
-        "maxPotentialFID": 16,
-        "cumulativeLayoutShift": 0.018273927909107056,
-        "cumulativeLayoutShiftMainFrame": 0.018273927909107056,
-        "lcpLoadStart": 1334,
-        "lcpLoadEnd": 1613,
-        "timeToFirstByte": 456,
+        "maxPotentialFID": 46,
+        "cumulativeLayoutShift": 0.01790241222099306,
+        "cumulativeLayoutShiftMainFrame": 0.01790241222099306,
+        "lcpLoadStart": 454,
+        "lcpLoadEnd": 820,
+        "timeToFirstByte": 454,
         "observedTimeOrigin": 0,
-        "observedTimeOriginTs": 1316318706730,
+        "observedTimeOriginTs": 1316942710388,
         "observedNavigationStart": 0,
-        "observedNavigationStartTs": 1316318706730,
-        "observedFirstPaint": 184,
-        "observedFirstPaintTs": 1316318890860,
-        "observedFirstContentfulPaint": 184,
-        "observedFirstContentfulPaintTs": 1316318890860,
-        "observedFirstContentfulPaintAllFrames": 184,
-        "observedFirstContentfulPaintAllFramesTs": 1316318890860,
-        "observedLargestContentfulPaint": 184,
-        "observedLargestContentfulPaintTs": 1316318890860,
-        "observedLargestContentfulPaintAllFrames": 184,
-        "observedLargestContentfulPaintAllFramesTs": 1316318890860,
-        "observedTraceEnd": 2749,
-        "observedTraceEndTs": 1316321455913,
-        "observedLoad": 254,
-        "observedLoadTs": 1316318960675,
-        "observedDomContentLoaded": 107,
-        "observedDomContentLoadedTs": 1316318813760,
-        "observedCumulativeLayoutShift": 0.018273927909107056,
-        "observedCumulativeLayoutShiftMainFrame": 0.018273927909107056,
-        "observedFirstVisualChange": 316,
-        "observedFirstVisualChangeTs": 1316319022730,
-        "observedLastVisualChange": 766,
-        "observedLastVisualChangeTs": 1316319472730,
-        "observedSpeedIndex": 326,
-        "observedSpeedIndexTs": 1316319032764
+        "observedNavigationStartTs": 1316942710388,
+        "observedFirstPaint": 152,
+        "observedFirstPaintTs": 1316942862430,
+        "observedFirstContentfulPaint": 152,
+        "observedFirstContentfulPaintTs": 1316942862430,
+        "observedFirstContentfulPaintAllFrames": 152,
+        "observedFirstContentfulPaintAllFramesTs": 1316942862430,
+        "observedLargestContentfulPaint": 152,
+        "observedLargestContentfulPaintTs": 1316942862430,
+        "observedLargestContentfulPaintAllFrames": 152,
+        "observedLargestContentfulPaintAllFramesTs": 1316942862430,
+        "observedTraceEnd": 2938,
+        "observedTraceEndTs": 1316945647896,
+        "observedLoad": 349,
+        "observedLoadTs": 1316943059462,
+        "observedDomContentLoaded": 71,
+        "observedDomContentLoadedTs": 1316942781368,
+        "observedCumulativeLayoutShift": 0.01790241222099306,
+        "observedCumulativeLayoutShiftMainFrame": 0.01790241222099306,
+        "observedFirstVisualChange": 274,
+        "observedFirstVisualChangeTs": 1316942984388,
+        "observedLastVisualChange": 717,
+        "observedLastVisualChangeTs": 1316943427388,
+        "observedSpeedIndex": 285,
+        "observedSpeedIndexTs": 1316942995524
       },
-      "bytes": 1389098,
+      "bytes": 1389196,
       "lcp": {
         "type": "list",
         "items": [
@@ -784,23 +784,23 @@
             "items": [
               {
                 "phase": "TTFB",
-                "timing": 456.10145,
+                "timing": 453.635,
                 "percent": "8%"
               },
               {
                 "phase": "Load Delay",
-                "timing": 878.0322075630435,
-                "percent": "15%"
+                "timing": 0,
+                "percent": "0%"
               },
               {
                 "phase": "Load Time",
-                "timing": 278.6530110790002,
-                "percent": "5%"
+                "timing": 366.8111845267307,
+                "percent": "6%"
               },
               {
                 "phase": "Render Delay",
-                "timing": 4250.357881357959,
-                "percent": "72%"
+                "timing": 5036.82381547327,
+                "percent": "86%"
               }
             ]
           }
@@ -811,9 +811,9 @@
           "url": "http://127.0.0.1:8082/assets/responsive/apartment-celeste/apartment-celeste-08-1920-8ebcbd026925.avif",
           "sessionTargetType": "page",
           "protocol": "http/1.1",
-          "rendererStartTime": 40.74300003051758,
-          "networkRequestTime": 41.390000104904175,
-          "networkEndTime": 50.141000270843506,
+          "rendererStartTime": 9.347999811172485,
+          "networkRequestTime": 9.914999961853027,
+          "networkEndTime": 20.70199990272522,
           "finished": true,
           "transferSize": 445547,
           "resourceSize": 445352,
@@ -828,8 +828,8 @@
       ]
     },
     {
-      "file": "local-after-3",
-      "date": "2026-10-11T21:22:31.556Z",
+      "file": "local-final-2",
+      "date": "2026-10-11T21:30:44.355Z",
       "lighthouseVersion": "12.8.2",
       "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
       "settings": {
@@ -894,47 +894,47 @@
       "performanceScore": 0.79,
       "seoScore": 1,
       "metrics": {
-        "firstContentfulPaint": 908,
-        "largestContentfulPaint": 5858,
-        "interactive": 6098,
-        "speedIndex": 908,
+        "firstContentfulPaint": 906,
+        "largestContentfulPaint": 5856,
+        "interactive": 6096,
+        "speedIndex": 906,
         "totalBlockingTime": 0,
         "maxPotentialFID": 16,
         "cumulativeLayoutShift": 0.018273927909107056,
         "cumulativeLayoutShiftMainFrame": 0.018273927909107056,
-        "lcpLoadStart": 510,
-        "lcpLoadEnd": 857,
-        "timeToFirstByte": 454,
+        "lcpLoadStart": 453,
+        "lcpLoadEnd": 911,
+        "timeToFirstByte": 453,
         "observedTimeOrigin": 0,
-        "observedTimeOriginTs": 1316462470447,
+        "observedTimeOriginTs": 1316955254713,
         "observedNavigationStart": 0,
-        "observedNavigationStartTs": 1316462470447,
-        "observedFirstPaint": 155,
-        "observedFirstPaintTs": 1316462625314,
-        "observedFirstContentfulPaint": 155,
-        "observedFirstContentfulPaintTs": 1316462625314,
-        "observedFirstContentfulPaintAllFrames": 155,
-        "observedFirstContentfulPaintAllFramesTs": 1316462625314,
-        "observedLargestContentfulPaint": 155,
-        "observedLargestContentfulPaintTs": 1316462625314,
-        "observedLargestContentfulPaintAllFrames": 155,
-        "observedLargestContentfulPaintAllFramesTs": 1316462625314,
-        "observedTraceEnd": 2796,
-        "observedTraceEndTs": 1316465266887,
-        "observedLoad": 271,
-        "observedLoadTs": 1316462741098,
-        "observedDomContentLoaded": 74,
-        "observedDomContentLoadedTs": 1316462544716,
+        "observedNavigationStartTs": 1316955254713,
+        "observedFirstPaint": 141,
+        "observedFirstPaintTs": 1316955395967,
+        "observedFirstContentfulPaint": 141,
+        "observedFirstContentfulPaintTs": 1316955395967,
+        "observedFirstContentfulPaintAllFrames": 141,
+        "observedFirstContentfulPaintAllFramesTs": 1316955395967,
+        "observedLargestContentfulPaint": 141,
+        "observedLargestContentfulPaintTs": 1316955395967,
+        "observedLargestContentfulPaintAllFrames": 141,
+        "observedLargestContentfulPaintAllFramesTs": 1316955395967,
+        "observedTraceEnd": 2707,
+        "observedTraceEndTs": 1316957961477,
+        "observedLoad": 219,
+        "observedLoadTs": 1316955473550,
+        "observedDomContentLoaded": 71,
+        "observedDomContentLoadedTs": 1316955325381,
         "observedCumulativeLayoutShift": 0.018273927909107056,
         "observedCumulativeLayoutShiftMainFrame": 0.018273927909107056,
         "observedFirstVisualChange": 279,
-        "observedFirstVisualChangeTs": 1316462749447,
-        "observedLastVisualChange": 722,
-        "observedLastVisualChangeTs": 1316463192447,
-        "observedSpeedIndex": 289,
-        "observedSpeedIndexTs": 1316462759532
+        "observedFirstVisualChangeTs": 1316955533713,
+        "observedLastVisualChange": 725,
+        "observedLastVisualChangeTs": 1316955979713,
+        "observedSpeedIndex": 288,
+        "observedSpeedIndexTs": 1316955543103
       },
-      "bytes": 1389103,
+      "bytes": 1389201,
       "lcp": {
         "type": "list",
         "items": [
@@ -990,23 +990,23 @@
             "items": [
               {
                 "phase": "TTFB",
-                "timing": 454.1188,
+                "timing": 453.1525,
                 "percent": "8%"
               },
               {
                 "phase": "Load Delay",
-                "timing": 55.493811244514404,
-                "percent": "1%"
+                "timing": 0,
+                "percent": "0%"
               },
               {
                 "phase": "Load Time",
-                "timing": 346.91636728255475,
-                "percent": "6%"
+                "timing": 458.16639994081294,
+                "percent": "8%"
               },
               {
                 "phase": "Render Delay",
-                "timing": 5001.708621472932,
-                "percent": "85%"
+                "timing": 4944.986100059187,
+                "percent": "84%"
               }
             ]
           }
@@ -1017,9 +1017,9 @@
           "url": "http://127.0.0.1:8082/assets/responsive/apartment-celeste/apartment-celeste-08-1920-8ebcbd026925.avif",
           "sessionTargetType": "page",
           "protocol": "http/1.1",
-          "rendererStartTime": 12.447999954223633,
-          "networkRequestTime": 12.977999925613403,
-          "networkEndTime": 22.1489999294281,
+          "rendererStartTime": 8.879000186920166,
+          "networkRequestTime": 9.54800009727478,
+          "networkEndTime": 21.4760000705719,
           "finished": true,
           "transferSize": 445547,
           "resourceSize": 445352,
@@ -1342,6 +1342,7 @@
       "canonical": "https://akilis.studio/application.html"
     }
   ],
+  "galleryFailedRequestTest": "PASS: failed next-frame request retains the decoded current image and counter.",
   "fidelity": [
     {
       "src": "assets/apartment-celeste/Apartment-Celeste-08.webp",

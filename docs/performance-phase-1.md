@@ -21,14 +21,14 @@ two runs per final revision; the table reports medians. Baseline is unchanged
 | First Contentful Paint | 1.57 s | 0.91 s |
 | Total transferred data | 4.79 MB | 1.39 MB |
 | Total Blocking Time | 0 ms | 0 ms |
-| Cumulative Layout Shift | 0.0179 | 0.0183 |
+| Cumulative Layout Shift | 0.0179 | 0.0181 |
 | SEO score | 100 / 100 | 100 / 100 |
 
 LCP improved by approximately 66%; transfer fell approximately 71%. LCP remains
 above the 2.5-second good threshold in this simulated test. These are laboratory
 results, not real-user Core Web Vitals or proof of a production improvement.
 External font timing and the local server affect absolute timings. Layout shift
-remained low, with a small measured increase of 0.0004.
+remained low, with a small measured increase of 0.0002.
 
 The initial **live** homepage run scored 62, LCP 8.86 s, transfer 9.35 MB, SEO 92.
 It reached Lighthouse's page-load time limit, so those results are provisional
@@ -57,6 +57,8 @@ No robots or SEO policy changes were made based on that timed-out run.
 - **Slideshows:** The existing 3.8-second crossfade and mobile four-frame limit
   are preserved. Offscreen cards pause and resume at their current frame when
   visible; hidden tabs pause too. Newly created slides use responsive sources.
+  The next frame is fetched while a card is visible and decoded before the
+  crossfade, keeping the current image visible on slow or failed requests.
   ResizeObserver refreshes cover-aware image sizes when the viewport changes.
 - **Fonts:** Existing Montserrat 400/500, Caviar Dreams faces, font preconnects
   and asynchronous stylesheet loading are retained. Browser checks confirmed
@@ -86,7 +88,8 @@ No robots or SEO policy changes were made based on that timed-out run.
 - Chrome browser checks: 11 routes at 390-pixel mobile and 1,440-pixel desktop
   widths; no JavaScript errors, missing local resources, broken images or
   horizontal overflow. Menu open/Escape close, visible gallery advance and
-  offscreen gallery pause/resume checked. Homepage/gallery screenshots inspected.
+  offscreen gallery pause/resume checked. A failed next-frame request was
+  injected to verify the current decoded frame stays visible. Homepage/gallery screenshots inspected.
 - JavaScript syntax and whitespace checks pass.
 - Sampled compression-only fidelity checks (SSIM against the original resized
   to the same dimensions): homepage AVIF 0.987–0.991; three portfolio WebP
