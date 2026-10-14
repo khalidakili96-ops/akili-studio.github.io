@@ -1,0 +1,6 @@
+{
+  "name": "akili-studio-site-checks",
+  "private": true,
+  "scripts": { "test": "node --test scripts/tracking.test.cjs" },
+  "devDependencies": { "jsdom": "27.0.0" }
+}
