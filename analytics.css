@@ -1,0 +1,11 @@
+/* Uses the website's existing type and surface variables. */
+.analytics-notice{position:fixed;z-index:1200;left:24px;bottom:24px;width:min(430px,calc(100vw - 48px));max-height:calc(100dvh - 48px);overflow:auto;padding:24px;background:var(--paper,#f5f1e9);color:var(--ink,#292724);border:1px solid var(--line,#d8d2c7);box-shadow:0 8px 32px #0002;font:400 12px/1.6 var(--font-secondary,Arial,sans-serif)}
+.analytics-notice[hidden]{display:none}
+.analytics-notice h2{margin:0 0 12px;font:500 23px/1.2 var(--font,Arial,sans-serif)}
+.analytics-notice p{margin:0 0 16px}
+.analytics-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.analytics-actions button{min-height:44px;padding:10px 16px;border:1px solid currentColor;background:transparent;color:inherit;font:500 12px/1.4 var(--font-secondary,Arial,sans-serif);cursor:pointer}
+.analytics-actions button:focus-visible,.analytics-settings:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.analytics-notice .analytics-detail{margin:0;font-size:11px}
+.analytics-settings{min-height:44px;padding:0;border:0;background:transparent;color:inherit;font:inherit;letter-spacing:inherit;text-align:left;cursor:pointer}
+@media(max-width:760px){.analytics-notice{left:18px;bottom:18px;width:calc(100vw - 36px);max-height:calc(100dvh - 36px);padding:20px}.analytics-actions button{flex:1}}
