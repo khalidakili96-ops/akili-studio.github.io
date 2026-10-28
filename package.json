@@ -1,6 +1,16 @@
 {
-  "name": "akili-studio-site-checks",
+  "name": "akili-studio-static-site",
   "private": true,
-  "scripts": { "test": "node --test scripts/tracking.test.cjs" },
-  "devDependencies": { "jsdom": "27.0.0" }
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "images": "node scripts/generate_images.mjs",
+    "test": "node --test scripts/tracking.test.cjs"
+  },
+  "devDependencies": {
+    "sharp": "0.34.5",
+    "jsdom": "27.0.0"
+  }
 }

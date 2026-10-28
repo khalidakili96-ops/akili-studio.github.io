@@ -1,0 +1,2201 @@
+{
+  "assets/apartment-celeste/Apartment-Celeste-01.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 431570,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-01-768-9fa742600246.webp",
+        "bytes": 53892
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-01-1280-f2a51612991c.webp",
+        "bytes": 121922
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-01-1920-484e41617ab3.webp",
+        "bytes": 217652
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-01-2560-e18cdd5e9aa3.webp",
+        "bytes": 310382
+      },
+      {
+        "width": 3840,
+        "url": "assets/apartment-celeste/Apartment-Celeste-01.webp",
+        "bytes": 431570,
+        "original": true
+      }
+    ],
+    "sha256": "0a9f190b4d2322823a2bed3862560ddb01172e902726ac4578e423376eb60cb1"
+  },
+  "assets/apartment-celeste/Apartment-Celeste-02.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 393926,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-02-768-4f52471f6018.webp",
+        "bytes": 54562
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-02-1280-394c5b76cc48.webp",
+        "bytes": 118456
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-02-1920-89c283245189.webp",
+        "bytes": 219000
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-02-2560-9baedf827b13.webp",
+        "bytes": 286068
+      },
+      {
+        "width": 3840,
+        "url": "assets/apartment-celeste/Apartment-Celeste-02.webp",
+        "bytes": 393926,
+        "original": true
+      }
+    ],
+    "sha256": "c7e2a551b469a51174e3d00a0786c265b4e7af7064004742987dd3fbb57c09ee"
+  },
+  "assets/apartment-celeste/Apartment-Celeste-03.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 342484,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-03-768-ac0016173b52.webp",
+        "bytes": 42682
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-03-1280-9739940dab64.webp",
+        "bytes": 91034
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-03-1920-8be5c4f0412a.webp",
+        "bytes": 175768
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-03-2560-186de286ced8.webp",
+        "bytes": 243478
+      },
+      {
+        "width": 3840,
+        "url": "assets/apartment-celeste/Apartment-Celeste-03.webp",
+        "bytes": 342484,
+        "original": true
+      }
+    ],
+    "sha256": "149b5be8ae2ee0a139b63b647ed983f5783e1ad0ef3b5de726f0edfb97129ef0"
+  },
+  "assets/apartment-celeste/Apartment-Celeste-04.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 511138,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-04-768-6cff89a94f7e.webp",
+        "bytes": 58086
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-04-1280-b047634c2f2e.webp",
+        "bytes": 133778
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-04-1920-f4bb6baaffd5.webp",
+        "bytes": 255902
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-04-2560-f3e171ecebc8.webp",
+        "bytes": 356760
+      },
+      {
+        "width": 3840,
+        "url": "assets/apartment-celeste/Apartment-Celeste-04.webp",
+        "bytes": 511138,
+        "original": true
+      }
+    ],
+    "sha256": "12a9e94778fff3ebb1f3d1b9a7a5e671a4e5ac4c8352b1f464f79cfcaf7c6d81"
+  },
+  "assets/apartment-celeste/Apartment-Celeste-05.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 566722,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-05-768-4dc497a266c9.webp",
+        "bytes": 54718
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-05-1280-8d2749a4a371.webp",
+        "bytes": 122672
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-05-1920-9d698a892344.webp",
+        "bytes": 238862
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-05-2560-47c074f0cc1b.webp",
+        "bytes": 327606
+      },
+      {
+        "width": 3840,
+        "url": "assets/apartment-celeste/Apartment-Celeste-05.webp",
+        "bytes": 566722,
+        "original": true
+      }
+    ],
+    "sha256": "68ac88e5d15743ff1515cc3121a87b3b68c3d6595e504197bf6bd6d479f2164b"
+  },
+  "assets/apartment-celeste/Apartment-Celeste-06.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 539430,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-06-768-4a964fe7f304.webp",
+        "bytes": 56470
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-06-1280-9d6a47efd009.webp",
+        "bytes": 123784
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-06-1920-19512badb1fd.webp",
+        "bytes": 235160
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-06-2560-9c1a2565793c.webp",
+        "bytes": 319616
+      },
+      {
+        "width": 3840,
+        "url": "assets/apartment-celeste/Apartment-Celeste-06.webp",
+        "bytes": 539430,
+        "original": true
+      }
+    ],
+    "sha256": "595ab97eb2b02000d0abdd1c4ecf2b08d7eb7077f8161bb16c3361e6f5c633e1"
+  },
+  "assets/apartment-celeste/Apartment-Celeste-07.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 824100,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-07-768-d95667f71368.webp",
+        "bytes": 61320
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-07-1280-b45be3f320e9.webp",
+        "bytes": 144654
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-07-1920-c6389b55c1b0.webp",
+        "bytes": 299856
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-07-2560-14c6fa729d40.webp",
+        "bytes": 441278
+      },
+      {
+        "width": 3840,
+        "url": "assets/apartment-celeste/Apartment-Celeste-07.webp",
+        "bytes": 824100,
+        "original": true
+      }
+    ],
+    "sha256": "3069f58bd5c77233a9327341a46cefa95c685f1d025fe63e2fabac6f38263135"
+  },
+  "assets/apartment-celeste/Apartment-Celeste-08.webp": {
+    "width": 3000,
+    "height": 2308,
+    "bytes": 1217620,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-08-768-ca5e60865cd1.webp",
+        "bytes": 116252
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-08-1280-11058e2d0b28.webp",
+        "bytes": 308332
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-08-1920-15e689dc8c63.webp",
+        "bytes": 615684
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-08-2560-935744256b47.webp",
+        "bytes": 889466
+      },
+      {
+        "width": 3000,
+        "url": "assets/apartment-celeste/Apartment-Celeste-08.webp",
+        "bytes": 1217620,
+        "original": true
+      }
+    ],
+    "avifVariants": [
+      {
+        "width": 1280,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-08-1280-8f2fe57e657d.avif",
+        "bytes": 240125
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-08-1920-8ebcbd026925.avif",
+        "bytes": 445352
+      },
+      {
+        "width": 3000,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-08-3000-7d47160ed4d4.avif",
+        "bytes": 889862
+      }
+    ],
+    "sha256": "9ba6521afc36585d87c087007f26620d76672c4091d4d01f649eeda3d11921e1"
+  },
+  "assets/apartment-celeste/Apartment-Celeste-09.webp": {
+    "width": 3000,
+    "height": 2250,
+    "bytes": 311380,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-09-768-a7b4d8cbb67b.webp",
+        "bytes": 53568
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-09-1280-cd716c2541db.webp",
+        "bytes": 110102
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-09-1920-c434d1522073.webp",
+        "bytes": 189430
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-09-2560-4dfd0c911cdd.webp",
+        "bytes": 259000
+      },
+      {
+        "width": 3000,
+        "url": "assets/apartment-celeste/Apartment-Celeste-09.webp",
+        "bytes": 311380,
+        "original": true
+      }
+    ],
+    "sha256": "ca48310656744fdd15b5d9c30422b8e4e7cdeceaa99d86e31221e296ff4de8ee"
+  },
+  "assets/apartment-celeste/Apartment-Celeste-10.webp": {
+    "width": 3000,
+    "height": 1610,
+    "bytes": 493032,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-10-768-613c9654d990.webp",
+        "bytes": 70408
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-10-1280-ead22dc6c19f.webp",
+        "bytes": 158002
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-10-1920-c36e8843b3d9.webp",
+        "bytes": 282420
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/apartment-celeste/apartment-celeste-10-2560-7fc34cbc60ed.webp",
+        "bytes": 373800
+      },
+      {
+        "width": 3000,
+        "url": "assets/apartment-celeste/Apartment-Celeste-10.webp",
+        "bytes": 493032,
+        "original": true
+      }
+    ],
+    "sha256": "034ebd34c2d4bf743762fbe5ec3b9aca09fdbf8f1336acfcf776b854e882f225"
+  },
+  "assets/dolce-divano/dolce-divano-01.webp": {
+    "width": 1200,
+    "height": 1000,
+    "bytes": 1097010,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/dolce-divano/dolce-divano-01-768-d10282b34dff.webp",
+        "bytes": 73048
+      },
+      {
+        "width": 1200,
+        "url": "assets/responsive/dolce-divano/dolce-divano-01-1200-851249b129db.webp",
+        "bytes": 188352
+      },
+      {
+        "width": 1200,
+        "url": "assets/dolce-divano/dolce-divano-01.webp",
+        "bytes": 1097010,
+        "original": true
+      }
+    ],
+    "sha256": "bc6364759e7fedbb16f07ff522badc31cce715a4c201cefaf5f1003fdc327ecc"
+  },
+  "assets/dolce-divano/dolce-divano-02.webp": {
+    "width": 1200,
+    "height": 1000,
+    "bytes": 1272322,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/dolce-divano/dolce-divano-02-768-5e893d2bfd03.webp",
+        "bytes": 93886
+      },
+      {
+        "width": 1200,
+        "url": "assets/responsive/dolce-divano/dolce-divano-02-1200-cbe7f8e87603.webp",
+        "bytes": 230812
+      },
+      {
+        "width": 1200,
+        "url": "assets/dolce-divano/dolce-divano-02.webp",
+        "bytes": 1272322,
+        "original": true
+      }
+    ],
+    "sha256": "d6e3f82fcd1dc81d2c4cbd61be623b6aedaa41731f4587acd1972f2046eefe53"
+  },
+  "assets/dolce-divano/dolce-divano-03.webp": {
+    "width": 1200,
+    "height": 1000,
+    "bytes": 177468,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/dolce-divano/dolce-divano-03-768-b79252451a44.webp",
+        "bytes": 73812
+      },
+      {
+        "width": 1200,
+        "url": "assets/responsive/dolce-divano/dolce-divano-03-1200-ea4cfe53c928.webp",
+        "bytes": 174820
+      },
+      {
+        "width": 1200,
+        "url": "assets/dolce-divano/dolce-divano-03.webp",
+        "bytes": 177468,
+        "original": true
+      }
+    ],
+    "sha256": "3beadcccacfa8658c3b6a6ed8fb4eee2a8282367e23b305f91274e86fce987a2"
+  },
+  "assets/dolce-divano/dolce-divano-04.webp": {
+    "width": 1200,
+    "height": 1000,
+    "bytes": 216990,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/dolce-divano/dolce-divano-04-768-728ea9e31541.webp",
+        "bytes": 96280
+      },
+      {
+        "width": 1200,
+        "url": "assets/responsive/dolce-divano/dolce-divano-04-1200-12d055720e77.webp",
+        "bytes": 213360
+      },
+      {
+        "width": 1200,
+        "url": "assets/dolce-divano/dolce-divano-04.webp",
+        "bytes": 216990,
+        "original": true
+      }
+    ],
+    "sha256": "63d3f37d9ef673f229464fdf315e8811e06e873882a6351356a7c31959354302"
+  },
+  "assets/dolce-divano/dolce-divano-05.webp": {
+    "width": 1200,
+    "height": 1000,
+    "bytes": 368808,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/dolce-divano/dolce-divano-05-768-9f5865984768.webp",
+        "bytes": 138794
+      },
+      {
+        "width": 1200,
+        "url": "assets/responsive/dolce-divano/dolce-divano-05-1200-5f0906d6528a.webp",
+        "bytes": 368668
+      },
+      {
+        "width": 1200,
+        "url": "assets/dolce-divano/dolce-divano-05.webp",
+        "bytes": 368808,
+        "original": true
+      }
+    ],
+    "sha256": "65a576fc242582d0cb95a929d80c5b5b3e0721bcf14c30c581771fd67e4b02ef"
+  },
+  "assets/dolce-divano/dolce-divano-06.webp": {
+    "width": 1200,
+    "height": 1000,
+    "bytes": 297688,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/dolce-divano/dolce-divano-06-768-5a799b255335.webp",
+        "bytes": 124910
+      },
+      {
+        "width": 1200,
+        "url": "assets/responsive/dolce-divano/dolce-divano-06-1200-6cef258f9303.webp",
+        "bytes": 295938
+      },
+      {
+        "width": 1200,
+        "url": "assets/dolce-divano/dolce-divano-06.webp",
+        "bytes": 297688,
+        "original": true
+      }
+    ],
+    "sha256": "77f2943f537dd4f75bf9d5d7cd88467d47f8f8236beed6fe3b2f03cbbc1f8aac"
+  },
+  "assets/dolce-divano/dolce-divano-07.webp": {
+    "width": 1200,
+    "height": 1000,
+    "bytes": 217754,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/dolce-divano/dolce-divano-07-768-9f4190bb5e6d.webp",
+        "bytes": 87272
+      },
+      {
+        "width": 1200,
+        "url": "assets/responsive/dolce-divano/dolce-divano-07-1200-ad11ca609a59.webp",
+        "bytes": 215304
+      },
+      {
+        "width": 1200,
+        "url": "assets/dolce-divano/dolce-divano-07.webp",
+        "bytes": 217754,
+        "original": true
+      }
+    ],
+    "sha256": "42872b9d5ab9cc0bf1c9a97a8f939c7be2316c5f057a1e22191ab0d4004cab38"
+  },
+  "assets/dolce-divano/dolce-divano-08.webp": {
+    "width": 1200,
+    "height": 1000,
+    "bytes": 261236,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/dolce-divano/dolce-divano-08-768-2ba6837cd15e.webp",
+        "bytes": 98394
+      },
+      {
+        "width": 1200,
+        "url": "assets/responsive/dolce-divano/dolce-divano-08-1200-ea24e7085437.webp",
+        "bytes": 259990
+      },
+      {
+        "width": 1200,
+        "url": "assets/dolce-divano/dolce-divano-08.webp",
+        "bytes": 261236,
+        "original": true
+      }
+    ],
+    "sha256": "7eb34deeeb2e47485a998ee982462d4e51a52d5e44c2d4d0aaee8d16bd4870a1"
+  },
+  "assets/dolce-divano/dolce-divano-09.webp": {
+    "width": 1200,
+    "height": 1000,
+    "bytes": 236682,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/dolce-divano/dolce-divano-09-768-fab7de6c9452.webp",
+        "bytes": 105484
+      },
+      {
+        "width": 1200,
+        "url": "assets/responsive/dolce-divano/dolce-divano-09-1200-260b3d2c22b6.webp",
+        "bytes": 233322
+      },
+      {
+        "width": 1200,
+        "url": "assets/dolce-divano/dolce-divano-09.webp",
+        "bytes": 236682,
+        "original": true
+      }
+    ],
+    "sha256": "80e97d8f5e67d0f4fd1c677182a4e1a2ca2ae3c8a2b2273cddf892e49ded488f"
+  },
+  "assets/dolce-divano/dolce-divano-10.webp": {
+    "width": 1200,
+    "height": 1000,
+    "bytes": 185042,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/dolce-divano/dolce-divano-10-768-cd5aa1f19cd2.webp",
+        "bytes": 76332
+      },
+      {
+        "width": 1200,
+        "url": "assets/responsive/dolce-divano/dolce-divano-10-1200-4934732dbcf4.webp",
+        "bytes": 167902
+      },
+      {
+        "width": 1200,
+        "url": "assets/dolce-divano/dolce-divano-10.webp",
+        "bytes": 185042,
+        "original": true
+      }
+    ],
+    "sha256": "b0b53a20921b5c5cff9376a3470b7c43f6eafaa19e5bd0ecc9b5820ae24db88d"
+  },
+  "assets/dolce-divano/dolce-divanohero-poster.webp": {
+    "width": 2500,
+    "height": 1113,
+    "bytes": 481994,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/dolce-divano/dolce-divanohero-poster-768-0dc17f6de504.webp",
+        "bytes": 59696
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/dolce-divano/dolce-divanohero-poster-1280-de6b0133ae65.webp",
+        "bytes": 142582
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/dolce-divano/dolce-divanohero-poster-1920-0c7a8a5b5ae9.webp",
+        "bytes": 274678
+      },
+      {
+        "width": 2500,
+        "url": "assets/responsive/dolce-divano/dolce-divanohero-poster-2500-e25a31e7219f.webp",
+        "bytes": 481594
+      },
+      {
+        "width": 2500,
+        "url": "assets/dolce-divano/dolce-divanohero-poster.webp",
+        "bytes": 481994,
+        "original": true
+      }
+    ],
+    "sha256": "78d1ad0eab611185f11bce83efa5bc75f390194bd6183e407b9511a4e6df4f70"
+  },
+  "assets/eleven/eleven-01.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 715544,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/eleven/eleven-01-768-a0d761e82635.webp",
+        "bytes": 65620
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/eleven/eleven-01-1280-0df978d60868.webp",
+        "bytes": 144686
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/eleven/eleven-01-1920-c922acdc84fa.webp",
+        "bytes": 283790
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/eleven/eleven-01-2560-11464348fa42.webp",
+        "bytes": 399406
+      },
+      {
+        "width": 3840,
+        "url": "assets/eleven/eleven-01.webp",
+        "bytes": 715544,
+        "original": true
+      }
+    ],
+    "sha256": "dc86ff1f1a0428a28f1f9542c63bcc742948accc346c66fe426d841aeda13568"
+  },
+  "assets/eleven/eleven-02.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 665420,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/eleven/eleven-02-768-65f9d815bab6.webp",
+        "bytes": 62868
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/eleven/eleven-02-1280-41af5e68570b.webp",
+        "bytes": 145220
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/eleven/eleven-02-1920-cc64b58acc79.webp",
+        "bytes": 278730
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/eleven/eleven-02-2560-6a575d980b31.webp",
+        "bytes": 366944
+      },
+      {
+        "width": 3840,
+        "url": "assets/eleven/eleven-02.webp",
+        "bytes": 665420,
+        "original": true
+      }
+    ],
+    "sha256": "6f1af37066028562b4458723e8203ecc41e40290f8479a90e4190eac4e169ac2"
+  },
+  "assets/eleven/eleven-03.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 413524,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/eleven/eleven-03-768-cc331b390d8e.webp",
+        "bytes": 51582
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/eleven/eleven-03-1280-f7c3043bf2b7.webp",
+        "bytes": 109828
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/eleven/eleven-03-1920-0f03197d513e.webp",
+        "bytes": 198812
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/eleven/eleven-03-2560-00e6d975312b.webp",
+        "bytes": 256984
+      },
+      {
+        "width": 3840,
+        "url": "assets/eleven/eleven-03.webp",
+        "bytes": 413524,
+        "original": true
+      }
+    ],
+    "sha256": "3180d967e8dfa6f6f3398151ecbe352c00fde6d10e4766fa5401e10db65e71fc"
+  },
+  "assets/eleven/eleven-04.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 449550,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/eleven/eleven-04-768-3db97425fd90.webp",
+        "bytes": 48558
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/eleven/eleven-04-1280-bb84f740cc7d.webp",
+        "bytes": 102854
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/eleven/eleven-04-1920-d2aa7d1f71b2.webp",
+        "bytes": 182818
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/eleven/eleven-04-2560-386fd4265fc9.webp",
+        "bytes": 257464
+      },
+      {
+        "width": 3840,
+        "url": "assets/eleven/eleven-04.webp",
+        "bytes": 449550,
+        "original": true
+      }
+    ],
+    "sha256": "5e4637efcfc19f09068cb8eec46cd6ad7a32a18c6b427e34493189c1a92486a1"
+  },
+  "assets/eleven/eleven-hero.webp": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 519506,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/eleven/eleven-hero-768-971970e3c605.webp",
+        "bytes": 80196
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/eleven/eleven-hero-1280-70ecc36432ae.webp",
+        "bytes": 157404
+      },
+      {
+        "width": 1672,
+        "url": "assets/responsive/eleven/eleven-hero-1672-2f423da31fc8.webp",
+        "bytes": 237046
+      },
+      {
+        "width": 1672,
+        "url": "assets/eleven/eleven-hero.webp",
+        "bytes": 519506,
+        "original": true
+      }
+    ],
+    "sha256": "c5821f281bb1fbd3c3159afe94944319287d99f6760ffc95fbe525083f08e7d6"
+  },
+  "assets/Residenza Verde/Residenza Verde-01.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 903772,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-01-768-2b59e634f2e8.webp",
+        "bytes": 53658
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-01-1280-61ca06857e6e.webp",
+        "bytes": 145172
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-01-1920-8eacce884baa.webp",
+        "bytes": 315544
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-01-2560-afa61ecab0e0.webp",
+        "bytes": 489716
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-01.webp",
+        "bytes": 903772,
+        "original": true
+      }
+    ],
+    "sha256": "84e2efe170ecf535a156f535b4c5b9293d1f952b0a794c4b0bf7030f3ae38f64"
+  },
+  "assets/Residenza Verde/Residenza Verde-02.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 978418,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-02-768-e8d1b0b9477f.webp",
+        "bytes": 68976
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-02-1280-33c609508434.webp",
+        "bytes": 185390
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-02-1920-1bb48a8775c5.webp",
+        "bytes": 390592
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-02-2560-2fb4a39c8213.webp",
+        "bytes": 536536
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-02.webp",
+        "bytes": 978418,
+        "original": true
+      }
+    ],
+    "sha256": "bc5eb3cf0d2230863fda3f772028b1f225d0ebf4c3dfc533443193d10bfe2545"
+  },
+  "assets/Residenza Verde/Residenza Verde-03.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 529446,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-03-768-225b85546993.webp",
+        "bytes": 42742
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-03-1280-d4c0a97e8e3d.webp",
+        "bytes": 101182
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-03-1920-86b68b88d063.webp",
+        "bytes": 201982
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-03-2560-e3acd382fb81.webp",
+        "bytes": 290894
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-03.webp",
+        "bytes": 529446,
+        "original": true
+      }
+    ],
+    "sha256": "b3b71737bde7918c6fac9ee889c5eb218130280d402fd45bb56d7b83a8c8f2d5"
+  },
+  "assets/Residenza Verde/Residenza Verde-04.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 676536,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-04-768-ad0810c0b843.webp",
+        "bytes": 46572
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-04-1280-8bf7731711e6.webp",
+        "bytes": 118204
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-04-1920-d71cb129d68f.webp",
+        "bytes": 241398
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-04-2560-d652843ec42e.webp",
+        "bytes": 347956
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-04.webp",
+        "bytes": 676536,
+        "original": true
+      }
+    ],
+    "sha256": "93b7392b4cc536dd4c762618703f493659316c6045ebd5c9aa271f16055e09d0"
+  },
+  "assets/Residenza Verde/Residenza Verde-05.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 1070762,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-05-768-78348787c2b3.webp",
+        "bytes": 72638
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-05-1280-c8b21695ef9e.webp",
+        "bytes": 191836
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-05-1920-e6d04f81e7f5.webp",
+        "bytes": 407532
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-05-2560-23bc17c7f320.webp",
+        "bytes": 586184
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-05.webp",
+        "bytes": 1070762,
+        "original": true
+      }
+    ],
+    "sha256": "480d4a2883421e4677c4a512a7ce6e7e82d6b4dec29648a6fe8e9ed96167215e"
+  },
+  "assets/Residenza Verde/Residenza Verde-06.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 1040112,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-06-768-cefffd6b09ef.webp",
+        "bytes": 63706
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-06-1280-a9a772458b60.webp",
+        "bytes": 166828
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-06-1920-9422c218866b.webp",
+        "bytes": 360200
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-06-2560-c0e87b6d746e.webp",
+        "bytes": 539862
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-06.webp",
+        "bytes": 1040112,
+        "original": true
+      }
+    ],
+    "sha256": "c75a2cc641d807dfc9dccba37bd8cde78fe1bfdab4e3d956f39d6e890db64c04"
+  },
+  "assets/Residenza Verde/Residenza Verde-07.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 497426,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-07-768-fe8c0a7f7e3d.webp",
+        "bytes": 52380
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-07-1280-6882b930630d.webp",
+        "bytes": 124698
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-07-1920-803b23889d75.webp",
+        "bytes": 238712
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-07-2560-79e764293a40.webp",
+        "bytes": 314062
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-07.webp",
+        "bytes": 497426,
+        "original": true
+      }
+    ],
+    "sha256": "ed02d5dab97fbf9bda300c0c2e92f2d699490026aad294a81a20d6c25f37ffa2"
+  },
+  "assets/Residenza Verde/Residenza Verde-08.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 934848,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-08-768-87a076dd551c.webp",
+        "bytes": 94098
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-08-1280-fe570e3f7eb7.webp",
+        "bytes": 229940
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-08-1920-32490a83356d.webp",
+        "bytes": 431108
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-08-2560-560713222d83.webp",
+        "bytes": 581242
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-08.webp",
+        "bytes": 934848,
+        "original": true
+      }
+    ],
+    "sha256": "857bd6c4f896b6ec914d443964e4443e4e2a0ce00dfdc9f8e4628b1a68c9a6d6"
+  },
+  "assets/Residenza Verde/Residenza Verde-09.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 276140,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-09-768-cbca380de03d.webp",
+        "bytes": 44568
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-09-1280-6a6c72dd61f8.webp",
+        "bytes": 82988
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-09-1920-0b3203d8138c.webp",
+        "bytes": 137764
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-09-2560-f75f64cade93.webp",
+        "bytes": 190114
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-09.webp",
+        "bytes": 276140,
+        "original": true
+      }
+    ],
+    "sha256": "4ae26ecc9eb41f4ca4c8d23481913b67c6c4a50b929254c5535ab82d90511f88"
+  },
+  "assets/Residenza Verde/Residenza Verde-10.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 1366402,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-10-768-19b617e70cff.webp",
+        "bytes": 73666
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-10-1280-8d5e6e5bb43d.webp",
+        "bytes": 193820
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-10-1920-5cec6611cf68.webp",
+        "bytes": 426442
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-10-2560-7ec223d203b2.webp",
+        "bytes": 650480
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-10.webp",
+        "bytes": 1366402,
+        "original": true
+      }
+    ],
+    "sha256": "ddd552d04151ae8bd906b005e9c7c368c0172f08310d9b5a537718d085e254a2"
+  },
+  "assets/Residenza Verde/Residenza Verde-11.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 160798,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-11-768-19d889e65e63.webp",
+        "bytes": 37012
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-11-1280-dc5fbe737caf.webp",
+        "bytes": 72562
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-11-1920-ff062905ee65.webp",
+        "bytes": 110278
+      },
+      {
+        "width": 2560,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-11.webp",
+        "bytes": 160798,
+        "original": true
+      }
+    ],
+    "sha256": "c82deaef44d105347067fa4bfced3030b19db879b94927ffbb73872631eb4be9"
+  },
+  "assets/Residenza Verde/Residenza Verde-12.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 408812,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-12-768-3c14fc1986e0.webp",
+        "bytes": 55100
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-12-1280-27fb5b685ec0.webp",
+        "bytes": 142104
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-12-1920-c2662d2c1637.webp",
+        "bytes": 227558
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-12-2560-bdd9b86cc761.webp",
+        "bytes": 384474
+      },
+      {
+        "width": 2560,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-12.webp",
+        "bytes": 408812,
+        "original": true
+      }
+    ],
+    "sha256": "eecf9f38f485d123c427ffc4c5bf121bec4b1eae563323218fcc7f7412309415"
+  },
+  "assets/Residenza Verde/Residenza Verde-13.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 1237406,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-13-768-a7a5fc53c99a.webp",
+        "bytes": 60204
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-13-1280-de4d85c95d6c.webp",
+        "bytes": 162632
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-13-1920-b1d99b6efcc9.webp",
+        "bytes": 375146
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-13-2560-14399a528903.webp",
+        "bytes": 601270
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-13.webp",
+        "bytes": 1237406,
+        "original": true
+      }
+    ],
+    "sha256": "b0ed2c52f1c71cccc789254ba6db648bec1bfcb915c3e968b885b1d8712a8531"
+  },
+  "assets/Residenza Verde/Residenza Verde-14.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 1328324,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-14-768-f6333499b3d1.webp",
+        "bytes": 70956
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-14-1280-9f98af3e6eaf.webp",
+        "bytes": 183768
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-14-1920-551d8b767efb.webp",
+        "bytes": 407946
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-14-2560-f35c147a1d11.webp",
+        "bytes": 619794
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-14.webp",
+        "bytes": 1328324,
+        "original": true
+      }
+    ],
+    "sha256": "0091bf31c6be049d9270d52b7537df37b746deccdfb99f30950d7b53622d5b85"
+  },
+  "assets/Residenza Verde/Residenza Verde-15.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 1509878,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-15-768-269e56b0cf5e.webp",
+        "bytes": 67014
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-15-1280-0f20c1f2f17a.webp",
+        "bytes": 181394
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-15-1920-0462f6ad6c62.webp",
+        "bytes": 424320
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-15-2560-7c125b894550.webp",
+        "bytes": 662472
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-15.webp",
+        "bytes": 1509878,
+        "original": true
+      }
+    ],
+    "sha256": "8368594065ea01e2b008b069639f48554a53d56367f223666b3897badeff31aa"
+  },
+  "assets/Residenza Verde/Residenza Verde-16.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 1100340,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-16-768-def7e61768b1.webp",
+        "bytes": 70176
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-16-1280-9a39732d5ea5.webp",
+        "bytes": 175426
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-16-1920-896f441fbca0.webp",
+        "bytes": 374416
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-16-2560-791e5f88791c.webp",
+        "bytes": 557020
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-16.webp",
+        "bytes": 1100340,
+        "original": true
+      }
+    ],
+    "sha256": "a51ff96c6b31e0bc35f944cddba37ece85a3e5c6f34fae97be3c75d6281507fa"
+  },
+  "assets/Residenza Verde/Residenza Verde-17.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 1528928,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-17-768-113e04a5ee95.webp",
+        "bytes": 70472
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-17-1280-7115768a4058.webp",
+        "bytes": 193248
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-17-1920-2fb9f22a07a9.webp",
+        "bytes": 450260
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-17-2560-73dc6b11e272.webp",
+        "bytes": 701826
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-17.webp",
+        "bytes": 1528928,
+        "original": true
+      }
+    ],
+    "sha256": "2f1daf80f85762cae252ef260ebe941731113a66e5cc81e7257a359002ecbb2d"
+  },
+  "assets/Residenza Verde/Residenza Verde-18.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 1258628,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-18-768-f32f4ad6339c.webp",
+        "bytes": 54470
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-18-1280-ff615a98a4a8.webp",
+        "bytes": 146832
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-18-1920-db4df42804f5.webp",
+        "bytes": 336564
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-18-2560-08b42a8ce791.webp",
+        "bytes": 515782
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-18.webp",
+        "bytes": 1258628,
+        "original": true
+      }
+    ],
+    "sha256": "f545d226c281e48668e14885d2fe51b836e169edb843efaa98aef9c8a6614abd"
+  },
+  "assets/Residenza Verde/Residenza Verde-19.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 1303742,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-19-768-f73d04f36d72.webp",
+        "bytes": 69548
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-19-1280-b5b4df4499c3.webp",
+        "bytes": 187302
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-19-1920-2faef5fccee8.webp",
+        "bytes": 422888
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-19-2560-20aef30b7635.webp",
+        "bytes": 634752
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-19.webp",
+        "bytes": 1303742,
+        "original": true
+      }
+    ],
+    "sha256": "9d09371585158b2a19d4895f22cc9ccccfd1f323f8fea7fd9e43e1dae53f79be"
+  },
+  "assets/Residenza Verde/Residenza Verde-20.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 949584,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-20-768-66c97076addf.webp",
+        "bytes": 85794
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-20-1280-01c09a65bb6e.webp",
+        "bytes": 265104
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-20-1920-218788124580.webp",
+        "bytes": 516750
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-20-2560-6d2627d62f9c.webp",
+        "bytes": 938400
+      },
+      {
+        "width": 2560,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-20.webp",
+        "bytes": 949584,
+        "original": true
+      }
+    ],
+    "sha256": "449b941bbee67f7e3acd2c25f681c76bdf6bb1ed2164552c23cac6e10ca70dc7"
+  },
+  "assets/Residenza Verde/Residenza Verde-21.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 387204,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-21-768-ec0bda549d01.webp",
+        "bytes": 48482
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-21-1280-0cf8052092e0.webp",
+        "bytes": 129298
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-21-1920-2a4b8db1d330.webp",
+        "bytes": 211310
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-21-2560-34916085271b.webp",
+        "bytes": 376778
+      },
+      {
+        "width": 2560,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-21.webp",
+        "bytes": 387204,
+        "original": true
+      }
+    ],
+    "sha256": "d0f5c8afb5df38f6f3d6fee26decd8559a75c81e74bf147d542f393b441f1c5b"
+  },
+  "assets/Residenza Verde/Residenza Verde-22.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 241518,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-22-768-c3fe6ac88434.webp",
+        "bytes": 42730
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-22-1280-e1220ecf72a3.webp",
+        "bytes": 99544
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-22-1920-3509a5d9cdb1.webp",
+        "bytes": 154336
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-22-2560-9cfd9cd90810.webp",
+        "bytes": 239228
+      },
+      {
+        "width": 2560,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-22.webp",
+        "bytes": 241518,
+        "original": true
+      }
+    ],
+    "sha256": "386467a88fe464c863e053703be7cba385389e37847b3ccaf47e6146fb40481f"
+  },
+  "assets/Residenza Verde/Residenza Verde-23.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 541366,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-23-768-f80839fad7a3.webp",
+        "bytes": 73828
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-23-1280-f8437aaf40a6.webp",
+        "bytes": 186526
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-23-1920-9247144b92ca.webp",
+        "bytes": 328150
+      },
+      {
+        "width": 2560,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-23.webp",
+        "bytes": 541366,
+        "original": true
+      }
+    ],
+    "sha256": "8a934439a24632d8a37865edf053b08f67272dd0336ce04c1d65f45119a06819"
+  },
+  "assets/Residenza Verde/Residenza Verde-24.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 159860,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-24-768-4a112cef9a18.webp",
+        "bytes": 21392
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-24-1280-d4b38ac3ccf2.webp",
+        "bytes": 54272
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-24-1920-2895e59ce0a2.webp",
+        "bytes": 93018
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-24-2560-d57ab7d7bbee.webp",
+        "bytes": 153412
+      },
+      {
+        "width": 2560,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-24.webp",
+        "bytes": 159860,
+        "original": true
+      }
+    ],
+    "sha256": "3ebba554446b033439b7080e6a587b888ec03fcfcbbb56c5d16ddee4b8a3fd6a"
+  },
+  "assets/Residenza Verde/Residenza Verde-25.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 376608,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-25-768-3e08eac39f13.webp",
+        "bytes": 49432
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-25-1280-60a687e0b8e3.webp",
+        "bytes": 130580
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-25-1920-95be64ae9698.webp",
+        "bytes": 209228
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-25-2560-b00e7ff6c789.webp",
+        "bytes": 364780
+      },
+      {
+        "width": 2560,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-25.webp",
+        "bytes": 376608,
+        "original": true
+      }
+    ],
+    "sha256": "517d8a711f00d94fec3db75e1ea2a572e4df024e9726b5ca15ddab2fcdf64678"
+  },
+  "assets/Residenza Verde/Residenza Verde-26.webp": {
+    "width": 3840,
+    "height": 2160,
+    "bytes": 367944,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-26-768-a80ec6a9361b.webp",
+        "bytes": 23292
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-26-1280-001c723591b0.webp",
+        "bytes": 51960
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-26-1920-9939a8cfe96d.webp",
+        "bytes": 111174
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-26-2560-0193537382d1.webp",
+        "bytes": 167962
+      },
+      {
+        "width": 3840,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-26.webp",
+        "bytes": 367944,
+        "original": true
+      }
+    ],
+    "sha256": "b98f3ba7b08aca58cdc06faec796850627a1ebef2942f82def43d2bdae34d1e8"
+  },
+  "assets/Residenza Verde/Residenza Verde-27.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 196232,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-27-768-60b2f1f9b00a.webp",
+        "bytes": 42916
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-27-1280-3b42837a3c02.webp",
+        "bytes": 87598
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-27-1920-29e836c06dbb.webp",
+        "bytes": 132890
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-27-2560-98762637174b.webp",
+        "bytes": 196094
+      },
+      {
+        "width": 2560,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-27.webp",
+        "bytes": 196232,
+        "original": true
+      }
+    ],
+    "sha256": "78a3dea8b9091dd866a9adbf44d32f33414f1957993ff37a8b712073d4f27309"
+  },
+  "assets/Residenza Verde/Residenza Verde-28.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 744460,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/residenza-verde/residenza-verde-28-768-23397b6e93eb.webp",
+        "bytes": 84690
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/residenza-verde/residenza-verde-28-1280-f41aac9b52d4.webp",
+        "bytes": 236166
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/residenza-verde/residenza-verde-28-1920-bcdbd9f46f93.webp",
+        "bytes": 422340
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/residenza-verde/residenza-verde-28-2560-6487ff2fe6a4.webp",
+        "bytes": 739484
+      },
+      {
+        "width": 2560,
+        "url": "assets/Residenza%20Verde/Residenza%20Verde-28.webp",
+        "bytes": 744460,
+        "original": true
+      }
+    ],
+    "sha256": "9634b4b53348a01b02abf9d48a3c325955f47b925e157b8cc704153552eab313"
+  },
+  "assets/villa-aurea/hero-poster.webp": {
+    "width": 2400,
+    "height": 2000,
+    "bytes": 494964,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/villa-aurea/hero-poster-768-fcb41a9b33cb.webp",
+        "bytes": 79222
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/villa-aurea/hero-poster-1280-177a504e7872.webp",
+        "bytes": 201550
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/villa-aurea/hero-poster-1920-b73572ebe0c0.webp",
+        "bytes": 337444
+      },
+      {
+        "width": 2400,
+        "url": "assets/responsive/villa-aurea/hero-poster-2400-d7bfefaa000f.webp",
+        "bytes": 492400
+      },
+      {
+        "width": 2400,
+        "url": "assets/villa-aurea/hero-poster.webp",
+        "bytes": 494964,
+        "original": true
+      }
+    ],
+    "sha256": "3860a2b91fa4c8fac1290609881ab05af11f584187c6748e0d70e626afe9d7dd"
+  },
+  "assets/villa-aurea/villa-aurea-01.webp": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 474752,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/villa-aurea/villa-aurea-01-768-d589b96ff867.webp",
+        "bytes": 64358
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/villa-aurea/villa-aurea-01-1280-245c824eb1f6.webp",
+        "bytes": 135752
+      },
+      {
+        "width": 1672,
+        "url": "assets/responsive/villa-aurea/villa-aurea-01-1672-8c93983a5248.webp",
+        "bytes": 213030
+      },
+      {
+        "width": 1672,
+        "url": "assets/villa-aurea/villa-aurea-01.webp",
+        "bytes": 474752,
+        "original": true
+      }
+    ],
+    "sha256": "d2755979035fb7ec96d47d25f9ff17e3e6d66498ed17c47b4eb314e562f542fd"
+  },
+  "assets/villa-aurea/villa-aurea-02.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 427038,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/villa-aurea/villa-aurea-02-768-1ce9aa932613.webp",
+        "bytes": 47748
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/villa-aurea/villa-aurea-02-1280-d3728622d548.webp",
+        "bytes": 129730
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/villa-aurea/villa-aurea-02-1920-39b79cd61a54.webp",
+        "bytes": 233218
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/villa-aurea/villa-aurea-02-2560-93b8aa58562f.webp",
+        "bytes": 422162
+      },
+      {
+        "width": 2560,
+        "url": "assets/villa-aurea/villa-aurea-02.webp",
+        "bytes": 427038,
+        "original": true
+      }
+    ],
+    "sha256": "d3ffcf45ed4776de58e5a89a4926329580f1a6eeed628e8bf02445248f44a7ec"
+  },
+  "assets/villa-aurea/villa-aurea-03.webp": {
+    "width": 2000,
+    "height": 2400,
+    "bytes": 567936,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/villa-aurea/villa-aurea-03-768-9d6713803f2d.webp",
+        "bytes": 102882
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/villa-aurea/villa-aurea-03-1280-a8c36013346f.webp",
+        "bytes": 269958
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/villa-aurea/villa-aurea-03-1920-4f8f8237c366.webp",
+        "bytes": 504198
+      },
+      {
+        "width": 2000,
+        "url": "assets/villa-aurea/villa-aurea-03.webp",
+        "bytes": 567936,
+        "original": true
+      }
+    ],
+    "sha256": "496b6c4acc56c6b2b52adbb50662a994e2b0f791d5b8fb01ef991e333f29cac4"
+  },
+  "assets/villa-aurea/villa-aurea-04.webp": {
+    "width": 2000,
+    "height": 2400,
+    "bytes": 432040,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/villa-aurea/villa-aurea-04-768-38446e40f9e3.webp",
+        "bytes": 83244
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/villa-aurea/villa-aurea-04-1280-1490e762aad2.webp",
+        "bytes": 202368
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/villa-aurea/villa-aurea-04-1920-0fd54e0f7b0c.webp",
+        "bytes": 368206
+      },
+      {
+        "width": 2000,
+        "url": "assets/responsive/villa-aurea/villa-aurea-04-2000-32dd32d18398.webp",
+        "bytes": 419934
+      },
+      {
+        "width": 2000,
+        "url": "assets/villa-aurea/villa-aurea-04.webp",
+        "bytes": 432040,
+        "original": true
+      }
+    ],
+    "sha256": "3c0705fa1c9353199e118c8f5be56b94b675f7637bcd3d7d2707df68fc3aa148"
+  },
+  "assets/villa-aurea/villa-aurea-05.webp": {
+    "width": 2000,
+    "height": 2400,
+    "bytes": 352184,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/villa-aurea/villa-aurea-05-768-53cedc5b8477.webp",
+        "bytes": 62398
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/villa-aurea/villa-aurea-05-1280-609f20aeab63.webp",
+        "bytes": 150570
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/villa-aurea/villa-aurea-05-1920-8fea72a70618.webp",
+        "bytes": 274076
+      },
+      {
+        "width": 2000,
+        "url": "assets/responsive/villa-aurea/villa-aurea-05-2000-10287bae1149.webp",
+        "bytes": 332538
+      },
+      {
+        "width": 2000,
+        "url": "assets/villa-aurea/villa-aurea-05.webp",
+        "bytes": 352184,
+        "original": true
+      }
+    ],
+    "sha256": "eda69c90174d94a48df6b1ce08ec89d39991425541b57d2ebd1ef628509399a5"
+  },
+  "assets/villa-aurea/villa-aurea-06.webp": {
+    "width": 2000,
+    "height": 2400,
+    "bytes": 679784,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/villa-aurea/villa-aurea-06-768-907325377b6b.webp",
+        "bytes": 138052
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/villa-aurea/villa-aurea-06-1280-cdd9658f7c7d.webp",
+        "bytes": 341448
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/villa-aurea/villa-aurea-06-1920-62a45670ae43.webp",
+        "bytes": 594626
+      },
+      {
+        "width": 2000,
+        "url": "assets/responsive/villa-aurea/villa-aurea-06-2000-9beebe57508a.webp",
+        "bytes": 675296
+      },
+      {
+        "width": 2000,
+        "url": "assets/villa-aurea/villa-aurea-06.webp",
+        "bytes": 679784,
+        "original": true
+      }
+    ],
+    "sha256": "16a07f0a34252d5a7ec1a0959468149457c09a37ed0ec201c9d887975fa3a18f"
+  },
+  "assets/villa-aurea/villa-aurea-07.webp": {
+    "width": 2560,
+    "height": 1359,
+    "bytes": 696232,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/villa-aurea/villa-aurea-07-768-2e702d13c795.webp",
+        "bytes": 35186
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/villa-aurea/villa-aurea-07-1280-85aa122d82e3.webp",
+        "bytes": 92472
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/villa-aurea/villa-aurea-07-1920-124393fd396c.webp",
+        "bytes": 180032
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/villa-aurea/villa-aurea-07-2560-fa0998a5814f.webp",
+        "bytes": 313550
+      },
+      {
+        "width": 2560,
+        "url": "assets/villa-aurea/villa-aurea-07.webp",
+        "bytes": 696232,
+        "original": true
+      }
+    ],
+    "sha256": "2d36a4af7e7ec0f9e50b51c263479f1754a8c6c887c042b2a6a14d07f288b453"
+  },
+  "assets/villa-aurea/villa-aurea-08.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 906312,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/villa-aurea/villa-aurea-08-768-2bd79aad3fa5.webp",
+        "bytes": 45112
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/villa-aurea/villa-aurea-08-1280-6b0fa7cd3b66.webp",
+        "bytes": 115422
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/villa-aurea/villa-aurea-08-1920-40875b2a4fb5.webp",
+        "bytes": 211802
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/villa-aurea/villa-aurea-08-2560-f132f6d773af.webp",
+        "bytes": 380498
+      },
+      {
+        "width": 2560,
+        "url": "assets/villa-aurea/villa-aurea-08.webp",
+        "bytes": 906312,
+        "original": true
+      }
+    ],
+    "sha256": "d1b614bd21569ed41276f3bb5613075eaacbf6582472064b61d0fe7e09a9058d"
+  },
+  "assets/villa-aurea/villa-aurea-09.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 449762,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/villa-aurea/villa-aurea-09-768-cebccf081961.webp",
+        "bytes": 50842
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/villa-aurea/villa-aurea-09-1280-6622052eb006.webp",
+        "bytes": 138580
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/villa-aurea/villa-aurea-09-1920-1d6c07a60fc9.webp",
+        "bytes": 256792
+      },
+      {
+        "width": 2560,
+        "url": "assets/villa-aurea/villa-aurea-09.webp",
+        "bytes": 449762,
+        "original": true
+      }
+    ],
+    "sha256": "10021b64b8ddc4f56e0a51ec133004e211935530137e600b2054c2ed4f4ef26e"
+  },
+  "assets/villa-aurea/villa-aurea-10.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 789804,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/villa-aurea/villa-aurea-10-768-f68e70633f25.webp",
+        "bytes": 38464
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/villa-aurea/villa-aurea-10-1280-353caeaef66a.webp",
+        "bytes": 98762
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/villa-aurea/villa-aurea-10-1920-16190af3b80f.webp",
+        "bytes": 181984
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/villa-aurea/villa-aurea-10-2560-0e23a528cb3f.webp",
+        "bytes": 317796
+      },
+      {
+        "width": 2560,
+        "url": "assets/villa-aurea/villa-aurea-10.webp",
+        "bytes": 789804,
+        "original": true
+      }
+    ],
+    "sha256": "a0b4cbb9c28ccdc27f29f80cb548fd604afbc00405a199a5a9154d1c4a8fc61f"
+  },
+  "assets/villa-aurea/villa-aurea-11.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 2681628,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/villa-aurea/villa-aurea-11-768-4febeaffdd12.webp",
+        "bytes": 34676
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/villa-aurea/villa-aurea-11-1280-eace5221aeca.webp",
+        "bytes": 91786
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/villa-aurea/villa-aurea-11-1920-4ed396beecd6.webp",
+        "bytes": 167968
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/villa-aurea/villa-aurea-11-2560-24862fc9b9e9.webp",
+        "bytes": 326042
+      },
+      {
+        "width": 2560,
+        "url": "assets/villa-aurea/villa-aurea-11.webp",
+        "bytes": 2681628,
+        "original": true
+      }
+    ],
+    "sha256": "b9a85ccba7fc93b9a77b54b7a3f1f780f74ce8672f2a8db0f8e027540e120871"
+  },
+  "assets/villa-aurea/villa-aurea-12.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 716770,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/villa-aurea/villa-aurea-12-768-5ab0c7d63f5e.webp",
+        "bytes": 38568
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/villa-aurea/villa-aurea-12-1280-faaa502083a3.webp",
+        "bytes": 99100
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/villa-aurea/villa-aurea-12-1920-59f1f9a99f11.webp",
+        "bytes": 185522
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/villa-aurea/villa-aurea-12-2560-12d1356d3f49.webp",
+        "bytes": 314478
+      },
+      {
+        "width": 2560,
+        "url": "assets/villa-aurea/villa-aurea-12.webp",
+        "bytes": 716770,
+        "original": true
+      }
+    ],
+    "sha256": "3a5c75cac57a16178ca6e6f5999ac97a03aad2132e30fe89ca25d8d901af34ce"
+  },
+  "assets/villa-aurea/villa-aurea-13.webp": {
+    "width": 2560,
+    "height": 1440,
+    "bytes": 492026,
+    "variants": [
+      {
+        "width": 768,
+        "url": "assets/responsive/villa-aurea/villa-aurea-13-768-6d462d548768.webp",
+        "bytes": 25666
+      },
+      {
+        "width": 1280,
+        "url": "assets/responsive/villa-aurea/villa-aurea-13-1280-da6fc6699058.webp",
+        "bytes": 65652
+      },
+      {
+        "width": 1920,
+        "url": "assets/responsive/villa-aurea/villa-aurea-13-1920-d498c29b9220.webp",
+        "bytes": 117286
+      },
+      {
+        "width": 2560,
+        "url": "assets/responsive/villa-aurea/villa-aurea-13-2560-c59b55fb77f7.webp",
+        "bytes": 213978
+      },
+      {
+        "width": 2560,
+        "url": "assets/villa-aurea/villa-aurea-13.webp",
+        "bytes": 492026,
+        "original": true
+      }
+    ],
+    "sha256": "9098779120a7ccee98cc507b01e64ddfa087c8f94977b3f2ab07134eb34072fb"
+  }
+}
