@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded',function(){
-  const groups=document.querySelectorAll('.about6-philosophy-principles');
+  const groups=document.querySelectorAll('.about6-philosophy-principles,.about6-pov-list');
   const navItems=[...document.querySelectorAll('.about6-page-nav button')];
   const sections=[...document.querySelectorAll('.about6-track')];
   const lightSections=new Set(['about6-pov','about6-beliefs','about6-founder','about6-vision-mission']);

@@ -2,6 +2,13 @@
 :root{--site-gutter:28px;--experience-ease:cubic-bezier(.22,1,.36,1)}
 main h1,main h2{overflow-wrap:break-word}
 main h1 em,main h2 em,main h2 i{vertical-align:baseline}
+.about6-pov-list>div{padding:24px;cursor:pointer;transition:padding .45s cubic-bezier(.22,1,.36,1),background .45s ease}
+.about6-pov-list>div.is-active{padding:30px 24px;background:rgba(175,134,63,.07)}
+.about6-pov-list>div:focus-visible{outline:1px solid var(--gold-text);outline-offset:-1px}
+@media(max-width:760px){
+ .about6-pov-list>div{padding:18px 12px}
+ .about6-pov-list>div.is-active{padding:24px 12px}
+}
 main .container>*,.split>*,.statement-grid>*,.celeste-grid>*,.villa-intro-grid>*{min-width:0}
 .celeste-hero-content,.villa-hero .container{width:min(1180px,calc(100% - var(--site-gutter)*2))}
 .experience-stages{position:relative;--stage-progress:0%;--stage-progress-y:0px}

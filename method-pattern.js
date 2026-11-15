@@ -1,6 +1,6 @@
 /* Pointer, keyboard and touch share the existing About method's progress interaction. */
 (() => {
- const groups=document.querySelectorAll('.about6-beliefs-grid,.id-method-grid,.service-landing .process,.services-v2 .process');
+ const groups=document.querySelectorAll('.about6-beliefs-grid,.id-method-grid,.service-landing .process,.services-v2 .process,.category-editorial .design-stages');
  groups.forEach(group=>{
   const items=[...group.children];if(items.length<2)return;
   group.classList.add('akili-method');group.style.setProperty('--method-count',items.length);

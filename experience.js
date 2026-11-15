@@ -1,7 +1,7 @@
 /* Shared equivalents of the approved About process and section-navigation patterns. */
 (() => {
  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
- document.querySelectorAll('.design-stages').forEach(group=>{
+ document.querySelectorAll('[data-simple-progress]').forEach(group=>{
   const items=[...group.children];
   if(items.length<2)return;
   group.classList.add('experience-stages');
