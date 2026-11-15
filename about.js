@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded',function(){
       else el.removeAttribute('aria-current');
     });
     const activeSection=sections[index];
-    if(pageNav) pageNav.classList.toggle('is-light',!!(activeSection && lightSections.has(activeSection.classList[1])));
+    if(pageNav) pageNav.classList.toggle('is-light',!!(activeSection && [...lightSections].some(name=>activeSection.classList.contains(name))));
   };
 
   groups.forEach(function(group){
