@@ -1,0 +1,41 @@
+/* Shared alignment and interaction layer. Existing fonts, colours and imagery retained. */
+:root{--site-gutter:28px;--experience-ease:cubic-bezier(.22,1,.36,1)}
+main h1,main h2{overflow-wrap:break-word}
+main h1 em,main h2 em,main h2 i{vertical-align:baseline}
+main .container>*,.split>*,.statement-grid>*,.celeste-grid>*,.villa-intro-grid>*{min-width:0}
+.celeste-hero-content,.villa-hero .container{width:min(1180px,calc(100% - var(--site-gutter)*2))}
+.experience-stages{position:relative;--stage-progress:0%;--stage-progress-y:0px}
+.experience-stages:before,.experience-stages:after{content:"";position:absolute;left:0;top:-15px;height:1px;pointer-events:none}
+.experience-stages:before{width:100%;background:var(--line)}
+.experience-stages:after{width:var(--stage-progress);background:var(--gold);transition:width .6s var(--experience-ease)}
+.experience-stage{transition:transform .5s var(--experience-ease),opacity .5s ease;outline-offset:6px}
+.experience-stage.is-current{transform:translateY(-4px)}
+.experience-stage.is-current h3{color:var(--gold-text)}
+.experience-nav{position:fixed;right:12px;top:50%;transform:translateY(-50%);z-index:900;display:grid;gap:6px;mix-blend-mode:difference;color:white}
+.experience-nav button{display:flex;align-items:center;justify-content:flex-end;gap:7px;min-width:44px;min-height:44px;border:0;background:none;color:inherit;font:400 9px/1.4 var(--font-secondary);cursor:pointer;padding:8px}
+.experience-nav button:after{content:"";width:4px;height:4px;border:1px solid currentColor;border-radius:50%;transition:background .3s ease,transform .3s ease}
+.experience-nav button[aria-current="true"]:after{background:currentColor;transform:scale(1.5)}
+.experience-nav button:focus-visible{outline:2px solid currentColor;outline-offset:0}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .selected-card,.archive-card,.case-card{transition:transform .6s var(--experience-ease)}
+ .selected-card:hover,.archive-card:hover,.case-card:hover{transform:translateY(-6px)}
+ .experience-stage:hover{transform:translateY(-4px)}
+}
+@media(max-width:1300px){.experience-nav{display:none}}
+@media(min-width:761px) and (max-width:1024px){
+ .site-header .menu-toggle{display:block;border:0;background:none;color:inherit;font:400 10px/1.4 var(--font-secondary);letter-spacing:.16em;text-transform:uppercase;min-height:44px;cursor:pointer}
+ .site-header .nav-links{display:none;position:absolute;top:100%;left:0;right:0;padding:25px 28px;background:var(--charcoal);color:white;flex-direction:column;align-items:flex-start;gap:18px}
+ .site-header .nav-links.open{display:flex}
+}
+@media(max-width:760px){
+ :root{--site-gutter:18px}
+ .experience-stages:before,.experience-stages:after{top:0;left:-10px;width:1px}
+ .experience-stages:before{height:100%}
+ .experience-stages:after{height:var(--stage-progress-y);transition:height .6s var(--experience-ease)}
+ .experience-stage.is-current{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto!important}
+ *,*:before,*:after{animation:none!important;transition:none!important}
+ .experience-stage.is-current{transform:none}
+}

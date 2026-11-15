@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded',function(){
-  const groups=document.querySelectorAll('.about6-philosophy-principles');
+  const groups=document.querySelectorAll('.about6-interactive-list');
   const navItems=[...document.querySelectorAll('.about6-page-nav button')];
   const sections=[...document.querySelectorAll('.about6-track')];
   const lightSections=new Set(['about6-pov','about6-beliefs','about6-founder','about6-vision-mission']);
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded',function(){
       else el.removeAttribute('aria-current');
     });
     const activeSection=sections[index];
-    if(pageNav) pageNav.classList.toggle('is-light',!!(activeSection && lightSections.has(activeSection.classList[1])));
+    if(pageNav) pageNav.classList.toggle('is-light',!!(activeSection && [...lightSections].some(name=>activeSection.classList.contains(name))));
   };
 
   groups.forEach(function(group){
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded',function(){
   navItems.forEach(function(item){
     item.addEventListener('click',function(){
       const target=document.getElementById(item.dataset.target);
-      if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+      if(target)target.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
     });
   });
 
