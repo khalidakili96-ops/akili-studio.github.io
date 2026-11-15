@@ -60,6 +60,7 @@ test('Design with intention shares the principle activation handler for pointer 
  d.window.document.dispatchEvent(new d.window.Event('DOMContentLoaded'));
  for(const selector of ['.about6-pov-list','.about6-philosophy-principles']){
   const items=[...d.window.document.querySelector(selector).children];
+  assert.ok(d.window.document.querySelector(selector).classList.contains('about6-interactive-list'));
   assert.ok(items.every(x=>x.tabIndex===0&&x.getAttribute('role')==='button'));
   items[1].dispatchEvent(new d.window.MouseEvent('mouseenter'));assert.equal(items[1].getAttribute('aria-pressed'),'true');
   items[3].dispatchEvent(new d.window.KeyboardEvent('keydown',{key:' ',bubbles:true}));assert.equal(items[3].getAttribute('aria-pressed'),'true');assert.equal(items[1].getAttribute('aria-pressed'),'false');
