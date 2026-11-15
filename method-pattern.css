@@ -3,6 +3,7 @@
 .id-method .akili-method{--method-track:#55514a;--method-paper:var(--dark,#292724);--method-copy:#bdb7ad}
 .interior-design-revamp .id-method{background:#292724;color:#f6f3ed}
 .interior-design-revamp .id-method h2{color:inherit}
+.interior-design-revamp .id-method .eyebrow.gold{color:#d3a65c}
 .akili-method:before,.akili-method:after{content:'';position:absolute;top:8px;left:5px;height:1px;pointer-events:none}
 .akili-method:before{right:0;background:var(--method-track)}
 .akili-method:after{width:var(--method-progress-width,0px);background:linear-gradient(90deg,#d3a65c,#ead3a2 55%,#d3a65c);box-shadow:0 0 7px #d3a65c2e;transition:width .7s cubic-bezier(.22,1,.36,1)}
