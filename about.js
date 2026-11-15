@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded',function(){
   navItems.forEach(function(item){
     item.addEventListener('click',function(){
       const target=document.getElementById(item.dataset.target);
-      if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+      if(target)target.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
     });
   });
 
