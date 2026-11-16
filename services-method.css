@@ -1,33 +1,36 @@
-/* About's approved method line, independently interactive on both Services tracks. */
+/* Shared approved gold-line interaction for Services and About's mission. */
 .services-v2 .approach{--track-surface:#292724;--track-line:#55514a;--track-gold:#d3a65c;--track-detail:#bdb7ad}
 .services-v2 .deliver{--track-surface:#fff;--track-line:#d9d3c9;--track-gold:#af863f;--track-detail:#625c54}
-.services-v2 [data-method-track]{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:0}
+:is(.services-v2,.about6-beliefs) [data-method-track]{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:0}
 .services-v2 [data-method-track="5"]{grid-template-columns:repeat(5,minmax(0,1fr))}
-.services-v2 [data-method-track]:before,.services-v2 [data-method-track]:after{content:'';position:absolute;top:8px;left:5px;height:1px;pointer-events:none}
-.services-v2 [data-method-track]:before{right:0;background:var(--track-line)}
-.services-v2 [data-method-track]:after{width:var(--method-progress-width,0px);background:linear-gradient(90deg,var(--track-gold),#ead3a2 55%,var(--track-gold));box-shadow:0 0 7px #d3a65c2e;transition:width .7s cubic-bezier(.22,1,.36,1)}
-.services-v2 [data-method-track]>article{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0;min-height:230px;padding:39px 12px 0;border:0;outline-offset:5px}
-.services-v2 [data-method-track]>article:first-child{align-items:flex-start;text-align:left;padding-left:0}
-.services-v2 [data-method-track]>article:last-child{align-items:flex-end;text-align:right;padding-right:0;border:0}
-.services-v2 [data-method-track]>article:after{content:'';position:absolute;top:3px;left:50%;width:10px;height:10px;transform:translateX(-50%);border:1px solid var(--track-gold);border-radius:50%;background:var(--track-surface);z-index:2;transition:transform .4s ease,background .4s ease,box-shadow .4s ease}
-.services-v2 [data-method-track]>article:first-child:after{left:0;transform:none}
-.services-v2 [data-method-track]>article:last-child:after{left:100%;transform:translateX(-100%)}
-.services-v2 [data-method-track]>article.is-reached:after{background:var(--track-gold);box-shadow:0 0 0 2px #d3a65c14}
-.services-v2 [data-method-track]>article.is-hovered:after{transform:translateX(-50%) scale(1.45)}
-.services-v2 [data-method-track]>article:first-child.is-hovered:after{transform:scale(1.45)}
-.services-v2 [data-method-track]>article:last-child.is-hovered:after{transform:translateX(-100%) scale(1.45)}
-.services-v2 [data-method-track] .node{display:none}
-.services-v2 [data-method-track] .process-icon{display:block;width:30px;height:30px;object-fit:contain;margin:0 0 18px}
-.services-v2 [data-method-track] small{display:block;color:var(--track-gold);font:400 8px/1 var(--font-secondary);letter-spacing:.16em;margin:0 0 22px}
-.services-v2 [data-method-track] h3{font:500 clamp(22px,2.1vw,32px)/1.1 var(--font);margin:0;letter-spacing:-.025em}
-.services-v2 [data-method-track] p{width:min(190px,100%);max-width:100%;margin:14px 0 0;color:var(--track-detail);font:400 10px/1.75 var(--font-secondary)}
+:is(.services-v2,.about6-beliefs) [data-method-track]:before,:is(.services-v2,.about6-beliefs) [data-method-track]:after{content:'';position:absolute;top:8px;left:5px;height:1px;pointer-events:none}
+:is(.services-v2,.about6-beliefs) [data-method-track]:before{right:0;background:var(--track-line)}
+:is(.services-v2,.about6-beliefs) [data-method-track]:after{width:var(--method-progress-width,0px);background:linear-gradient(90deg,var(--track-gold),#ead3a2 55%,var(--track-gold));box-shadow:0 0 7px #d3a65c2e;transition:width .7s cubic-bezier(.22,1,.36,1)}
+:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div){position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0;min-height:230px;padding:39px 12px 0;border:0;outline-offset:5px}
+:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div):first-child{align-items:flex-start;text-align:left;padding-left:0}
+:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div):last-child{align-items:flex-end;text-align:right;padding-right:0;border:0}
+:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div):after{content:'';position:absolute;top:3px;left:50%;width:10px;height:10px;transform:translateX(-50%);border:1px solid var(--track-gold);border-radius:50%;background:var(--track-surface);z-index:2;transition:transform .4s ease,background .4s ease,box-shadow .4s ease}
+:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div):first-child:after{left:0;transform:none}
+:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div):last-child:after{left:100%;transform:translateX(-100%)}
+:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div).is-reached:after{background:var(--track-gold);box-shadow:0 0 0 2px #d3a65c14}
+:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div).is-hovered:after{transform:translateX(-50%) scale(1.45)}
+:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div):first-child.is-hovered:after{transform:scale(1.45)}
+:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div):last-child.is-hovered:after{transform:translateX(-100%) scale(1.45)}
+:is(.services-v2,.about6-beliefs) [data-method-track] .node{display:none}
+:is(.services-v2,.about6-beliefs) [data-method-track] .process-icon{display:block;width:30px;height:30px;object-fit:contain;margin:0 0 18px}
+:is(.services-v2,.about6-beliefs) [data-method-track] :is(small,span){display:block;color:var(--track-gold);font:400 8px/1 var(--font-secondary);letter-spacing:.16em;margin:0 0 22px}
+:is(.services-v2,.about6-beliefs) [data-method-track] :is(h3,b){font:500 clamp(22px,2.1vw,32px)/1.1 var(--font);margin:0;letter-spacing:-.025em}
+:is(.services-v2,.about6-beliefs) [data-method-track] p{width:min(190px,100%);max-width:100%;margin:14px 0 0;color:var(--track-detail);font:400 10px/1.75 var(--font-secondary)}
 @media(max-width:900px){
- .services-v2 [data-method-track]{--method-node-y:36px;grid-template-columns:1fr}
- .services-v2 [data-method-track]:before{top:0;bottom:0;left:4px;right:auto;width:1px;height:auto}
- .services-v2 [data-method-track]:after{top:0;left:4px;width:1px;height:var(--method-progress-height,0px);background:linear-gradient(180deg,var(--track-gold),#ead3a2 55%,var(--track-gold));transition:height .7s cubic-bezier(.22,1,.36,1)}
- .services-v2 [data-method-track]>article,.services-v2 [data-method-track]>article:first-child,.services-v2 [data-method-track]>article:last-child{align-items:flex-start;text-align:left;padding:28px 0 34px 40px;min-height:0;border:0}
- .services-v2 [data-method-track]>article:after,.services-v2 [data-method-track]>article:first-child:after,.services-v2 [data-method-track]>article:last-child:after{left:0;top:31px;transform:none}
- .services-v2 [data-method-track]>article.is-hovered:after,.services-v2 [data-method-track]>article:last-child.is-hovered:after{transform:scale(1.45)}
- .services-v2 [data-method-track] p{width:min(420px,100%)}
+ :is(.services-v2,.about6-beliefs) [data-method-track]{--method-node-y:36px;grid-template-columns:1fr}
+ :is(.services-v2,.about6-beliefs) [data-method-track]:before{top:0;bottom:0;left:4px;right:auto;width:1px;height:auto}
+ :is(.services-v2,.about6-beliefs) [data-method-track]:after{top:0;left:4px;width:1px;height:var(--method-progress-height,0px);background:linear-gradient(180deg,var(--track-gold),#ead3a2 55%,var(--track-gold));transition:height .7s cubic-bezier(.22,1,.36,1)}
+ :is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div),:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div):first-child,:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div):last-child{align-items:flex-start;text-align:left;padding:28px 0 34px 40px;min-height:0;border:0}
+ :is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div):after,:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div):first-child:after,:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div):last-child:after{left:0;top:31px;transform:none}
+ :is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div).is-hovered:after,:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div):last-child.is-hovered:after{transform:scale(1.45)}
+ :is(.services-v2,.about6-beliefs) [data-method-track] p{width:min(420px,100%)}
 }
-@media(prefers-reduced-motion:reduce){.services-v2 [data-method-track]:after,.services-v2 [data-method-track]>article:after{transition:none}}
+@media(prefers-reduced-motion:reduce){:is(.services-v2,.about6-beliefs) [data-method-track]:after,:is(.services-v2,.about6-beliefs) [data-method-track]>:is(article,div):after{transition:none}}
+
+.about6-beliefs [data-method-track]{--track-surface:var(--about-light);--track-line:#cfc7bb;--track-gold:var(--about-gold);--track-detail:var(--about-muted)}
+.about6-beliefs [data-method-track]>div{justify-content:flex-start;border:0!important}
