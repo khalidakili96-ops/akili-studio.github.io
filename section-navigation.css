@@ -1,0 +1,11 @@
+/* Same numbered-dot navigation language as the approved About page. */
+.section-navigation{position:fixed;z-index:30;top:50%;right:28px;display:flex;flex-direction:column;gap:7px;padding:8px 0;transform:translateY(-50%);max-height:calc(100vh - 120px);overflow-y:auto;scrollbar-width:thin;color:var(--section-nav-ink,#211f1b)}
+.section-navigation button{appearance:none;display:flex;align-items:center;gap:7px;min-width:44px;min-height:44px;padding:6px;border:0;background:transparent;color:inherit;opacity:.5;cursor:pointer;font:400 7px/1 var(--font-secondary);letter-spacing:.14em;transition:opacity .3s ease,color .3s ease}
+.section-navigation button span{display:block;width:17px;text-align:right;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.section-navigation button:after{content:'';display:block;width:4px;height:4px;border:1px solid currentColor;border-radius:50%;transition:transform .3s ease,background .3s ease}
+.section-navigation button.is-active{opacity:1}
+.section-navigation button.is-active span{transform:translateX(-2px)}
+.section-navigation button.is-active:after{background:currentColor;transform:scale(1.35)}
+.section-navigation button:focus-visible{outline:1px solid currentColor;outline-offset:-1px}
+@media(max-width:900px){.section-navigation{display:none}}
+@media(prefers-reduced-motion:reduce){.section-navigation button,.section-navigation button span,.section-navigation button:after{transition:none}}
